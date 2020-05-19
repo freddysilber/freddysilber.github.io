@@ -7,9 +7,8 @@ import './App.scss'
 const App = () => {
   return (
     <>
-      <h1>Freddy Silber / Software Engineer</h1>
-      <LinkedInBadge />
       <Header />
+      <LinkedInBadge />
       <HelloProps compiler='Typescript' framework='React' />
     </>
   )
