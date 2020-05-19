@@ -4,7 +4,10 @@ import './App.css'
 
 const App = () => {
   return (
-    <LinkedInBadge />
+    <>
+      <h1>Freddy Silber / Software Engineer</h1>
+      <LinkedInBadge />
+    </>
   )
 }
 
