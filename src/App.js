@@ -4,7 +4,7 @@ import LinkedInBadge from './components/LinkedInBadge'
 import HelloProps from './components/HelloProps'
 import './App.scss'
 
-const App = () => {
+export default function App() {
   return (
     <>
       <Header />
@@ -13,5 +13,3 @@ const App = () => {
     </>
   )
 }
-
-export default App
