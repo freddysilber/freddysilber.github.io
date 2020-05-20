@@ -1,7 +1,6 @@
-import * as React from "react";
+import React from 'react'
 
 export interface HelloProps { compiler: string; framework: string; }
-
 // 'HelloProps' describes the shape of props.
 // State is never set so we use the '{}' type.
 export default class Hello extends React.Component<HelloProps, {}> {
