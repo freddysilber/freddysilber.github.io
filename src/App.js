@@ -1,8 +1,5 @@
 import React from 'react'
-import Header from './components/Header'
-import LinkedInBadge from './components/LinkedInBadge'
-import HelloProps from './components/HelloProps'
-import Counter from './components/Counter'
+import { Counter, Header, LinkedInBadge, HelloProps } from './components'
 import './App.scss'
 
 export default function App() {
