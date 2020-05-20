@@ -24,7 +24,7 @@ export default function Header() {
 	return (
 		<AppBar className={classes.background} position="static">
 			<Toolbar variant="dense">
-				<Typography variant="h6"><h3 className="headerText">Freddy Silber / Software Engineer</h3></Typography>
+				<Typography variant="h4"><p className="headerText">Freddy Silber / Software Engineer</p></Typography>
 			</Toolbar>
 		</AppBar>
 	)
