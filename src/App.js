@@ -1,5 +1,5 @@
 import React from 'react'
-import { Counter, Header, LinkedInBadge, HelloProps } from './components'
+import { Bio, Counter, Header, LinkedInBadge, HelloProps } from './components'
 import './App.scss'
 
 export default function App() {
@@ -9,6 +9,7 @@ export default function App() {
       <LinkedInBadge />
       <HelloProps compiler='Typescript' framework='React' />
       <Counter />
+      <Bio />
     </>
   )
 }
