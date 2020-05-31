@@ -5,6 +5,7 @@ import './App.scss'
 export default function App() {
   return (
     <>
+      {/* title and images */}
       <Header />
       <Navigation />
       {/* <Bio /> */}
