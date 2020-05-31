@@ -35,13 +35,13 @@ export default function Header(props: Props) {
 					</Toolbar>
 				</AppBar>
 			</HideOnScroll>
-			{/* <Toolbar />
+			<Toolbar />
 			<Container>
 				<Box my={1}>
 					<a href="https://twitter.com/freddysilber" className="twitter-follow-button" data-show-count="true">Follow Me</a>
 					<Bio />
 				</Box>
-			</Container> */}
+			</Container>
 		</>
 	)
 }
