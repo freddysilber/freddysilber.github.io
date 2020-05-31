@@ -12,13 +12,13 @@ export default class Counter extends React.Component<CounterProps, any> {
 		}
 	}
 
-	likePost = () => {
+	upVote = () => {
 		this.setState({
 			likes: this.state.likes + 1
 		})
 	}
 
-	dislikePost = () => {
+	downVote = () => {
 		this.setState({
 			likes: this.state.likes - 1
 		})
@@ -35,8 +35,8 @@ export default class Counter extends React.Component<CounterProps, any> {
 		return (
 			<>
 				<div>Likes: {this.state.likes} - Username: {this.state.username}</div>
-				<button onClick={this.likePost}>Like</button>
-				<button onClick={this.dislikePost}>Dislike</button>
+				<button onClick={this.upVote}>Like</button>
+				<button onClick={this.downVote}>Dislike</button>
 				<input value={this.state.username} onChange={this.handleChange}></input>
 			</>
 		)
