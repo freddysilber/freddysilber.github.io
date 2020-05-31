@@ -6,9 +6,9 @@ export default function App() {
   return (
     <>
       <Header />
+      <Navigation />
       {/* <Bio /> */}
       <LinkedInBadge />
-      {/* <Navigation /> */}
       {/* <HelloProps compiler='Typescript' framework='React' /> */}
       {/* <Counter /> */}
     </>
