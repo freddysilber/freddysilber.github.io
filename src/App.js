@@ -8,7 +8,7 @@ export default function App() {
     <>
       <Header />
       <Bio />
-      <i className="devicon-react-original"></i>
+      {/* <i className="devicon-react-original"></i> */}
       <SocialMediaContainer />
     </>
   )

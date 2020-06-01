@@ -1,6 +1,8 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography, useScrollTrigger, Slide } from '@material-ui/core'
+import { AppBar, Toolbar, Typography, useScrollTrigger, Slide, Box, Avatar } from '@material-ui/core'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
+import profile from '../images/profile.jpeg'
+import vintage from '../images/vintage.jpeg'
 
 interface Props {
 	window?: () => Window
@@ -11,6 +13,14 @@ const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		background: {
 			background: '#666'
+		},
+		avatar: {
+			width: '10rem',
+			height: '10rem',
+			margin: '.25rem'
+		},
+		flex: {
+			display: 'flex'
 		}
 	})
 )
@@ -35,6 +45,10 @@ export default function Header(props: Props) {
 				</AppBar>
 			</HideOnScroll>
 			<Toolbar />
+			<Box my={1} className={classes.flex}>
+				<Avatar src={profile} className={classes.avatar} />
+				<Avatar src={vintage} className={classes.avatar} />
+			</Box>
 		</>
 	)
 }
