@@ -1,18 +1,19 @@
 import React from 'react'
-import { Header, LinkedInBadge, Navigation } from './components'
-// import { Bio, Counter, Header, LinkedInBadge, HelloProps, Navigation } from './components'
+import { Header, Navigation, Bio } from './components'
+import { SocialMediaContainer } from './containers'
 import './App.scss'
 
 export default function App() {
   return (
     <>
-      {/* title and images */}
       <Header />
+      <Bio />
+      <i className="devicon-react-original"></i>
       <Navigation />
-      {/* <Bio /> */}
-      <LinkedInBadge />
+      {/* <LinkedInBadge /> */}
       {/* <HelloProps compiler='Typescript' framework='React' /> */}
       {/* <Counter /> */}
+      <SocialMediaContainer />
     </>
   )
 }
