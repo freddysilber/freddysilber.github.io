@@ -2,6 +2,7 @@ import React from 'react'
 import { Bio } from './index'
 import { AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Box, Container, Slide } from '@material-ui/core'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
+import TwitterFollow from './TwitterFollow'
 
 
 interface Props {
@@ -38,7 +39,7 @@ export default function Header(props: Props) {
 			<Toolbar />
 			<Container>
 				<Box my={1}>
-					<a href="https://twitter.com/freddysilber" className="twitter-follow-button" data-show-count="true">Follow Me</a>
+					<TwitterFollow />
 					<Bio />
 				</Box>
 			</Container>
