@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography, useScrollTrigger, Slide, Box, Avatar } from '@material-ui/core'
+import { AppBar, Toolbar, Typography, useScrollTrigger, Slide, Avatar, Paper } from '@material-ui/core'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import profile from '../images/profile.jpeg'
 import vintage from '../images/vintage.jpeg'
@@ -20,7 +20,17 @@ const useStyles = makeStyles((theme: Theme) =>
 			margin: '.25rem'
 		},
 		flex: {
-			display: 'flex'
+			display: 'flex',
+			justifyContent: 'center',
+			background: '#666',
+			margin: '0 1rem'
+		},
+		headerText: {
+			fontFamily: 'Grizzly',
+			fontWeight: 'lighter',
+			margin: '0',
+			color: '#FF9933',
+			fontSize: '3vw'
 		}
 	})
 )
@@ -39,16 +49,16 @@ export default function Header(props: Props) {
 				<AppBar className={classes.background}>
 					<Toolbar variant="dense">
 						<Typography variant="h4">
-							<p className="headerText">Freddy Silber /// Software Engineer</p>
+							<p className={classes.headerText}>Freddy Silber /// Software Engineer</p>
 						</Typography>
 					</Toolbar>
 				</AppBar>
 			</HideOnScroll>
 			<Toolbar />
-			<Box my={1} className={classes.flex}>
+			<Paper elevation={3} className={classes.flex}>
 				<Avatar src={profile} className={classes.avatar} />
 				<Avatar src={vintage} className={classes.avatar} />
-			</Box>
+			</Paper>
 		</>
 	)
 }
