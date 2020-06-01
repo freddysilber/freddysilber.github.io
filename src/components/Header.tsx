@@ -28,9 +28,9 @@ const useStyles = makeStyles((theme: Theme) =>
 		headerText: {
 			fontFamily: 'Grizzly',
 			fontWeight: 'lighter',
-			margin: '.25rem',
+			margin: '0',
 			color: '#FF9933',
-			fontSize: '5.5vw'
+			// fontSize: '5.5vw'
 		}
 	})
 )
@@ -47,13 +47,7 @@ export default function Header(props: Props) {
 		<>
 			<HideOnScroll {...props}>
 				<AppBar className={classes.background}>
-					<Typography variant="h4" className={classes.headerText}>
-						<p className={classes.headerText}>Freddy Silber /// Software Engineer</p>
-					</Typography>
-
-					{/* <Typography variant="h4">
-						<p className={classes.headerText}>Freddy Silber /// Software Engineer</p>
-					</Typography> */}
+					<h1 className={classes.headerText}>Freddy Silber /// Software Engineer</h1>
 				</AppBar>
 			</HideOnScroll>
 			<Toolbar />
