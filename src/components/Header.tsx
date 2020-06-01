@@ -1,9 +1,8 @@
 import React from 'react'
 import { Bio } from './index'
-import { AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Box, Container, Slide } from '@material-ui/core'
+import { AppBar, Toolbar, Typography, useScrollTrigger, Box, Container, Slide } from '@material-ui/core'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import TwitterFollow from './TwitterFollow'
-
 
 interface Props {
 	window?: () => Window
@@ -28,7 +27,6 @@ export default function Header(props: Props) {
 	const classes = useStyles()
 	return (
 		<>
-			<CssBaseline />
 			<HideOnScroll {...props}>
 				<AppBar className={classes.background}>
 					<Toolbar variant="dense">
