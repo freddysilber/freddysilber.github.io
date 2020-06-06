@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, Typography, useScrollTrigger, Slide, Avatar, Paper } from '@material-ui/core'
+import { AppBar, Toolbar, useScrollTrigger, Slide, Avatar, Paper } from '@material-ui/core'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import profile from '../images/profile.jpeg'
 import vintage from '../images/vintage.jpeg'
@@ -29,8 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
 			fontFamily: 'Grizzly',
 			fontWeight: 'lighter',
 			margin: '0',
-			color: '#FF9933',
-			// fontSize: '5.5vw'
+			color: '#FF9933'
 		}
 	})
 )
