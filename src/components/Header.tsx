@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme: Theme) =>
 			fontFamily: 'Grizzly',
 			fontWeight: 'lighter',
 			margin: '0',
-			color: '#FF9933'
+			color: '#FF9933',
+			fontSize: '140%'
 		}
 	})
 )
