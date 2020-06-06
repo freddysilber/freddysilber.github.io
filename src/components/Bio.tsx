@@ -12,7 +12,6 @@ const flatironSchoolUrl = () => <a href="https://flatironschool.com/" target="_b
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		bioContainer: {
-			margin: '1rem',
 			padding: '1rem',
 			background: '#666',
 			color: '#FF9933'

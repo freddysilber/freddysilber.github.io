@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Bio } from './components'
+import { Header, Bio, Skills } from './components'
 import { SocialMediaContainer } from './containers'
 import './App.scss'
 
@@ -7,8 +7,8 @@ export default function App() {
   return (
     <>
       <Header />
+      <Skills />
       <Bio />
-      {/* <i className="devicon-react-original"></i> */}
       <SocialMediaContainer />
     </>
   )

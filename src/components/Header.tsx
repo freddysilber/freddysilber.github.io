@@ -22,8 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
 		flex: {
 			display: 'flex',
 			justifyContent: 'center',
-			background: '#666',
-			margin: '0 1rem'
+			background: '#666'
 		},
 		headerText: {
 			fontFamily: 'Grizzly',
@@ -34,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
 	})
 )
 
-function HideOnScroll(props: Props) {
+const HideOnScroll = (props: Props) => {
 	const { children, window } = props
 	const trigger = useScrollTrigger({ target: window ? window() : undefined })
 	return <Slide appear={false} direction="down" in={!trigger}>{children}</Slide>
