@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme: Theme) =>
 		flex: {
 			display: 'flex',
 			justifyContent: 'center',
-			background: '#666'
+			background: '#666',
+			padding: '1rem'
 		},
 		headerText: {
 			fontFamily: 'Grizzly',
