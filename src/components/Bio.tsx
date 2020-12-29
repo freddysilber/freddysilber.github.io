@@ -2,12 +2,14 @@ import React from 'react'
 import { Box, Paper } from '@material-ui/core'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 
-const cloudcoachurl = () => <a href="https://cloudcoach.com/" target="_blank" rel="noopener noreferrer" className="bioAnchor">Cloud Coach</a>
-const fraserUrl = () => <a href='https://frasercolorado.com/' target='_blank' rel='noopener noreferrer' className='bioAnchor'>Fraser</a>
-const winterParkResortUrl = () => <a href='https://www.winterparkresort.com/' target='_blank' rel='noopener noreferrer' className='bioAnchor'>Winter Park Resort</a>
-const middleParkHighSchool = () => <a href='http://mphs.egsd.org/' target='_blank' rel='noopener noreferrer' className='bioAnchor'>Middle Park High School</a>
-const salesforceUrl = () => <a href='https://www.salesforce.com/' target='_blank' rel='noopener noreferrer' className='bioAnchor'>Salesforce</a>
-const flatironSchoolUrl = () => <a href="https://flatironschool.com/" target="_blank" rel="noopener noreferrer" className="bioAnchor">Flatiron School</a>
+import { urls } from '../util'
+
+const cloudcoachurl: () => JSX.Element = () => <a href={urls.cloudCoach.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{urls.cloudCoach.name}</a>
+const fraserUrl: () => JSX.Element = () => <a href={urls.fraser.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.fraser.name}</a>
+const winterParkResortUrl: () => JSX.Element = () => <a href={urls.winterParkResort.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.winterParkResort.name}</a>
+const middleParkHighSchool: () => JSX.Element = () => <a href={urls.middleParkHighSchool.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.middleParkHighSchool.name}</a>
+const salesforceUrl: () => JSX.Element = () => <a href={urls.salesforce.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.salesforce.name}</a>
+const flatironSchoolUrl: () => JSX.Element = () => <a href={urls.flatironSchool.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{urls.flatironSchool.name}</a>
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -19,8 +21,8 @@ const useStyles = makeStyles((theme: Theme) =>
 	}),
 )
 
-const Bio = () => {
-	const classes = useStyles()
+export default function Bio(): JSX.Element {
+	const classes: Record<string, string> = useStyles()
 	return (
 		<Box my={1}>
 			<Paper elevation={3} className={classes.bioContainer}>
@@ -51,5 +53,3 @@ const Bio = () => {
 		</Box>
 	)
 }
-
-export default Bio

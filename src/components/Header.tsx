@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppBar, Toolbar, useScrollTrigger, Slide, Avatar, Paper } from '@material-ui/core'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
-import profile from '../images/profile.jpeg'
+
 import vintage from '../images/vintage.jpeg'
 
 interface Props {
@@ -41,8 +41,8 @@ const HideOnScroll = (props: Props) => {
 	return <Slide appear={false} direction="down" in={!trigger}>{children}</Slide>
 }
 
-export default function Header(props: Props) {
-	const classes = useStyles()
+export default function Header(props: Props): JSX.Element {
+	const classes: Record<string, string> = useStyles()
 	return (
 		<>
 			<HideOnScroll {...props}>
@@ -52,7 +52,6 @@ export default function Header(props: Props) {
 			</HideOnScroll>
 			<Toolbar />
 			<Paper elevation={3} className={classes.flex}>
-				<Avatar src={profile} className={classes.avatar} />
 				<Avatar src={vintage} className={classes.avatar} />
 			</Paper>
 		</>

@@ -10,22 +10,30 @@ const useStyles = makeStyles((theme: Theme) =>
 		}
 	}),
 )
-export default function Skills() {
-	const classes = useStyles()
+
+const ICONS: string[] = [
+	'devicon-react-original',
+	'devicon-html5-plain',
+	'devicon-css3-plain',
+	'devicon-git-plain',
+	'devicon-java-plain',
+	'devicon-mysql-plain',
+	'devicon-postgresql-plain',
+	'devicon-ruby-plain',
+	'devicon-sass-original',
+	'devicon-typescript-plain',
+	'devicon-visualstudio-plain',
+	'devicon-webpack-plain',
+	'devicon-angularjs-plain'
+]
+
+const renderIcons: () => JSX.Element[] = () => ICONS.map((i: string) => <i className={i}></i>)
+
+export default function Skills(): JSX.Element {
+	const classes: Record<string, string> = useStyles()
 	return (
 		<div className={classes.skillsContainer}>
-			<i className="devicon-react-original"></i>
-			<i className="devicon-html5-plain"></i>
-			<i className="devicon-css3-plain"></i>
-			<i className="devicon-git-plain"></i>
-			<i className="devicon-java-plain"></i>
-			<i className="devicon-mysql-plain"></i>
-			<i className="devicon-postgresql-plain"></i>
-			<i className="devicon-ruby-plain"></i>
-			<i className="devicon-sass-original"></i>
-			<i className="devicon-typescript-plain"></i>
-			<i className="devicon-visualstudio-plain"></i>
-			<i className="devicon-webpack-plain"></i>
+			{renderIcons()}
 		</div>
 	)
 }
