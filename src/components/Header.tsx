@@ -2,7 +2,7 @@ import React from 'react'
 import { AppBar, Toolbar, useScrollTrigger, Slide, Avatar, Paper } from '@material-ui/core'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 
-import vintage from '../images/vintage.jpeg'
+import vintage from '../assets/images/vintage.jpeg'
 
 interface Props {
 	window?: () => Window
