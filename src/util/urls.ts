@@ -22,5 +22,9 @@ export const urls = {
 	flatironSchool: {
 		name: 'Flatiron School',
 		url: 'https://flatironschool.com/'
+	},
+	github: {
+		name: 'GitHub',
+		url: 'https://github.com/freddysilber'
 	}
 }

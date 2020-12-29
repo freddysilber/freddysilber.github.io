@@ -6,7 +6,8 @@ const useStyles = makeStyles((theme: Theme) =>
 		skillsContainer: {
 			display: 'flex',
 			justifyContent: 'space-evenly',
-			marginTop: '.5rem'
+			marginTop: '.5rem',
+			flexWrap: 'wrap'
 		}
 	}),
 )

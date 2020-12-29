@@ -3,11 +3,19 @@ import { AppBar, Toolbar, useScrollTrigger, Slide, Avatar, Paper } from '@materi
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 
 import vintage from '../assets/images/vintage.jpeg'
+import horseRide from '../assets/images/horseRide.jpeg'
+import wreath from '../assets/images/wreath.jpeg'
 
 interface Props {
 	window?: () => Window
 	children: React.ReactElement
 }
+
+const AVATARS: string[] = [
+	vintage,
+	horseRide,
+	wreath
+]
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -15,22 +23,21 @@ const useStyles = makeStyles((theme: Theme) =>
 			background: '#666'
 		},
 		avatar: {
-			width: '10rem',
-			height: '10rem',
-			margin: '.25rem'
-		},
-		flex: {
-			display: 'flex',
-			justifyContent: 'center',
-			background: '#666',
-			padding: '1rem'
+			width: '15rem',
+			height: '15rem',
+			margin: '0 auto .5rem auto'
 		},
 		headerText: {
 			fontFamily: 'Grizzly',
 			fontWeight: 'lighter',
-			margin: '0',
+			margin: '0 0 0 1rem',
 			color: '#FF9933',
-			fontSize: '140%'
+			fontSize: '1.4em'
+		},
+		imagesContainer: {
+			display: 'flex',
+			justifyContent: 'space-evenly',
+			flexWrap: 'wrap'
 		}
 	})
 )
@@ -51,9 +58,9 @@ export default function Header(props: Props): JSX.Element {
 				</AppBar>
 			</HideOnScroll>
 			<Toolbar />
-			<Paper elevation={3} className={classes.flex}>
-				<Avatar src={vintage} className={classes.avatar} />
-			</Paper>
+			<div className={classes.imagesContainer}>
+				{AVATARS.map((image: string) => <Avatar src={image} className={classes.avatar} />)}
+			</div>
 		</>
 	)
 }
