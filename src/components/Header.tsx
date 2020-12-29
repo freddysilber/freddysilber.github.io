@@ -8,7 +8,7 @@ import wreath from '../assets/images/wreath.jpeg'
 
 interface Props {
 	window?: () => Window
-	children: React.ReactElement
+	children?: React.ReactElement
 }
 
 const AVATARS: string[] = [
