@@ -26,5 +26,8 @@ export const urls = {
 	github: {
 		name: 'GitHub',
 		url: 'https://github.com/freddysilber'
+	},
+	instagram: {
+		url: 'https://www.instagram.com/burnttoast_jpeg/'
 	}
 }

@@ -6,6 +6,7 @@ import {
 	Theme
 } from '@material-ui/core'
 
+import instagram from '../assets/icons/instagram.png'
 import { LinkedInBadge, TwitterFollow } from '../components'
 
 import { urls } from '../util'
@@ -37,8 +38,11 @@ export default function SocialMediaContainer(): JSX.Element {
 			<div className={classes.socialContainer}>
 				<TwitterFollow />
 				<LinkedInBadge />
-				<a href={urls.github.url} className={classes.anchor} target="_blank" rel="noopener noreferrer" >
+				<a href={urls.github.url} className={classes.anchor} target="_blank" rel="noopener noreferrer">
 					<i className={`devicon-github-original ${classes.icon}`}></i>
+				</a>
+				<a href={urls.instagram.url} target="_blank" rel="noopener noreferrer">
+					<img src={instagram} width="50" />
 				</a>
 			</div>
 		</Paper>
