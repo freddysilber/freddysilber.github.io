@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const HideOnScroll = (props: Props) => {
 	const { children, window } = props
+	// Note this Trigger: front end triggers could be pretty cool to implement in the future
 	const trigger = useScrollTrigger({ target: window ? window() : undefined })
 	return <Slide appear={false} direction="down" in={!trigger}>{children}</Slide>
 }
