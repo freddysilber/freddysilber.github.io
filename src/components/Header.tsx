@@ -1,7 +1,8 @@
 import React from 'react'
+// Material UI
 import { AppBar, Toolbar, useScrollTrigger, Slide, Avatar, Paper } from '@material-ui/core'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
-
+// Images
 import vintage from '../assets/images/vintage.jpeg'
 import horseRide from '../assets/images/horseRide.jpeg'
 import wreath from '../assets/images/wreath.jpeg'
@@ -11,11 +12,7 @@ interface Props {
 	children?: React.ReactElement
 }
 
-const AVATARS: string[] = [
-	vintage,
-	horseRide,
-	wreath
-]
+const AVATARS: string[] = [vintage, horseRide, wreath]
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -59,7 +56,7 @@ export default function Header(props: Props): JSX.Element {
 			</HideOnScroll>
 			<Toolbar />
 			<div className={classes.imagesContainer}>
-				{AVATARS.map((image: string) => <Avatar src={image} className={classes.avatar} />)}
+				{AVATARS.map((image: string) => <Avatar src={image} className={classes.avatar} variant="rounded" />)}
 			</div>
 		</>
 	)
