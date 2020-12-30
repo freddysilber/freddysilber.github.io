@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import './App.scss'
-import { Home, Navigation, Header } from './components'
+import { Home, Navigation, Header, About } from './components'
 import { Routes } from './util'
 
 export default function App() {
@@ -13,6 +13,7 @@ export default function App() {
 				<Navigation />
 				<Switch>
 					<Route exact path={Routes.home} component={Home} />
+					<Route exact path={Routes.about} component={About} />
 				</Switch>
 			</Router>
 		</>

@@ -3,7 +3,7 @@ import { Paper, Tabs, Tab, makeStyles } from '@material-ui/core'
 // Router
 import { Link } from 'react-router-dom'
 // Navigation & Helpers
-import { NavTabs, NavTab } from './NavigationHelper'
+import { NavTabs, NavTab } from './'
 
 
 const useStyles = makeStyles({
@@ -22,7 +22,7 @@ const renderTabs: () => JSX.Element[] = () => {
 	})
 }
 
-export default function Navigation() {
+export default function Navigation(): JSX.Element {
 	const classes: Record<string, string> = useStyles()
 	const [value, setValue] = React.useState(0)
 
