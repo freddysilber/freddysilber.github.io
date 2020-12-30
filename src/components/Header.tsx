@@ -1,6 +1,6 @@
 import React from 'react'
 // Material UI
-import { AppBar, Toolbar, useScrollTrigger, Slide, Avatar, Paper } from '@material-ui/core'
+import { AppBar, Toolbar, useScrollTrigger, Slide, Avatar } from '@material-ui/core'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 // Images
 import vintage from '../assets/images/vintage.jpeg'
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
 			background: '#666'
 		},
 		avatar: {
-			width: '15rem',
+			width: '30%',
 			height: '15rem',
 			margin: '0 auto .5rem auto'
 		},

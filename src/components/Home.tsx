@@ -6,7 +6,6 @@ import { SocialMediaContainer } from '../containers'
 export default function Home(): JSX.Element {
 	return (
 		<>
-			<Header />
 			<Skills />
 			<Bio />
 			<SocialMediaContainer />
