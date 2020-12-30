@@ -42,7 +42,7 @@ export default function SocialMediaContainer(): JSX.Element {
 					<i className={`devicon-github-original ${classes.icon}`}></i>
 				</a>
 				<a href={urls.instagram.url} target="_blank" rel="noopener noreferrer">
-					<img src={instagram} width="50" />
+					<img src={instagram} width="50" alt="instagram" />
 				</a>
 			</div>
 		</Paper>

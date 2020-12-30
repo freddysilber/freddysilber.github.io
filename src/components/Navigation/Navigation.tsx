@@ -6,7 +6,7 @@ import {
 	Tabs
 } from '@material-ui/core'
 // Router
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 // Navigation & Helpers
 import { NavTabs, NavTab } from './'
 
@@ -30,10 +30,8 @@ const renderTabs: () => JSX.Element[] = () => {
 export default function Navigation(): JSX.Element {
 	const classes: Record<string, string> = useStyles()
 	const [value, setValue] = React.useState(0)
-	console.log(value, setValue)
 
 	const handleChange = (event: React.ChangeEvent<{}>, newValue: number): void => {
-		console.log('Navi event!', event)
 		setValue(newValue)
 	}
 
