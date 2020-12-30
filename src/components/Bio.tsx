@@ -3,14 +3,14 @@ import { Box, Paper } from '@material-ui/core'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 // Utilities
 import { urls } from '../util'
-
+// Anchors/ Site Links
 const cloudcoachurl: () => JSX.Element = () => <a href={urls.cloudCoach.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{urls.cloudCoach.name}</a>
 const fraserUrl: () => JSX.Element = () => <a href={urls.fraser.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.fraser.name}</a>
 const winterParkResortUrl: () => JSX.Element = () => <a href={urls.winterParkResort.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.winterParkResort.name}</a>
 const middleParkHighSchool: () => JSX.Element = () => <a href={urls.middleParkHighSchool.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.middleParkHighSchool.name}</a>
 const salesforceUrl: () => JSX.Element = () => <a href={urls.salesforce.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.salesforce.name}</a>
 const flatironSchoolUrl: () => JSX.Element = () => <a href={urls.flatironSchool.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{urls.flatironSchool.name}</a>
-
+// Styles
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		bioContainer: {
