@@ -1,3 +1,13 @@
+@font-face {
+	font-family: 'Grizzly';
+	src: local('Grizzly'), url(../../assets/fonts/Grizzly.ttf) format('truetype')
+}
 h1 {
-	color: dodgerblue;
+	margin: 0 !important;
+}
+a.header {
+	color: white;
+	text-decoration: none;
+	font-family: 'Grizzly';
+	font-weight: lighter;
 }
