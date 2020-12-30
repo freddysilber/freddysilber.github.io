@@ -8,8 +8,8 @@ import { Routes } from './util'
 export default function App() {
   return (
     <>
-      <Navigation />
       <Router>
+        <Navigation />
         <Switch>
           <Route exact path={Routes.home} component={Home} />
         </Switch>
