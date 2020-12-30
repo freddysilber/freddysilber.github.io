@@ -5,8 +5,6 @@ import {
 	makeStyles,
 	Theme
 } from '@material-ui/core'
-// Icons
-const instagram = require('../assets/icons/instagram.png')
 // Components
 import { LinkedInBadge, TwitterBadge } from '../components'
 // Utilities
@@ -44,7 +42,7 @@ export default function SocialMediaContainer(): JSX.Element {
 					<i className={`devicon-github-original ${classes.icon}`}></i>
 				</a>
 				<a href={urls.instagram.url} target="_blank" rel="noopener noreferrer">
-					<img src={instagram} width="50" alt="instagram" />
+					<i className={`fab fa-instagram ${classes.icon}`}></i>
 				</a>
 			</div>
 		</Paper>
