@@ -8,6 +8,7 @@ import { Routes } from '../util'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
+    {/* <Header2 /> */}
     <h1>Hi people of middle earth</h1>
     {/* <Skills /> */}
     {/* <i className="devicon-angularjs-plain"></i> */}
