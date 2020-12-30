@@ -1,8 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
+// Styles
 import './App.scss'
+// Components
 import { Home, Navigation, Header, About } from './components'
+// Utilities
 import { Routes } from './util'
 
 export default function App() {
