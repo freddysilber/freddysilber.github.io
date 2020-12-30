@@ -22,7 +22,7 @@ const useStyles = makeStyles(() =>
 		},
 		avatar: {
 			width: '33%',
-			height: '15rem',
+			height: '15rem'
 		},
 		imagesContainer: {
 			display: 'flex',

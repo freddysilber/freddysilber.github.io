@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-	Paper,
-	createStyles,
-	makeStyles,
-	Theme
-} from '@material-ui/core'
+import { Paper, createStyles, makeStyles, Theme } from '@material-ui/core'
 // Utilities
 import { urls } from '../util'
 
