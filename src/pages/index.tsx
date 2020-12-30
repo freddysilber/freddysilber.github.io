@@ -19,7 +19,6 @@ const IndexPage = () => (
 		<br />
 		<Link to={Routes.usingTypescript}>Go to "Using TypeScript"</Link>
 		<SocialMediaContainer />
-		<Skills />
 	</Layout>
 )
 

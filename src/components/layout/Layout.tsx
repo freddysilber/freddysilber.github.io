@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 // Components
-import { Header, Navigation } from '..'
+import { Header, Navigation, Skills } from '..'
 // Styles
 import './index.scss'
 
@@ -27,6 +27,7 @@ const Layout = ({ children }: any) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Skills />
       <Navigation />
       <div
         style={{
