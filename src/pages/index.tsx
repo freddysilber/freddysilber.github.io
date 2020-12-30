@@ -19,7 +19,6 @@ const IndexPage = () => (
 		<Link to={Routes.usingTypescript}>Go to "Using TypeScript"</Link>
 		<SocialMediaContainer />
 		<Skills />
-		<i className="fab fa-instagram"></i>
 	</Layout>
 )
 

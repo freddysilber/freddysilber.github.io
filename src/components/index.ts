@@ -4,7 +4,5 @@ export { default as Bio } from './bio/Bio'
 export { default as Skills } from './Skills'
 export { default as Image } from './Image'
 export { default as SEO } from './seo'
-export { default as LinkedInBadge } from './socialmedia/LinkedInBadge'
-export { default as TwitterBadge } from './socialmedia/TwitterBadge'
 
 export { Navigation } from './navigation'

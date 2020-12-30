@@ -29,5 +29,11 @@ export const urls = {
 	},
 	instagram: {
 		url: 'https://www.instagram.com/burnttoast_jpeg/'
+	},
+	linkedIn: {
+		url: 'https://www.linkedin.com/in/freddysilber/'
+	},
+	twitter: {
+		url: 'https://twitter.com/freddysilber'
 	}
 }

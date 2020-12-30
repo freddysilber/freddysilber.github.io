@@ -5,8 +5,6 @@ import {
 	makeStyles,
 	Theme
 } from '@material-ui/core'
-// Components
-import { LinkedInBadge, TwitterBadge } from '../components'
 // Utilities
 import { urls } from '../util'
 
@@ -36,13 +34,17 @@ export default function SocialMediaContainer(): JSX.Element {
 	return (
 		<Paper elevation={3} className={classes.container}>
 			<div className={classes.socialContainer}>
-				<TwitterBadge />
-				<LinkedInBadge />
 				<a href={urls.github.url} className={classes.anchor} target="_blank" rel="noopener noreferrer">
 					<i className={`devicon-github-original ${classes.icon}`}></i>
 				</a>
 				<a href={urls.instagram.url} target="_blank" rel="noopener noreferrer">
 					<i className={`fab fa-instagram ${classes.icon}`}></i>
+				</a>
+				<a href={urls.linkedIn.url} target="_blank" rel="noopener noreferrer">
+					<i className={`fab fa-linkedin ${classes.icon}`}></i>
+				</a>
+				<a href={urls.twitter.url} target="_blank" rel="noopener noreferrer">
+					<i className={`fab fa-twitter ${classes.icon}`}></i>
 				</a>
 			</div>
 		</Paper>
