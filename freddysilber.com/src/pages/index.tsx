@@ -4,11 +4,16 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import { Skills } from '../components'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
+    <h1>Hi people of middle earth</h1>
+    <div>
+      <Skills />
+    </div>
+    <i className="devicon-angularjs-plain"></i>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
