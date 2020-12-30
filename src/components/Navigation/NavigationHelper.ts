@@ -8,6 +8,6 @@ export interface NavTab {
 
 export const NavTabs: NavTab[] = [
 	{ label: 'Home', route: Routes.home },
-	{ label: 'About', route: Routes.about },
+	{ label: 'To Page 2', route: Routes.page2 },
 	{ label: 'Projects', route: Routes.projects }
 ]

@@ -35,6 +35,7 @@ export default function Skills(): JSX.Element {
 
 	return (
 		<div className={classes.skillsContainer}>
+			<p>Skills</p>
 			{renderIcons()}
 		</div>
 	)

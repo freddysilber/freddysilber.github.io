@@ -6,7 +6,7 @@ import {
 	Theme
 } from '@material-ui/core'
 // Icons
-import instagram from '../assets/icons/instagram.png'
+const instagram = require('../assets/icons/instagram.png')
 // Components
 import { LinkedInBadge, TwitterBadge } from '../components'
 // Utilities
