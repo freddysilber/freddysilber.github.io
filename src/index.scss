@@ -1,3 +1,5 @@
+$black: black;
+
 @font-face {
 	font-family: 'Drama Sans';
 	src: url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.eot'); /* IE9 Compat Modes */
@@ -23,7 +25,11 @@
 }
 a {
 	text-decoration: none;
+	color: $black;
 }
+// a:active {
+// 	color: $black;
+// }
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
