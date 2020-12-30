@@ -1,15 +1,15 @@
 import React from 'react'
+// Router
+import { Link } from 'react-router-dom'
+// Material UI
 import {
 	makeStyles,
 	Paper,
 	Tab,
 	Tabs
 } from '@material-ui/core'
-// Router
-// import { Link } from 'react-router-dom'
 // Navigation & Helpers
 import { NavTabs, NavTab } from './'
-
 
 const useStyles = makeStyles({
 	root: {
@@ -19,11 +19,7 @@ const useStyles = makeStyles({
 
 const renderTabs: () => JSX.Element[] = () => {
 	return NavTabs.map((tab: NavTab) => {
-		return (
-			// <Link key={tab.route} to={tab.route}>
-			<Tab key={tab.route} label={tab.label} />
-			// </Link>
-		)
+		return <Tab key={tab.route} label={tab.label} component={Link} to={tab.route} />
 	})
 }
 
