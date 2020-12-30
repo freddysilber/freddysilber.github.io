@@ -17,18 +17,18 @@ const useStyles = makeStyles({
 	}
 })
 
-const renderTabs: () => JSX.Element[] = () => {
-	return NavTabs.map((tab: NavTab) => {
-		return <Tab key={tab.route} label={tab.label} component={Link} to={tab.route} />
-	})
-}
-
 export default function Navigation(): JSX.Element {
 	const classes: Record<string, string> = useStyles()
 	const [value, setValue] = React.useState(0)
 
 	const handleChange = (event: React.ChangeEvent<{}>, newValue: number): void => {
 		setValue(newValue)
+	}
+
+	const renderTabs: () => JSX.Element[] = () => {
+		return NavTabs.map((tab: NavTab) => {
+			return <Tab key={tab.route} label={tab.label} component={Link} to={tab.route} />
+		})
 	}
 
 	return (

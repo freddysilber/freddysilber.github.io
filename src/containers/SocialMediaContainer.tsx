@@ -5,10 +5,11 @@ import {
 	makeStyles,
 	Theme
 } from '@material-ui/core'
-
+// Icons
 import instagram from '../assets/icons/instagram.png'
+// Components
 import { LinkedInBadge, TwitterFollow } from '../components'
-
+// Utilities
 import { urls } from '../util'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -33,6 +34,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function SocialMediaContainer(): JSX.Element {
 	const classes: Record<string, string> = useStyles()
+
 	return (
 		<Paper elevation={3} className={classes.container}>
 			<div className={classes.socialContainer}>
