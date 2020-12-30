@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 // Components
-import { Layout, SEO, Image, Bio } from '../components'
+import { Layout, SEO, Image, Bio, Skills } from '../components'
 import { SocialMediaContainer } from '../containers'
 // Utilities
 import { Routes } from '../util'
@@ -18,6 +18,8 @@ const IndexPage = () => (
 		<br />
 		<Link to={Routes.usingTypescript}>Go to "Using TypeScript"</Link>
 		<SocialMediaContainer />
+		<Skills />
+		<i className="fab fa-instagram"></i>
 	</Layout>
 )
 
