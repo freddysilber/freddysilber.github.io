@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 // Components
 import { Layout, SEO, Image, Bio } from '../components'
+import { SocialMediaContainer } from '../containers'
 // Utilities
 import { Routes } from '../util'
 
@@ -16,6 +17,7 @@ const IndexPage = () => (
 		<Link to={Routes.page2}>Go to page 2</Link>
 		<br />
 		<Link to={Routes.usingTypescript}>Go to "Using TypeScript"</Link>
+		<SocialMediaContainer />
 	</Layout>
 )
 
