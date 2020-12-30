@@ -1,5 +1,10 @@
 import React from 'react'
-import { Paper, Tabs, Tab, makeStyles } from '@material-ui/core'
+import {
+	makeStyles,
+	Paper,
+	Tab,
+	Tabs
+} from '@material-ui/core'
 // Router
 import { Link } from 'react-router-dom'
 // Navigation & Helpers
