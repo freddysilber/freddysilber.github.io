@@ -20,9 +20,9 @@ const useStyles = makeStyles({
 const renderTabs: () => JSX.Element[] = () => {
 	return NavTabs.map((tab: NavTab) => {
 		return (
-			<Link key={tab.route} to={tab.route}>
-				<Tab label={tab.label} />
-			</Link>
+			// <Link key={tab.route} to={tab.route}>
+			<Tab key={tab.route} label={tab.label} />
+			// </Link>
 		)
 	})
 }

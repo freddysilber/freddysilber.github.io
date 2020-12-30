@@ -28,7 +28,7 @@ const ICONS: string[] = [
 	'devicon-angularjs-plain'
 ]
 
-const renderIcons: () => JSX.Element[] = () => ICONS.map((i: string) => <i className={i}></i>)
+const renderIcons: () => JSX.Element[] = () => ICONS.map((i: string) => <i key={i} className={i}></i>)
 
 export default function Skills(): JSX.Element {
 	const classes: Record<string, string> = useStyles()
