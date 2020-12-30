@@ -8,7 +8,7 @@ import {
 // Icons
 import instagram from '../assets/icons/instagram.png'
 // Components
-import { LinkedInBadge, TwitterFollow } from '../components'
+import { LinkedInBadge, TwitterBadge } from '../components'
 // Utilities
 import { urls } from '../util'
 
@@ -38,7 +38,7 @@ export default function SocialMediaContainer(): JSX.Element {
 	return (
 		<Paper elevation={3} className={classes.container}>
 			<div className={classes.socialContainer}>
-				<TwitterFollow />
+				<TwitterBadge />
 				<LinkedInBadge />
 				<a href={urls.github.url} className={classes.anchor} target="_blank" rel="noopener noreferrer">
 					<i className={`devicon-github-original ${classes.icon}`}></i>
