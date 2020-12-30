@@ -2,7 +2,9 @@ import React from 'react'
 import { Box, Paper } from '@material-ui/core'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 // Utilities
-import { urls } from '../util'
+import { urls } from '../../util'
+// Styles
+import './index.scss'
 // Anchors/ Site Links
 const cloudcoachurl: () => JSX.Element = () => <a href={urls.cloudCoach.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{urls.cloudCoach.name}</a>
 const fraserUrl: () => JSX.Element = () => <a href={urls.fraser.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.fraser.name}</a>

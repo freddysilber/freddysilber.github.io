@@ -1,13 +1,8 @@
 import React from 'react'
 // Router
-import { Link } from 'react-router-dom'
+import { Link } from 'gatsby'
 // Material UI
-import {
-	makeStyles,
-	Paper,
-	Tab,
-	Tabs
-} from '@material-ui/core'
+import { makeStyles, Paper, Tab, Tabs } from '@material-ui/core'
 // Navigation & Helpers
 import { NavTabs, NavTab } from './'
 
@@ -28,12 +23,16 @@ export default function Navigation(): JSX.Element {
 	const renderTabs: () => JSX.Element[] = () => {
 		return NavTabs.map((tab: NavTab) => {
 			return <Tab key={tab.route} label={tab.label} component={Link} to={tab.route} />
+			// return (
+			// 	<Link to={tab.route}>
+			// 		<Tab key={tab.route} label={tab.label} />
+			// 	</Link>
+			// )
 		})
 	}
 
 	return (
 		<Paper className={classes.root}>
-			<br />
 			<Tabs value={value} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
 				{renderTabs()}
 			</Tabs>
