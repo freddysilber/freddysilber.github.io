@@ -57,7 +57,7 @@ export default function Header(props: Props): JSX.Element {
 			</HideOnScroll>
 			<Toolbar />
 			<div className={classes.imagesContainer}>
-				{AVATARS.map((image: string) => <Avatar src={image} className={classes.avatar} variant="rounded" />)}
+				{AVATARS.map((image: string) => <Avatar key={image} src={image} className={classes.avatar} variant="rounded" />)}
 			</div>
 		</>
 	)

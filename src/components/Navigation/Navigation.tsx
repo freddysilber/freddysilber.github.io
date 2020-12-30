@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 const renderTabs: () => JSX.Element[] = () => {
 	return NavTabs.map((tab: NavTab) => {
 		return (
-			<Link to={tab.route}>
+			<Link key={tab.route} to={tab.route}>
 				<Tab label={tab.label} />
 			</Link>
 		)
@@ -30,6 +30,7 @@ const renderTabs: () => JSX.Element[] = () => {
 export default function Navigation(): JSX.Element {
 	const classes: Record<string, string> = useStyles()
 	const [value, setValue] = React.useState(0)
+	console.log(value, setValue)
 
 	const handleChange = (event: React.ChangeEvent<{}>, newValue: number): void => {
 		console.log('Navi event!', event)
