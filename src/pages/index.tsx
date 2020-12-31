@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 // Components
-import { Layout, SEO, Image, Bio, Skills } from '../components'
+import { Layout, SEO, Image, Bio } from '../components'
 // Containers
 import { SocialMediaContainer } from '../containers'
 // Utilities
