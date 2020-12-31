@@ -1,8 +1,10 @@
 // If you don't want to use TypeScript you can delete this file!
 import React from 'react'
 import { PageProps, Link, graphql } from 'gatsby'
-
+// Components
 import { Layout, SEO } from '../components'
+// Utilities
+import { Routes } from '../util'
 
 type DataProps = {
   site: {
@@ -18,7 +20,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
     <p>For type checking you'll want to install <em>typescript</em> via npm and run <em>tsc --init</em> to create a <em>.tsconfig</em> file.</p>
     <p>You're currently on the page "{path}" which was built on {data.site.buildTime}.</p>
     <p>To learn more, head over to our <a href="https://www.gatsbyjs.com/docs/typescript/">documentation about TypeScript</a>.</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Link to={Routes.home}>Go back to the homepage</Link>
   </Layout>
 )
 
