@@ -2,12 +2,14 @@ module.exports = {
   siteMetadata: {
     title: `Freddy Silber /// Software Engineer`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@freddysilber`,
+    author: `@freddysilber`
   },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-twitter`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,8 +17,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
