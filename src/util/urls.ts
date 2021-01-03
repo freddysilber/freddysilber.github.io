@@ -1,4 +1,4 @@
-export const urls = {
+export const URLS = {
 	cloudCoach: {
 		name: 'Cloud Coach',
 		url: 'https://cloudcoach.com/'

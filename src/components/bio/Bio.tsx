@@ -2,16 +2,16 @@ import React from 'react'
 import { Box, Paper } from '@material-ui/core'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 // Utilities
-import { urls } from '../../util'
+import { URLS } from '../../util'
 // Styles
 import './index.scss'
 // Anchors/ Site Links
-const cloudcoachurl: () => JSX.Element = () => <a href={urls.cloudCoach.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{urls.cloudCoach.name}</a>
-const fraserUrl: () => JSX.Element = () => <a href={urls.fraser.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.fraser.name}</a>
-const winterParkResortUrl: () => JSX.Element = () => <a href={urls.winterParkResort.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.winterParkResort.name}</a>
-const middleParkHighSchool: () => JSX.Element = () => <a href={urls.middleParkHighSchool.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.middleParkHighSchool.name}</a>
-const salesforceUrl: () => JSX.Element = () => <a href={urls.salesforce.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{urls.salesforce.name}</a>
-const flatironSchoolUrl: () => JSX.Element = () => <a href={urls.flatironSchool.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{urls.flatironSchool.name}</a>
+const cloudcoachurl: () => JSX.Element = () => <a href={URLS.cloudCoach.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{URLS.cloudCoach.name}</a>
+const fraserUrl: () => JSX.Element = () => <a href={URLS.fraser.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.fraser.name}</a>
+const winterParkResortUrl: () => JSX.Element = () => <a href={URLS.winterParkResort.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.winterParkResort.name}</a>
+const middleParkHighSchool: () => JSX.Element = () => <a href={URLS.middleParkHighSchool.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.middleParkHighSchool.name}</a>
+const salesforceUrl: () => JSX.Element = () => <a href={URLS.salesforce.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.salesforce.name}</a>
+const flatironSchoolUrl: () => JSX.Element = () => <a href={URLS.flatironSchool.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{URLS.flatironSchool.name}</a>
 // Styles
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
