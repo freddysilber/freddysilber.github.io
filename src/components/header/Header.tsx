@@ -1,4 +1,5 @@
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React from 'react'
 // Material UI
@@ -10,10 +11,10 @@ import { Routes } from '../../util'
 import './index.scss'
 // Images
 const vintage = require('../../assets/images/vintage.png')
-const horseRide = require('../../assets/images/horseRide.png')
+// const horseRide = require('../../assets/images/horseRide.png')
 const wreath = require('../../assets/images/wreath.png')
 
-const AVATARS: string[] = [vintage, horseRide, wreath]
+const AVATARS: string[] = [vintage, wreath]
 
 const useStyles = makeStyles(() =>
 	createStyles({
@@ -32,6 +33,24 @@ const useStyles = makeStyles(() =>
 	})
 )
 
+const horseRide = graphql`
+	query {
+		file (relativePath: { eq: "horseRide.png" }) {
+			childImageSharp {
+				fixed (height: 500){
+					...GatsbyImageSharpFixed
+				}
+			}
+		}
+	}
+`
+
+function Image(): JSX.Element {
+	// console.log(useStaticQuery(query))
+	const data = useStaticQuery(horseRide)
+	return <Img fixed={data.file.childImageSharp.fixed} alt="Horse Ride" />
+}
+
 export default function Header({ siteTitle }: any) {
 	const classes: Record<string, string> = useStyles()
 
@@ -44,6 +63,7 @@ export default function Header({ siteTitle }: any) {
 					</Link>
 				</h3>
 			</header>
+			<Image />
 			<div className={classes.imagesContainer}>
 				{AVATARS.map((image: string) => <Avatar key={image} src={image} className={classes.avatar} variant="rounded" />)}
 			</div>
