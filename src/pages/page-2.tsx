@@ -9,18 +9,18 @@ import { Routes } from '../util'
 import { useSiteMetadata } from '../hooks'
 
 export default function SecondPage() {
-  const { title } = useSiteMetadata()
+	const { title } = useSiteMetadata()
 
-  return (
-    <Layout>
-      <SEO title="Page two" />
-      <h1>welcome to {title}</h1>
-      <Image />
-      <h1>Hi from the second page</h1>
-      <p>Welcome to page 2</p>
-      <Link to={Routes.home}>Go back to the homepage</Link>
-    </Layout >
-  )
+	return (
+		<Layout>
+			<SEO title="Page two" />
+			<h1>welcome to {title}</h1>
+			<Image />
+			<h1>Hi from the second page</h1>
+			<p>Welcome to page 2</p>
+			<Link to={Routes.home}>Go back to the homepage</Link>
+		</Layout >
+	)
 }
 
 const horseRide = graphql`
@@ -36,6 +36,6 @@ const horseRide = graphql`
 `
 
 function Image() {
-  const data = useStaticQuery(horseRide)
-  return <Img fixed={data.file.childImageSharp.fixed} alt="Horse Ride" />
+	const data = useStaticQuery(horseRide)
+	return <Img fixed={data.file.childImageSharp.fixed} alt="Horse Ride" />
 }
