@@ -10,11 +10,11 @@ import { Routes } from '../../util'
 // Styles
 import './index.scss'
 // Images
-const vintage = require('../../assets/images/vintage.png')
+// const vintage = require('../../assets/images/vintage.png')
 // const horseRide = require('../../assets/images/horseRide.png')
-const wreath = require('../../assets/images/wreath.png')
+// const wreath = require('../../assets/images/wreath.png')
 
-const AVATARS: string[] = [vintage, wreath]
+// const AVATARS: string[] = [wreath]
 
 const useStyles = makeStyles(() =>
 	createStyles({
@@ -37,7 +37,7 @@ const horseRide = graphql`
 	query {
 		file (relativePath: { eq: "horseRide.png" }) {
 			childImageSharp {
-				fixed (height: 500){
+				fixed (height: 500) {
 					...GatsbyImageSharpFixed
 				}
 			}
@@ -45,11 +45,44 @@ const horseRide = graphql`
 	}
 `
 
-function Image(): JSX.Element {
-	// console.log(useStaticQuery(query))
+// const vintage = graphql`
+// 	query {
+// 		file (relativePath: { eq: "vintage.png" }) {
+// 			childImageSharp {
+// 				fixed (height: 500) {
+// 					...GatsbyImageSharpFixed
+// 				}
+// 			}
+// 		}
+// 	}
+// `
+
+// const wreath = graphql`
+// 	query {
+// 		file (relativePath: { eq: "wreath.png" }) {
+// 			childImageSharp {
+// 				fixed (height: 500) {
+// 					...GatsbyImageSharpFixed
+// 				}
+// 			}
+// 		}
+// 	}
+// `
+
+function HorseRide(): JSX.Element {
 	const data = useStaticQuery(horseRide)
 	return <Img fixed={data.file.childImageSharp.fixed} alt="Horse Ride" />
 }
+
+// function Vintage(): JSX.Element {
+// 	const data = useStaticQuery(vintage)
+// 	return <Img fixed={data.file.childImageSharp.fixed} alt="Vintage" />
+// }
+
+// function Wreath(): JSX.Element {
+// 	const data = useStaticQuery(wreath)
+// 	return <Img fixed={data.file.childImageSharp.fixed} alt="Wreath" />
+// }
 
 export default function Header({ siteTitle }: any) {
 	const classes: Record<string, string> = useStyles()
@@ -63,9 +96,11 @@ export default function Header({ siteTitle }: any) {
 					</Link>
 				</h3>
 			</header>
-			<Image />
 			<div className={classes.imagesContainer}>
-				{AVATARS.map((image: string) => <Avatar key={image} src={image} className={classes.avatar} variant="rounded" />)}
+				<HorseRide />
+				{/* <Vintage /> */}
+				{/* <Wreath /> */}
+				{/* {AVATARS.map((image: string) => <Avatar key={image} src={image} className={classes.avatar} variant="rounded" />)} */}
 			</div>
 		</>
 	)
