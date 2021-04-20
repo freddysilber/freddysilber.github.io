@@ -3,8 +3,6 @@ import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import React, { useEffect } from 'react'
 // Material UI
-import { Avatar } from '@material-ui/core'
-import { createStyles, makeStyles } from '@material-ui/core/styles'
 // Utilities
 import { makeRainbow, Routes } from '../../util'
 // Styles
@@ -15,23 +13,6 @@ import './index.scss'
 // const wreath = require('../../assets/images/wreath.png')
 
 // const AVATARS: string[] = [wreath]
-
-const useStyles = makeStyles(() =>
-	createStyles({
-		background: {
-			background: '#666'
-		},
-		avatar: {
-			width: '33%',
-			height: '15rem'
-		},
-		imagesContainer: {
-			display: 'flex',
-			justifyContent: 'center',
-			flexWrap: 'wrap'
-		}
-	})
-)
 
 // const horseRide = graphql`
 // 	query {
@@ -85,7 +66,7 @@ const useStyles = makeStyles(() =>
 // }
 
 export default function Header({ siteTitle }: any) {
-	const classes: Record<string, string> = useStyles()
+	// const classes: Record<string, string> = useStyles()
 	// when this function is called, it will promote the title to have a rainbow pulse effect
 	useEffect(() => {
 		makeRainbow(); // Make the header title have the rainbow animation
@@ -100,12 +81,12 @@ export default function Header({ siteTitle }: any) {
 					</Link>
 				</h1>
 			</header>
-			<div className={classes.imagesContainer}>
+			{/* <div className={classes.imagesContainer}> */}
 				{/* <HorseRide /> */}
 				{/* <Vintage /> */}
 				{/* <Wreath /> */}
 				{/* {AVATARS.map((image: string) => <Avatar key={image} src={image} className={classes.avatar} variant="rounded" />)} */}
-			</div>
+			{/* </div> */}
 		</>
 	)
 }

@@ -1,16 +1,4 @@
 import React from 'react'
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-
-const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		skillsContainer: {
-			display: 'flex',
-			justifyContent: 'space-evenly',
-			marginTop: '.5rem',
-			flexWrap: 'wrap'
-		}
-	}),
-)
 
 const ICONS: string[] = [
 	'devicon-react-original',
@@ -30,11 +18,10 @@ const ICONS: string[] = [
 
 
 export default function Skills(): JSX.Element {
-	const classes: Record<string, string> = useStyles()
 	const renderIcons: () => JSX.Element[] = () => ICONS.map((i: string) => <i key={i} className={i}></i>)
 
 	return (
-		<div className={classes.skillsContainer}>
+		<div style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '.5rem', flexWrap: 'wrap' }}>
 			{renderIcons()}
 		</div>
 	)
