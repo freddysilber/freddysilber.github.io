@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 // Material UI
 import { makeStyles, Paper, Tab, Tabs } from '@material-ui/core'
 // Navigation & Helpers
-import { NavTabs, NavTab } from './'
+import { NavTabs, NavTab } from '.'
 
 const useStyles = makeStyles({
 	root: {
