@@ -71,7 +71,7 @@ export default function Header({ siteTitle }: any) {
 	useEffect(() => {
 		makeRainbow(); // Make the header title have the rainbow animation
 	})
-		
+
 	return (
 		<>
 			<header>
