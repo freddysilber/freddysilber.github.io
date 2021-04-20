@@ -33,17 +33,17 @@ const useStyles = makeStyles(() =>
 	})
 )
 
-const horseRide = graphql`
-	query {
-		file (relativePath: { eq: "horseRide.png" }) {
-			childImageSharp {
-				fixed (height: 500) {
-					...GatsbyImageSharpFixed
-				}
-			}
-		}
-	}
-`
+// const horseRide = graphql`
+// 	query {
+// 		file (relativePath: { eq: "horseRide.png" }) {
+// 			childImageSharp {
+// 				fixed (height: 500) {
+// 					...GatsbyImageSharpFixed
+// 				}
+// 			}
+// 		}
+// 	}
+// `
 
 // const vintage = graphql`
 // 	query {
@@ -69,10 +69,10 @@ const horseRide = graphql`
 // 	}
 // `
 
-function HorseRide(): JSX.Element {
-	const data = useStaticQuery(horseRide)
-	return <Img fixed={data.file.childImageSharp.fixed} alt="Horse Ride" />
-}
+// function HorseRide(): JSX.Element {
+// 	const data = useStaticQuery(horseRide)
+// 	return <Img fixed={data.file.childImageSharp.fixed} alt="Horse Ride" />
+// }
 
 // function Vintage(): JSX.Element {
 // 	const data = useStaticQuery(vintage)
@@ -97,7 +97,7 @@ export default function Header({ siteTitle }: any) {
 				</h3>
 			</header>
 			<div className={classes.imagesContainer}>
-				<HorseRide />
+				{/* <HorseRide /> */}
 				{/* <Vintage /> */}
 				{/* <Wreath /> */}
 				{/* {AVATARS.map((image: string) => <Avatar key={image} src={image} className={classes.avatar} variant="rounded" />)} */}
