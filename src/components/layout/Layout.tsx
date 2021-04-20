@@ -29,12 +29,10 @@ const Layout = ({ children }: any) => {
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<Skills />
 			<Navigation />
-			<div style={{ margin: `0 auto`, padding: `0 1.0875rem 1.45rem` }}>
+			<div style={{ margin: `0 auto`, padding: `0 1rem 1.5rem` }}>
 				<main>{children}</main>
-				<footer style={{ marginTop: `2rem` }}>
-					© {new Date().getFullYear()}, Built with
-          {` `}
-					<a href='https://www.gatsbyjs.com'>Gatsby</a>
+				<footer>
+					<p>Made with ❤️ by yours truly. -Freddy</p>
 				</footer>
 			</div>
 		</>
