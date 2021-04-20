@@ -1,12 +1,12 @@
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { useEffect } from 'react'
 // Material UI
 import { Avatar } from '@material-ui/core'
 import { createStyles, makeStyles } from '@material-ui/core/styles'
 // Utilities
-import { Routes } from '../../util'
+import { makeRainbow, Routes } from '../../util'
 // Styles
 import './index.scss'
 // Images
@@ -86,15 +86,19 @@ const useStyles = makeStyles(() =>
 
 export default function Header({ siteTitle }: any) {
 	const classes: Record<string, string> = useStyles()
-
+	// when this function is called, it will promote the title to have a rainbow pulse effect
+	useEffect(() => {
+		makeRainbow(); // Make the header title have the rainbow animation
+	})
+		
 	return (
 		<>
 			<header>
-				<h3>
+				<h1 style={{ padding: '1rem' }}>
 					<Link to={Routes.home} className='header'>
 						{siteTitle}
 					</Link>
-				</h3>
+				</h1>
 			</header>
 			<div className={classes.imagesContainer}>
 				{/* <HorseRide /> */}

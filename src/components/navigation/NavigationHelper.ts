@@ -2,8 +2,8 @@
 import { Routes } from '../../util'
 
 export interface NavTab {
-	label: string,
-	route: string
+	label: string;
+	route: string;
 }
 
 export const NavTabs: NavTab[] = [
