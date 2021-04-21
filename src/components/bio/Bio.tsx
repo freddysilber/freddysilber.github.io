@@ -4,12 +4,12 @@ import { URLS } from '../../util'
 // Styles
 import './index.scss'
 // Anchors/ Site Links
-const cloudcoachurl: () => JSX.Element = () => <a href={URLS.cloudCoach.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{URLS.cloudCoach.name}</a>
-const fraserUrl: () => JSX.Element = () => <a href={URLS.fraser.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.fraser.name}</a>
-const winterParkResortUrl: () => JSX.Element = () => <a href={URLS.winterParkResort.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.winterParkResort.name}</a>
-const middleParkHighSchool: () => JSX.Element = () => <a href={URLS.middleParkHighSchool.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.middleParkHighSchool.name}</a>
-const salesforceUrl: () => JSX.Element = () => <a href={URLS.salesforce.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.salesforce.name}</a>
-const flatironSchoolUrl: () => JSX.Element = () => <a href={URLS.flatironSchool.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{URLS.flatironSchool.name}</a>
+const cloudcoachurl = () => <a href={URLS.cloudCoach.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{URLS.cloudCoach.name}</a>
+const fraserUrl = () => <a href={URLS.fraser.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.fraser.name}</a>
+const winterParkResortUrl = () => <a href={URLS.winterParkResort.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.winterParkResort.name}</a>
+const middleParkHighSchool = () => <a href={URLS.middleParkHighSchool.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.middleParkHighSchool.name}</a>
+const salesforceUrl = () => <a href={URLS.salesforce.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.salesforce.name}</a>
+const flatironSchoolUrl = () => <a href={URLS.flatironSchool.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{URLS.flatironSchool.name}</a>
 
 export default function Bio(): JSX.Element {
 	return (
