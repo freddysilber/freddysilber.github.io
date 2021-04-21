@@ -2,8 +2,9 @@
 	font-family: 'Grizzly';
 	src: local('Grizzly'), url(../../assets/fonts/Grizzly.ttf) format('truetype')
 }
-h3 {
-	padding: .5rem 0 .5rem 0 !important;
+h1 {
+	padding: .5rem 0 .5rem .5 !important;
+	font-size: 2em !important;
 	// margin: 0 !important;
 }
 a.header {

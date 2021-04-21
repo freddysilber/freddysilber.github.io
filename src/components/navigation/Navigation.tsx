@@ -1,33 +1,32 @@
 import React from 'react'
 // Router
 import { Link } from 'gatsby'
-// Navigation & Helpers
-import { NavTabs, NavTab } from '.'
+import { Routes } from '../../util'
 
 export default function Navigation(): JSX.Element {
-	const [value, setValue] = React.useState(0)
-
-	const handleChange = (event: React.ChangeEvent<{}>, newValue: number): void => {
-		setValue(newValue)
-	}
-
-	// const renderTabs: () => JSX.Element[] = () => {
-	// 	return NavTabs.map((tab: NavTab) => {
-	// 		return <Tab key={tab.route} label={tab.label} component={Link} to={tab.route} />
-	// 		// return (
-	// 		// 	<Link to={tab.route}>
-	// 		// 		<Tab key={tab.route} label={tab.label} />
-	// 		// 	</Link>
-	// 		// )
-	// 	})
-	// }
-
 	return (
-		<p>Make Nav tabs</p>
-		// <Paper className={classes.root}>
-		// 	<Tabs value={value} onChange={handleChange} indicatorColor="primary" textColor="primary" centered>
-		// 		{renderTabs()}
-		// 	</Tabs>
-		// </Paper>
+		<>
+			<nav className="navbar" role="navigation" aria-label="main navigation">
+				<div className="navbar-menu">
+					<div className="navbar-start">
+						<Link className="navbar-item" to={Routes.home}>Home</Link>
+						<Link className="navbar-item" to="/404">Blog</Link>
+					</div>
+					<div className="navbar-end">
+						<div className="navbar-item has-dropdown is-hoverable">
+							<a className="navbar-link">More</a>
+							<div className="navbar-dropdown is-right">
+								<a className="navbar-item">About</a>
+								<a className="navbar-item">Jobs</a>
+								<a className="navbar-item">Contact</a>
+								<hr className="navbar-divider" />
+								<a className="navbar-item">Report an issue</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<hr className="navbar-divider" />
+		</>
 	)
 }

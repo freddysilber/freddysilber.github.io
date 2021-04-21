@@ -6,6 +6,8 @@ import { Layout, SEO, Image, Bio } from '../components'
 import { SocialMediaContainer } from '../containers'
 // Utilities
 import { Routes } from '../util'
+// Styles
+import '../scss/index.scss'
 
 const IndexPage = () => (
 	<Layout>
@@ -13,6 +15,7 @@ const IndexPage = () => (
 		<br />
 		<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
 			<Image />
+			<button className="button is-dark">Dark</button>
 		</div>
 		<Bio />
 		<Link to={Routes.page2}>Go to page 2</Link>

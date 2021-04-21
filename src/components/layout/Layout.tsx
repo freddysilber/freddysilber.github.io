@@ -29,9 +29,9 @@ const Layout = ({ children }: any) => {
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<Skills />
 			<Navigation />
-			<div style={{ margin: `0 auto`, padding: `0 1rem 1.5rem` }}>
+			<div className="body">
 				<main>{children}</main>
-				<footer>
+				<footer className="has-text-centered">
 					<p>Made with ❤️ by yours truly. -Freddy</p>
 				</footer>
 			</div>
