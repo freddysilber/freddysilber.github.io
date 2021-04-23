@@ -1,6 +1,6 @@
-export function makeRainbow() {
+export function rainbowText() {
 	let angle = 0
-	const p: HTMLParagraphElement = document.querySelector('.header')
+	const p: HTMLParagraphElement | null = document.querySelector('.header')
 	const text = p.textContent.split('')
 	const len = text.length
 	const phaseJump = 360 / len
