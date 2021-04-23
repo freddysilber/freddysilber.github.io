@@ -6,19 +6,21 @@
 }
 
 header {
-	// background-color: #666;
-	background-color: $dark;
-
 	h1.titleText {
 		padding: 0 0 0 1rem;
 		font-size: 2em;
 		letter-spacing: 3px;
 		
 		a.header {
-			color: #bba3eb;
+			color: $purple;
 			text-decoration: none;
 			font-family: 'Grizzly';
 			font-weight: lighter;
+			transition: all .5s ease;
+
+			&:hover {
+				color: $warning;
+			}
 		}
 	}
 }

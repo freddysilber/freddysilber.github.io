@@ -9,9 +9,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 // Components
-import { Header, Navigation, Skills } from '..'
+import { Header, Navigation } from '..'
 // Styles
-import './index.scss'
+import './layout.scss'
 
 const Layout = ({ children }: any) => {
 	const data = useStaticQuery(graphql`
@@ -27,7 +27,6 @@ const Layout = ({ children }: any) => {
 		<>
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<Navigation />
-			<Skills />
 			<div className="body">
 				<main>{children}</main>
 				<footer className="has-text-centered">

@@ -6,7 +6,7 @@ import React, { useEffect } from 'react'
 // Utilities
 import { makeRainbow, Routes } from '../../util'
 // Styles
-import './index.scss'
+import './header.scss'
 // Images
 // const vintage = require('../../assets/images/vintage.png')
 // const horseRide = require('../../assets/images/horseRide.png')

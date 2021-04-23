@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 // Components
-import { Layout, SEO, Image, Bio } from '../components'
+import { Layout, SEO, Image, Bio, Skills } from '../components'
 // Containers
 import { SocialMediaContainer } from '../containers'
 // Utilities
@@ -12,6 +12,7 @@ import '../scss/index.scss'
 const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
+		<Skills />
 		<br />
 		<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
 			<Image />
