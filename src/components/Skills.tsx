@@ -18,10 +18,18 @@ const ICONS: string[] = [
 
 
 export default function Skills(): JSX.Element {
-	const renderIcons: () => JSX.Element[] = () => ICONS.map((i: string) => <i key={i} className={i}></i>)
+	const renderIcons = () => (
+		ICONS.map((i: string) => (
+			<i key={i} className={i} style={{ fontSize: '1.5rem' }}></i>)
+		)
+	)
 
 	return (
-		<div style={{ display: 'flex', justifyContent: 'space-evenly', marginTop: '.5rem', flexWrap: 'wrap' }}>
+		<div style={{
+			display: 'flex',
+			justifyContent: 'space-evenly',
+			flexWrap: 'wrap'
+		}}>
 			{renderIcons()}
 		</div>
 	)

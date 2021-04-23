@@ -68,14 +68,14 @@ import './index.scss'
 export default function Header({ siteTitle }: any) {
 	// const classes: Record<string, string> = useStyles()
 	// when this function is called, it will promote the title to have a rainbow pulse effect
-	useEffect(() => {
-		makeRainbow(); // Make the header title have the rainbow animation
-	})
+	// useEffect(() => {
+	// 	makeRainbow(); // Make the header title have the rainbow animation
+	// })
 
 	return (
 		<>
 			<header>
-				<h1 style={{ padding: '1rem', letterSpacing: '3px' }}>
+				<h1 className="titleText">
 					<Link to={Routes.home} className='header'>
 						{siteTitle}
 					</Link>

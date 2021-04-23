@@ -1,21 +1,28 @@
+@import '../../scss/index.scss';
+
 @font-face {
 	font-family: 'Grizzly';
 	src: local('Grizzly'), url(../../assets/fonts/Grizzly.ttf) format('truetype')
 }
-h1 {
-	padding: .5rem 0 .5rem .5 !important;
-	font-size: 2em !important;
-	// margin: 0 !important;
-}
-a.header {
-	color: white;
-	text-decoration: none;
-	font-family: 'Grizzly';
-	font-weight: lighter;
-}
+
 header {
-	background-color: #666;
+	// background-color: #666;
+	background-color: $dark;
+
+	h1.titleText {
+		padding: 0 0 0 1rem;
+		font-size: 2em;
+		letter-spacing: 3px;
+		
+		a.header {
+			color: #bba3eb;
+			text-decoration: none;
+			font-family: 'Grizzly';
+			font-weight: lighter;
+		}
+	}
 }
+
 img {
 	margin: 0;
 }
