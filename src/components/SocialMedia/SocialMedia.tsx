@@ -1,30 +1,12 @@
 import React from 'react'
 // Utilities
-import { URLS } from '../util'
+import { URLS } from '../../util'
+// Styles
+import './socialMedia.scss'
 
-// const useStyles = makeStyles((theme: Theme) =>
-// 	createStyles({
-// 		container: {
-// 			background: '#666'
-// 		},
-// 		socialContainer: {
-// 			display: 'flex',
-// 			justifyContent: 'space-evenly',
-// 			alignItems: 'center'
-// 		},
-// 		anchor: {
-// 			textDecoration: 'none',
-// 			color: 'black'
-// 		},
-// 		icon: {
-// 			fontSize: '3em'
-// 		}
-// 	})
-// )
-
-export default function SocialMediaContainer(): JSX.Element {
+export default function SocialMedia(): JSX.Element {
 	return (
-		<div>
+		<div className="container">
 			<a href={URLS.github.url} target='_blank' rel='noopener noreferrer'>
 				<i className={`devicon-github-original `}></i>
 			</a>

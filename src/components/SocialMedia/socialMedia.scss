@@ -1,0 +1,17 @@
+@import '../../scss/index.scss';
+
+div.container {
+	display: flex;
+	justify-content: space-evenly;
+
+	a {
+		i {
+			font-size: 1.5rem;
+			transition: all .5s ease;
+
+			&:hover {
+				color: $purple;
+			}
+		}
+	}
+}

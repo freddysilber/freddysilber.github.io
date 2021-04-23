@@ -4,5 +4,6 @@ export { default as Bio } from './Bio/Bio'
 export { default as Skills } from './Skills'
 export { default as Image } from './Image'
 export { default as SEO } from './Seo'
+export { default as SocialMedia } from './SocialMedia/SocialMedia'
 
 export { Navigation } from './Navigation'
