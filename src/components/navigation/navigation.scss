@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Empire';
+	src: local('Empire'), url(../../assets/fonts/Empire.otf) format('truetype')
+}
+
+a {
+	font-family: 'Empire';
+	letter-spacing: 3px;
+}

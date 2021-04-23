@@ -2,6 +2,8 @@ import React from 'react'
 // Router
 import { Link } from 'gatsby'
 import { Routes } from '../../util'
+// Styles
+import './navigation.scss'
 
 export default function Navigation(): JSX.Element {
 	return (
