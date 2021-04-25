@@ -1,4 +1,6 @@
 import React from 'react'
+// Styles
+import './skills.scss'
 
 const ICONS: string[] = [
 	'devicon-react-original',
@@ -25,11 +27,7 @@ export default function Skills(): JSX.Element {
 	)
 
 	return (
-		<div style={{
-			display: 'flex',
-			justifyContent: 'space-between',
-			flexWrap: 'wrap',
-		}}>
+		<div className="skillsContainer">
 			{renderIcons()}
 		</div>
 	)
