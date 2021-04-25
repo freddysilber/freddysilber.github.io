@@ -29,9 +29,9 @@ const Layout = ({ children }: any) => {
 			<Navigation />
 			<div className="body">
 				<main>{children}</main>
-				<footer className="has-text-centered">
+				{/* <footer className="has-text-centered">
 					<p>Made with ❤️ by yours truly. -Freddy</p>
-				</footer>
+				</footer> */}
 			</div>
 		</>
 	)
