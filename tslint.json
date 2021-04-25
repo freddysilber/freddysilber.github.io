@@ -6,11 +6,7 @@
 		"deprecation": {
 			"severity": "warn"
 		},
-		"import-blacklist": [
-			true,
-			"rxjs/Rx"
-		],
-		"interface-name": false,
+		"interface-name": true,
 		"max-classes-per-file": false,
 		"member-access": false,
 		"member-ordering": [

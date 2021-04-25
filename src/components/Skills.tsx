@@ -27,8 +27,9 @@ export default function Skills(): JSX.Element {
 	return (
 		<div style={{
 			display: 'flex',
-			justifyContent: 'space-evenly',
-			flexWrap: 'wrap'
+			justifyContent: 'space-between',
+			flexWrap: 'wrap',
+			width: '50%'
 		}}>
 			{renderIcons()}
 		</div>
