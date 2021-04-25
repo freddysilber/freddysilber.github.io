@@ -18,10 +18,9 @@ const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
 		<Skills />
-		<br />
+		{/* <br /> */}
 		<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
 			<Image />
-			<button className="button is-dark">Dark</button>
 		</div>
 		<Bio />
 		<Link to={Routes.page2}>Go to page 2</Link>
