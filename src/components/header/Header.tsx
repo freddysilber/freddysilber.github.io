@@ -1,93 +1,21 @@
-import { Link, graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import React, { useEffect } from 'react'
+import React from 'react'
 // Material UI
 // Utilities
-import { makeRainbow, Routes } from '../../util'
+import { Routes } from '../../util'
 // Styles
 import './header.scss'
-// Images
-// const vintage = require('../../assets/images/vintage.png')
-// const horseRide = require('../../assets/images/horseRide.png')
-// const wreath = require('../../assets/images/wreath.png')
-
-// const AVATARS: string[] = [wreath]
-
-// const horseRide = graphql`
-// 	query {
-// 		file (relativePath: { eq: "horseRide.png" }) {
-// 			childImageSharp {
-// 				fixed (height: 500) {
-// 					...GatsbyImageSharpFixed
-// 				}
-// 			}
-// 		}
-// 	}
-// `
-
-// const vintage = graphql`
-// 	query {
-// 		file (relativePath: { eq: "vintage.png" }) {
-// 			childImageSharp {
-// 				fixed (height: 500) {
-// 					...GatsbyImageSharpFixed
-// 				}
-// 			}
-// 		}
-// 	}
-// `
-
-// const wreath = graphql`
-// 	query {
-// 		file (relativePath: { eq: "wreath.png" }) {
-// 			childImageSharp {
-// 				fixed (height: 500) {
-// 					...GatsbyImageSharpFixed
-// 				}
-// 			}
-// 		}
-// 	}
-// `
-
-// function HorseRide(): JSX.Element {
-// 	const data = useStaticQuery(horseRide)
-// 	return <Img fixed={data.file.childImageSharp.fixed} alt="Horse Ride" />
-// }
-
-// function Vintage(): JSX.Element {
-// 	const data = useStaticQuery(vintage)
-// 	return <Img fixed={data.file.childImageSharp.fixed} alt="Vintage" />
-// }
-
-// function Wreath(): JSX.Element {
-// 	const data = useStaticQuery(wreath)
-// 	return <Img fixed={data.file.childImageSharp.fixed} alt="Wreath" />
-// }
 
 export default function Header({ siteTitle }: any) {
-	// const classes: Record<string, string> = useStyles()
-	// when this function is called, it will promote the title to have a rainbow pulse effect
-	// useEffect(() => {
-	// 	makeRainbow(); // Make the header title have the rainbow animation
-	// })
-
 	return (
-		<>
-			<header>
-				<h1 className="titleText">
-					<Link to={Routes.home} className='header'>
-						{siteTitle}
-					</Link>
-				</h1>
-			</header>
-			{/* <div className={classes.imagesContainer}> */}
-				{/* <HorseRide /> */}
-				{/* <Vintage /> */}
-				{/* <Wreath /> */}
-				{/* {AVATARS.map((image: string) => <Avatar key={image} src={image} className={classes.avatar} variant="rounded" />)} */}
-			{/* </div> */}
-		</>
+		<header>
+			<h1 className="titleText">
+				<Link to={Routes.home} className='header'>
+					{siteTitle}
+				</Link>
+			</h1>
+		</header>
 	)
 }
 

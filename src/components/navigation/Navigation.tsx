@@ -12,7 +12,7 @@ export default function Navigation(): JSX.Element {
 				<div className="navbar-menu">
 					<div className="navbar-start">
 						<Link className="navbar-item" to={Routes.home} activeClassName="active">Home</Link>
-						<Link className="navbar-item" to="/404">Blog</Link>
+						<Link className="navbar-item" to="/404" activeClassName="active">Blog</Link>
 					</div>
 					{/* <div className="navbar-end">
 						<div className="navbar-item has-dropdown is-hoverable">

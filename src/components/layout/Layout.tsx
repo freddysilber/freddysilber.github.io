@@ -25,9 +25,9 @@ const Layout = ({ children }: any) => {
   `)
 	return (
 		<>
-			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-			<Navigation />
 			<div className="body">
+				<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+				<Navigation />
 				<main>{children}</main>
 				{/* <footer className="has-text-centered">
 					<p>Made with ❤️ by yours truly. -Freddy</p>

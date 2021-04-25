@@ -17,7 +17,7 @@ import '../scss/global.scss'
 
 const mainStyles = {
 	display: 'flex',
-	margin: '1rem 0 1rem 0'
+	// margin: '1rem 0 1rem 0'
 }
 
 const IndexPage = () => (
