@@ -1,9 +1,26 @@
+@import '../../scss/global.scss';
+
 @font-face {
 	font-family: 'Empire';
 	src: local('Empire'), url(../../assets/fonts/Empire.otf) format('truetype')
 }
 
-a {
-	font-family: 'Empire';
-	letter-spacing: 3px;
+nav {
+	a {
+		font-family: 'Empire';
+		letter-spacing: 3px;
+		font-size: 1.5em;
+		border-radius: 10px;
+		border: 1px solid transparent;
+		transition: all .2s ease;
+		margin: 0 .25rem 0 .25rem;
+
+		&:hover {
+			border: 1px solid $purple;
+		}
+	}
+
+	.active {
+		border: 1px solid $purple;
+	}
 }

@@ -6,7 +6,7 @@
 		"deprecation": {
 			"severity": "warn"
 		},
-		"interface-name": true,
+		"interface-name": false,
 		"max-classes-per-file": false,
 		"member-access": false,
 		"member-ordering": [

@@ -11,7 +11,7 @@ export default function Navigation(): JSX.Element {
 			<nav className="navbar is-dark" role="navigation" aria-label="main navigation">
 				<div className="navbar-menu">
 					<div className="navbar-start">
-						<Link className="navbar-item" to={Routes.home}>Home</Link>
+						<Link className="navbar-item" to={Routes.home} activeClassName="active">Home</Link>
 						<Link className="navbar-item" to="/404">Blog</Link>
 					</div>
 					{/* <div className="navbar-end">

@@ -1,17 +1,23 @@
-@import '../../scss/index.scss';
+@import '../../scss/global.scss';
 
 div.container {
 	display: flex;
 	justify-content: space-evenly;
 
 	a {
+		transition: all .5s ease;
 		i {
+			color: $info;
 			font-size: 1.5rem;
 			transition: all .5s ease;
 
 			&:hover {
 				color: $purple;
 			}
+		}
+
+		&:hover {
+			transform: scale(1.5);
 		}
 	}
 }
