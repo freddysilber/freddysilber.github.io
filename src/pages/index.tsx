@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
 // Components
 import {
@@ -18,12 +17,9 @@ import './scss/index.scss'
 const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
-		<Skills />
-		{/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-			<Image />
-		</div> */}
 		<section className="firstSection">
 			<StaticImage className="horseRide" src="../assets/images/wreath.png" alt="Horse Ride" />
+			<Skills />
 			<Bio />
 		</section>
 

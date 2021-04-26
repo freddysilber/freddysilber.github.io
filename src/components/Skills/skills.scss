@@ -1,10 +1,9 @@
 @import '../../scss/mixins.scss';
 
 div.skillsContainer {
-	@include flex-container-horizontal();
+	@include flex-container-vertical();
 	justify-content: space-between;
-	flex-wrap: wrap;
-	margin: .5rem 0 .5rem 0;
+	margin: 0 .5rem 0 .5rem;
 
 	i {
 		font-size: 1.5em;
