@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: `/freddysilber.com`,
   siteMetadata: {
     title: `Freddy Silber`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `My Personal Website description goes here. YOU SHOULD CHANGE THIS TO SOMETHING ELSE... and/ or add more metadata to this object!`,
     author: `@freddysilber`
   },
   plugins: [

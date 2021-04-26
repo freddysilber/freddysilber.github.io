@@ -3,7 +3,7 @@
 section.firstSection {
 	@include flex-container-horizontal();
 
-	.horseRide {
+	.avatar {
 		border-radius: 10px;
 		// This might need to be changed cause it seems hella ghetto
 		width: 200rem;

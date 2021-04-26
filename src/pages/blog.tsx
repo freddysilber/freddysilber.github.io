@@ -1,40 +1,29 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 // Components
 import { Layout, SEO } from '../components'
-// Utilities
-import { Routes } from '../util'
 // Hooks
-import { useSiteMetadata } from '../hooks'
+// import { useSiteMetadata } from '../hooks'
+import { StaticImage } from "gatsby-plugin-image"
+// Styles
+import './scss/blog.scss'
 
 export default function SecondPage() {
-	const { title } = useSiteMetadata()
+	// const { title } = useSiteMetadata()
 
 	return (
 		<Layout>
 			<SEO title="Blog" />
-			<h1>welcome to {title}</h1>
+			{/* <h1>welcome to {title}</h1> */}
+			<h1>Welcome to my blog!</h1>
+			<p>You wont see much because it's still in being created, stay tuned!</p>
 			<Image />
-			<p>Welcome to my blog!</p>
-			<Link to={Routes.home}>Go back to the homepage</Link>
 		</Layout >
 	)
 }
 
-const horseRide = graphql`
-	query {
-		file(relativePath: { eq: "horseRide.png" }) {
-			childImageSharp {
-				fixed {
-					...GatsbyImageSharpFixed
-				}
-			}
-		}
-	}
-`
 
 function Image() {
-	const data = useStaticQuery(horseRide)
-	return <Img fixed={data.file.childImageSharp.fixed} alt="Horse Ride" />
+	return (
+		<StaticImage className="horseRide" src="../assets/images/horseRide.png" alt="Horse Ride" />
+	)
 }

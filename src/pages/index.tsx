@@ -18,7 +18,7 @@ const IndexPage = () => (
 	<Layout>
 		<SEO title="Home" />
 		<section className="firstSection">
-			<StaticImage className="horseRide" src="../assets/images/wreath.png" alt="Horse Ride" />
+			<StaticImage className="avatar" src="../assets/images/wreath.png" alt="Avatar" />
 			<Skills />
 			<Bio />
 		</section>
