@@ -1,0 +1,12 @@
+@import '../../scss/mixins.scss';
+
+section.firstSection {
+	@include flex-container-horizontal();
+
+	.horseRide {
+		border-radius: 10px;
+		margin-right: .5rem;
+		// This might need to be changed cause it seems hella ghetto
+		width: 200rem;
+	}
+}

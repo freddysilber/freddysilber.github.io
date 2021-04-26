@@ -1,3 +1,5 @@
+@import '../../scss/global.scss';
+
 @font-face {
 	font-family: 'Drama Sans';
 	src: url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.eot'); /* IE9 Compat Modes */
@@ -8,7 +10,12 @@
 }
 p {
 	font-family: 'DramaSans';
-}
-a {
-	color: black;
+
+	a {
+		color: $purple;
+
+		&:hover {
+			color: $red
+		}
+	}
 }

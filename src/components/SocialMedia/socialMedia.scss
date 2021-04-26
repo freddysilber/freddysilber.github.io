@@ -3,13 +3,13 @@
 div.container {
 	display: flex;
 	justify-content: space-evenly;
-	margin-top: .5rem;
+	margin-top: 1rem;
 
 	a {
 		transition: all .5s ease;
 		i {
 			color: $info;
-			font-size: 1.5rem;
+			font-size: 2rem;
 			transition: all .5s ease;
 
 			&:hover {

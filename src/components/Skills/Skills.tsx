@@ -19,16 +19,10 @@ const ICONS: string[] = [
 ]
 
 
-export default function Skills(): JSX.Element {
-	const renderIcons = () => (
-		ICONS.map((i: string) => (
-			<i key={i} className={i} style={{ fontSize: '1.5rem' }}></i>)
-		)
-	)
-
+export default function Skills() {
 	return (
 		<div className="skillsContainer">
-			{renderIcons()}
+			{ICONS.map((i: string) => <i key={i} className={i}></i>)}
 		</div>
 	)
 }

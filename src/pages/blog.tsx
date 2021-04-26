@@ -13,11 +13,10 @@ export default function SecondPage() {
 
 	return (
 		<Layout>
-			<SEO title="Page two" />
+			<SEO title="Blog" />
 			<h1>welcome to {title}</h1>
 			<Image />
-			<h1>Hi from the second page</h1>
-			<p>Welcome to page 2</p>
+			<p>Welcome to my blog!</p>
 			<Link to={Routes.home}>Go back to the homepage</Link>
 		</Layout >
 	)

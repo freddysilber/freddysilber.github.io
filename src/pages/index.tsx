@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import {
 	Layout,
 	SEO,
-	Image,
+	// Image,
 	Bio,
 	Skills,
 	SocialMedia
@@ -13,12 +13,7 @@ import {
 // Utilities
 // import { Routes } from '../util'
 // Styles
-import '../scss/global.scss'
-
-const mainStyles = {
-	display: 'flex',
-	// margin: '1rem 0 1rem 0'
-}
+import './scss/index.scss'
 
 const IndexPage = () => (
 	<Layout>
@@ -27,10 +22,10 @@ const IndexPage = () => (
 		{/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
 			<Image />
 		</div> */}
-		<div style={mainStyles}>
-			<StaticImage style={{}} src="../assets/images/horseRide.png" alt="Horse Ride" />
+		<section className="firstSection">
+			<StaticImage className="horseRide" src="../assets/images/wreath.png" alt="Horse Ride" />
 			<Bio />
-		</div>
+		</section>
 
 		{/* <Link to={Routes.page2}>Go to page 2</Link>
 		<br />
