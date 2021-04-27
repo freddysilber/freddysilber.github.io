@@ -25,16 +25,19 @@ export default function Bio(): JSX.Element {
 				I graduated {middleParkHighSchool()} in Granby Colorado and during school, I would often find myself nerding out in our computer lab with some of my friends.
 				We would do all kinds of things like creating claymation films, 3D printing, programming 3D printers, video games, and our attemps to hack other computer programs.
 			</p>
+			<br />
 			<p>
 				Shortly after I graduated high school, I landed a job with a company called {cloudcoachurl()} and started learning basic programming skills on the {salesforceUrl()}.com CRM platform.
-				Now I am a developer for Cloud Coach and spend my time assisting our clients with custom UI's, automation, database triggers, and implementations as well as manage a few component libraries,
-				optimize code, maintain consistant data, and invent my own workflows, apps etc.
+				Now I am a junior developer for Cloud Coach implementing new features and tools for our product.
 			</p>
 			<br />
 			<p>
 				I have recently graduated from {flatironSchoolUrl()} for the Full Stack Software Engineering curriculum. During this course, I have practiced skills
 				within the entire stack of a web application. I learned many languages, some of witch are Ruby, Ruby on Rails, Javascript, React, Redux, Angular, Node and many more as well as
 				building multiple projects to add to my portfolio!
+			</p>
+			<br />
+			<p>
 				Asside from programming all the time, I enjoy playing electric guitar, cook, play with my cat, skateboard, snowboard, bmx bike, mountain bike, fish, hike, camp and much much more... oh, and keep learning!
 			</p>
 		</div >
