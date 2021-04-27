@@ -1,11 +1,15 @@
 @import '../../scss/global.scss';
 
-p {
-	a {
-		color: $purple;
-
-		&:hover {
-			color: $red
+div {
+	color: $grey-lighter;
+	
+	p {
+		a {
+			color: $purple;
+			
+			&:hover {
+				color: $red
+			}
 		}
 	}
 }

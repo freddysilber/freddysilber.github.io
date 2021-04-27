@@ -14,8 +14,7 @@ export default function SecondPage() {
 		<Layout>
 			<SEO title="Blog" />
 			{/* <h1>welcome to {title}</h1> */}
-			<h1>Welcome to my blog!</h1>
-			<p>You wont see much because it's still in being created, stay tuned!</p>
+			<h1>Coming soon... so heres another picture</h1>
 			<Image />
 		</Layout >
 	)

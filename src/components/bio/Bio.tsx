@@ -14,7 +14,7 @@ const flatironSchoolUrl = () => <a href={URLS.flatironSchool.url} target="_blank
 export default function Bio(): JSX.Element {
 	return (
 		<div>
-			<p className="has-text-grey-lighter">
+			<p>
 				Hi, I'm Freddy and I'm a software engineer/ full stack web developer.
 				I grew up in a small mountain town called {fraserUrl()} in the state of Colorado.
 				I'm a snowboarder but that doesn't pay the bills so now I'm a developer.
