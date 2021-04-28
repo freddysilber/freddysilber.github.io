@@ -1,0 +1,11 @@
+@import '../../scss/global.scss';
+
+section.resumeContainer {
+	display: flex;
+	justify-content: center;
+	
+	iframe {
+		border-radius: 10px;
+		border: 2px solid $purple;
+	}
+}
