@@ -1,0 +1,32 @@
+@import '../../scss/global.scss';
+
+div.container {
+	display: flex;
+	justify-content: center;
+
+	div.resumeContainer {
+		width: 90%;
+		border: 1px solid $white-ter;
+		border-radius: 10px;
+		padding: 1%;
+		color: $white-ter;
+		background-color: $dark;
+
+		h1.titleName {
+			font-weight: bold;
+		}
+
+		hr {
+			margin: 0;
+			height: 1px;
+		}
+
+		.centerText {
+			text-align: center;
+		}
+
+		.marginTop {
+			margin-top: 1rem;
+		}
+	}
+}

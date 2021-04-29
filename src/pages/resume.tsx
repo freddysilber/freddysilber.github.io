@@ -1,6 +1,7 @@
 import React from 'react'
 import {
 	Layout,
+	Resume,
 	SEO,
 } from '../components'
 import './scss/resume.scss'
@@ -18,6 +19,7 @@ export default function ResumePage() {
 	return (
 		<Layout>
 			<SEO title="Resume" />
+			<Resume />
 			{/* <button className="button is-primary is-light" onClick={downloadResume}>Download</button> */}
 			<section className="resumeContainer">
 				<iframe width="1000" height="1000" src={resumeUrl}></iframe>
