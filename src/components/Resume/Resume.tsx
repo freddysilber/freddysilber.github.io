@@ -28,20 +28,71 @@ export default function Resume() {
 				<h1 className="centerText marginTop bold">Technical Projects</h1>
 				<hr />
 				<p>
-					<span style={{ fontWeight: 'bold' }}>React Redux Portfolio Project / Portfolio Site - Github | Demo</span>
+					<span>React Redux Portfolio Project / Portfolio Site - Github | Demo</span>
 					<br />
 					Portfolio website/ web application to learn about my background and projects
 					<ol>
-						<li>
-							Utilized React components and React router to create a multi-tab single page application to teach viewers about me
-						</li>
-						<li>
-							Implemented a Rails API backend to persist data in a database from user input and information gathering
-						</li>
-						<li>
-							Amplified the UI with React-bootstrap to brand with consistent styling and create a friendly user experience
-						</li>
+						<li>Utilized React components and React router to create a multi-tab single page application to teach viewers about me</li>
+						<li>Implemented a Rails API backend to persist data in a database from user input and information gathering</li>
+						<li>Amplified the UI with React-bootstrap to brand with consistent styling and create a friendly user experience</li>
 					</ol>
+				</p>
+				<p>
+					<span>Rails Address Book - Github | Demo</span>
+					<br />
+					Web application for account and project management using an an address book with personal contacts for clients
+					<ol>
+						<li>Programmed a 3rd party login system using OAuth in Ruby to allow users to login via Github</li>
+						<li>Produced a UI from scratch where users can manage personal or professional contacts and accounts</li>
+						<li>Incorporated the ability to relate multiple records using Active Record associations so user data can be organized</li>
+						<li>Designed a Sqlite3 database schema and coded all the database logic for multiple models and relationships</li>
+						<li>Interacted with my Rails API taking advantage of all CRUD requirements across all models in my database</li>
+					</ol>
+				</p>
+				<p>
+					<span>Rails Address Book - Github | Demo</span>
+					<br />
+					Web application for account and project management using an an address book with personal contacts for clients
+					<ol>
+						<li>Programmed a 3rd party login system using OAuth in Ruby to allow users to login via Github</li>
+						<li>Produced a UI from scratch where users can manage personal or professional contacts and accounts</li>
+						<li>Incorporated the ability to relate multiple records using Active Record associations so user data can be organized</li>
+						<li>Designed a Sqlite3 database schema and coded all the database logic for multiple models and relationships</li>
+						<li>Interacted with my Rails API taking advantage of all CRUD requirements across all models in my database</li>
+					</ol>
+				</p>
+				<h1 className="centerText marginTop bold">Experience</h1>
+				<hr />
+				<p>
+					<span>Cloud Coach | Fort Collins, Colorado</span>
+					<br />
+					Product Specialist | Solutions Specialist | Developer 04/2018 - Present
+					<br />
+					<ol>
+						<li>Maintain a Lightning Component and Apex library to shorten component build times from 2 weeks to 4 days</li>
+						<li>Listen to client needs to create and maintain a code base for custom implementations of business processes</li>
+						<li>Refactor database triggers to reduce time complexity from O(n^2) to O(n), removing errors at runtime and enabling clients to process large batches of records safely within Salesforce processing limits</li>
+						<li>Prioritize peer code reviews and unit testing to reduce deployment and integration errors by 90%</li>
+					</ol>
+				</p>
+				<p>
+					<span>The Foundry Cinema and Bowl | Winter Park, Colorado</span>
+					<br />
+					Sales, Chef, Front of the house, Back of the house 01/2013 - 01/2018
+					<br />
+					<ol>
+						<li>Assisted in front of house and back of the house operations prioritizing areas that needed the most help</li>
+						<li>Onboarded over 10 new employees to build an efficient work process and achieve greater numbers in sales</li>
+						<li>Fulfilled inventories in weekly order lists to keep the kitchen and concessions well stocked</li>
+						<li>Enforced positive work environment 5 nights a week to keep staff and returning customers pleased with our service</li>
+					</ol>
+				</p>
+				<h1 className="centerText marginTop bold">Education</h1>
+				<hr />
+				<p>
+					<span>Flatiron School - Online</span>
+					<br />
+					Full Stack Web Development, Software Engineering, Ruby on Rails and JavaScript program         05/2019 - 05/2020
 				</p>
 			</div>
 		</div>
