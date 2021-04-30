@@ -14,11 +14,16 @@ div.container {
 
 		h1.bold {
 			font-weight: bold;
+			text-transform: uppercase;
 		}
 
 		hr {
 			margin: 0;
 			height: 1px;
+		}
+
+		ol {
+			margin: 1rem;
 		}
 
 		.centerText {

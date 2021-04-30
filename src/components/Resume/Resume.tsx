@@ -27,6 +27,22 @@ export default function Resume() {
 				</p>
 				<h1 className="centerText marginTop bold">Technical Projects</h1>
 				<hr />
+				<p>
+					<span style={{ fontWeight: 'bold' }}>React Redux Portfolio Project / Portfolio Site - Github | Demo</span>
+					<br />
+					Portfolio website/ web application to learn about my background and projects
+					<ol>
+						<li>
+							Utilized React components and React router to create a multi-tab single page application to teach viewers about me
+						</li>
+						<li>
+							Implemented a Rails API backend to persist data in a database from user input and information gathering
+						</li>
+						<li>
+							Amplified the UI with React-bootstrap to brand with consistent styling and create a friendly user experience
+						</li>
+					</ol>
+				</p>
 			</div>
 		</div>
 	)
