@@ -12,7 +12,7 @@ import {
 // Utilities
 // import { Routes } from '../util'
 // Styles
-import './scss/index.module.scss'
+import './scss/index.scss'
 
 const IndexPage = () => (
 	<Layout>

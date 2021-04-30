@@ -4,7 +4,7 @@ import {
 	Resume,
 	SEO,
 } from '../components'
-import './scss/resume.module.scss'
+import './scss/resume.scss'
 
 const resumeUrl = 'https://docs.google.com/document/d/e/2PACX-1vQFc7TyXlpdmebBT_9pUoxoXiydpn2qYm86vygqybCLeyoh3Yr70QN6-nH-d81vY0rOf8i6qgP3jbu_/pub?embedded=true'
 export default function ResumePage() {
