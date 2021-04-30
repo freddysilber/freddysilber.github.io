@@ -3,8 +3,17 @@ import React from 'react'
 import './resume.scss'
 
 export default function Resume() {
+	// const downloadResume = () => {
+	// 	console.log('download')
+	// 	const a: HTMLAnchorElement = document.createElement('a')
+	// 	a.download = 'Freddy Silber\'s Resume';
+	// 	a.href = resumeUrl.toDataURL(`image/jpeg`, 1);
+	// 	a.click();
+	// }
+
 	return (
 		<div className="container">
+			{/* <button className="button is-primary is-light" onClick={downloadResume}>Download</button> */}
 			<div className="resumeContainer">
 				<h1 className="bold">Freddy Silber</h1>
 				<p>970-531-0297 | freddy.silber@gmail.com</p>
