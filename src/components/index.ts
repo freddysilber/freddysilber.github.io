@@ -5,5 +5,6 @@ export { default as Skills } from './Skills/Skills'
 export { default as Image } from './Image'
 export { default as SEO } from './Seo'
 export { default as SocialMedia } from './SocialMedia/SocialMedia'
+export { default as Resume } from './Resume/Resume'
 
 export { Navigation } from './Navigation'
