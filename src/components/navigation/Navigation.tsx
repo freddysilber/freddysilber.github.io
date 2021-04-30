@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Routes } from '../../util'
 // Styles
-import './navigation.scss'
+import './navigation.module.scss'
 
 export default function Navigation(): JSX.Element {
 	return (

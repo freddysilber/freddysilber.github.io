@@ -5,7 +5,7 @@ import React from 'react'
 // Utilities
 import { Routes } from '../../util'
 // Styles
-import './header.scss'
+import './header.module.scss'
 
 export default function Header({ siteTitle }: any) {
 	return (

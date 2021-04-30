@@ -2,7 +2,7 @@ import React from 'react'
 // Utilities
 import { URLS } from '../../util'
 // Styles
-import './socialMedia.scss'
+import './socialMedia.module.scss'
 
 export default function SocialMedia(): JSX.Element {
 	return (

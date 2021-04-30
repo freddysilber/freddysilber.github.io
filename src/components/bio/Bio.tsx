@@ -2,7 +2,7 @@ import React from 'react'
 // Utilities
 import { URLS } from '../../util'
 // Styles
-import './bio.scss'
+import './bio.module.scss'
 // Anchors/ Site Links
 const cloudcoachurl = () => <a href={URLS.cloudCoach.url} target="_blank" rel="noopener noreferrer" className="bioAnchor">{URLS.cloudCoach.name}</a>
 const fraserUrl = () => <a href={URLS.fraser.url} target='_blank' rel='noopener noreferrer' className='bioAnchor'>{URLS.fraser.name}</a>

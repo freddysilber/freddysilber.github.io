@@ -1,6 +1,6 @@
 import React from 'react'
 // Styles
-import './skills.scss'
+import './skills.module.scss'
 
 const ICONS: string[] = [
 	'devicon-react-original',

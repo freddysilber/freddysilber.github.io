@@ -1,6 +1,6 @@
 import React from 'react'
 // Styles
-import './resume.scss'
+import './resume.module.scss'
 
 export default function Resume() {
 	return (
