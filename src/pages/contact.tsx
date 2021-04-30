@@ -3,7 +3,7 @@ import {
 	Layout,
 	SEO,
 } from '../components'
-import './scss/contact.scss'
+import './scss/contact.module.scss'
 
 export default function ContactPage() {
 	return (

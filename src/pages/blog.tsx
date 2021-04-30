@@ -5,7 +5,7 @@ import { Layout, SEO } from '../components'
 // import { useSiteMetadata } from '../hooks'
 import { StaticImage } from "gatsby-plugin-image"
 // Styles
-import './scss/blog.scss'
+import './scss/blog.module.scss'
 
 export default function SecondPage() {
 	// const { title } = useSiteMetadata()
