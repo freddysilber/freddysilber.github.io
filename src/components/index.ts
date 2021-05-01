@@ -1,6 +1,6 @@
 export { default as Layout } from './Layout/layout'
 export { default as Header } from './Header/header'
-export { default as Bio } from './Bio/bio'
+export { default as Bio } from './bio'
 export { default as Skills } from './Skills/skills'
 export { default as Image } from './Image'
 export { default as SEO } from './seo'
