@@ -61,7 +61,7 @@ export default function Resume() {
 				<p>
 					<span>Rails Address Book - <a href={githubRepo('rails-address-book')}>Github</a> | <a href="https://www.youtube.com/watch?v=mPOfY_4FgvI&t=3s">Demo</a></span>
 					<br />
-					Web application for account and project management using an an address book with personal contacts for clients
+					Web application for account and project management using an address book with personal contacts for clients
 					<ol>
 						<li>Programmed a 3rd party login system using OAuth in Ruby to allow users to login via Github</li>
 						<li>Produced a UI from scratch where users can manage personal or professional contacts and accounts</li>
