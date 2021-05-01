@@ -1,6 +1,15 @@
 @import '../../scss/global.scss';
 
+@font-face {
+	font-family: 'Fira Code';
+	src: local('FiraCode-Regular'), url(../../assets/fonts/FiraCode-Regular.otf);
+}
+
 div.container {
+	* {
+		font-family: 'Fira Code';
+	}
+
 	display: flex;
 	justify-content: center;
 
@@ -24,6 +33,10 @@ div.container {
 
 		ol {
 			margin: 1rem;
+			
+			li {
+				list-style-type: circle;
+			}
 		}
 
 		span {

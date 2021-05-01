@@ -1,4 +1,10 @@
-export const URLS = {
+interface Url {
+	name?: string;
+	url: string;
+}
+type Urls = Record<string, Url>;
+
+export const URLS: Urls = {
 	cloudCoach: {
 		name: 'Cloud Coach',
 		url: 'https://cloudcoach.com/'
@@ -35,5 +41,18 @@ export const URLS = {
 	},
 	twitter: {
 		url: 'https://twitter.com/freddysilber'
+	},
+	blog: {
+		url: 'https://freddysilber.github.io/blog/'
+	},
+	portfolio: {
+		url: 'freddysilber.github.io'
+	},
+	youtube: {
+		url: 'https://www.youtube.com/channel/UCzzigkFUQprDQ3DBFiSg75w'
 	}
+};
+
+export function githubRepo(repoName: string) {
+	return `${URLS.github.url}/${repoName}`
 }

@@ -1,3 +1,3 @@
 export { Routes } from './routes'
-export { URLS } from './urls'
+export { URLS, githubRepo } from './urls'
 export { rainbowText } from './rainbowText'

@@ -1,4 +1,5 @@
 import React from 'react'
+import { URLS, githubRepo } from '../../util'
 // Styles
 import './resume.scss'
 
@@ -16,8 +17,8 @@ export default function Resume() {
 			{/* <button className="button is-primary is-light" onClick={downloadResume}>Download</button> */}
 			<div className="resumeContainer">
 				<h1 className="bold">Freddy Silber</h1>
-				<p>970-531-0297 | freddy.silber@gmail.com</p>
-				<p>LinkedIn | Github | Blog | Portfolio | YouTube</p>
+				<p><a href="tel:+1-970-532-0297">970-531-0297</a> | <a href="mailto: freddy.silber@gmail.com">freddy.silber@gmail.com</a></p>
+				<p><a href={URLS.linkedIn.url}>LinkedIn</a> | <a href={URLS.github.url}>Github</a> | <a href={URLS.blog.url}>Blog</a> | <a href={URLS.portfolio.url}>Portfolio</a> | <a href={URLS.youtube.url}>YouTube</a></p>
 				<h1 className="centerText marginTop bold">Software Engineer</h1>
 				<hr />
 				<p>
@@ -37,7 +38,7 @@ export default function Resume() {
 				<h1 className="centerText marginTop bold">Technical Projects</h1>
 				<hr />
 				<p>
-					<span>React Redux Portfolio Project / Portfolio Site - Github | Demo</span>
+					<span>React Redux Portfolio Project / Portfolio Site - <a href={githubRepo('portfolio-site')}>Github</a> | <a href="https://www.youtube.com/watch?v=Wg42yMQ6dxI&t=1s">Demo</a></span>
 					<br />
 					Portfolio website/ web application to learn about my background and projects
 					<ol>
@@ -47,19 +48,18 @@ export default function Resume() {
 					</ol>
 				</p>
 				<p>
-					<span>Rails Address Book - Github | Demo</span>
+					<span>Agile Project - <a href={githubRepo('agile-project')}>Github</a> | <a href="https://www.youtube.com/watch?v=yQMf8GfuxRA&t=1s">Demo</a></span>
 					<br />
-					Web application for account and project management using an an address book with personal contacts for clients
+					Web application for agile style project management using kanban boards with projects and tasks
 					<ol>
-						<li>Programmed a 3rd party login system using OAuth in Ruby to allow users to login via Github</li>
-						<li>Produced a UI from scratch where users can manage personal or professional contacts and accounts</li>
-						<li>Incorporated the ability to relate multiple records using Active Record associations so user data can be organized</li>
-						<li>Designed a Sqlite3 database schema and coded all the database logic for multiple models and relationships</li>
-						<li>Interacted with my Rails API taking advantage of all CRUD requirements across all models in my database</li>
+						<li>Built a Rails API backend to persist data in my application using a Sqlite3 database</li>
+						<li>Created a kanban board using Javascript and ES6 modules to visualize user created data from projects and tasks</li>
+						<li>Included drag and drop functionality to update current statuses of personal tasks within the kanban board</li>
+						<li>Enforced CRUD application requirements for a fully functional single page application using fetch calls to my API</li>
 					</ol>
 				</p>
 				<p>
-					<span>Rails Address Book - Github | Demo</span>
+					<span>Rails Address Book - <a href={githubRepo('rails-address-book')}>Github</a> | <a href="https://www.youtube.com/watch?v=mPOfY_4FgvI&t=3s">Demo</a></span>
 					<br />
 					Web application for account and project management using an an address book with personal contacts for clients
 					<ol>
@@ -101,7 +101,7 @@ export default function Resume() {
 				<p>
 					<span>Flatiron School - Online</span>
 					<br />
-					Full Stack Web Development, Software Engineering, Ruby on Rails and JavaScript program         05/2019 - 05/2020
+					Full Stack Web Development, Software Engineering, Ruby on Rails and JavaScript program 05/2018 - 05/2020
 				</p>
 			</div>
 		</div>
