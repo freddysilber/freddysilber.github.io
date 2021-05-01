@@ -17,8 +17,8 @@ export default function Resume() {
 			{/* <button className="button is-primary is-light" onClick={downloadResume}>Download</button> */}
 			<div className="resumeContainer">
 				<h1 className="bold">Freddy Silber</h1>
-				<p><a href="tel:+1-970-532-0297">970-531-0297</a> | <a href="mailto: freddy.silber@gmail.com">freddy.silber@gmail.com</a></p>
-				<p><a href={URLS.linkedIn.url}>LinkedIn</a> | <a href={URLS.github.url}>Github</a> | <a href={URLS.blog.url}>Blog</a> | <a href={URLS.portfolio.url}>Portfolio</a> | <a href={URLS.youtube.url}>YouTube</a></p>
+				<p><a href="tel:+1-970-532-0297">970-531-0297</a> | <a href="mailto: freddy.silber@gmail.com" target="_blank">freddy.silber@gmail.com</a></p>
+				<p><a href={URLS.linkedIn.url} target="_blank">LinkedIn</a> | <a href={URLS.github.url} target="_blank">Github</a> | <a href={URLS.blog.url} target="_blank">Blog</a> | <a href={URLS.portfolio.url}>Portfolio</a> | <a href={URLS.youtube.url}>YouTube</a></p>
 				<h1 className="centerText marginTop bold">Software Engineer</h1>
 				<hr />
 				<p>

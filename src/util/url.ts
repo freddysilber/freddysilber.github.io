@@ -2,6 +2,7 @@ interface Url {
 	name?: string;
 	url: string;
 }
+
 type Urls = Record<string, Url>;
 
 export const URLS: Urls = {
