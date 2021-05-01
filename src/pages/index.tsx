@@ -4,13 +4,10 @@ import { StaticImage } from "gatsby-plugin-image"
 import {
 	Layout,
 	SEO,
-	// Image,
 	Bio,
 	Skills,
 	SocialMedia
 } from '../components'
-// Utilities
-// import { Routes } from '../util'
 // Styles
 import './scss/index.scss'
 
@@ -22,10 +19,6 @@ const IndexPage = () => (
 			<Skills />
 			<Bio />
 		</section>
-
-		{/* <Link to={Routes.page2}>Go to page 2</Link>
-		<br />
-		<Link to={Routes.usingTypescript}>Go to "Using TypeScript"</Link> */}
 		<SocialMedia />
 	</Layout>
 )

@@ -7,7 +7,7 @@ import './socialMedia.scss'
 export default function SocialMedia(): JSX.Element {
 	return (
 		<div className="socialMediaContainer">
-			<span>Follow me on social media!</span>
+			<span>Lets get in touch!</span>
 			<a href={URLS.github.url} target='_blank' rel='noopener noreferrer'>
 				<i className={`devicon-github-original `}></i>
 			</a>
