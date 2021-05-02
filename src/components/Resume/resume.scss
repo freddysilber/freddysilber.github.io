@@ -5,53 +5,42 @@
 	src: local('FiraCode-Regular'), url(../../assets/fonts/FiraCode-Regular.otf);
 }
 
-div.container {
-	* {
-		font-family: 'Fira Code';
+* {
+	font-family: 'Fira Code';
+}
+
+div.resumeContainer {
+	margin: 1%;
+	color: $white-ter;
+	background-color: $dark;
+
+	h1.bold {
+		font-weight: bold;
+		text-transform: uppercase;
 	}
 
-	display: flex;
-	justify-content: center;
+	hr {
+		margin: 0;
+		height: 1px;
+	}
 
-	div.resumeContainer {
-		width: 80%;
-		display: flex;
-		flex-direction: column ;
-		flex: 1;
-		border: 1px solid $white-ter;
-		border-radius: 10px;
-		padding: 1%;
-		color: $white-ter;
-		background-color: $dark;
+	ol {
+		margin: 1rem;
 
-		h1.bold {
-			font-weight: bold;
-			text-transform: uppercase;
+		li {
+			list-style-type: circle;
 		}
+	}
 
-		hr {
-			margin: 0;
-			height: 1px;
-		}
+	span {
+		font-weight: bold;
+	}
 
-		ol {
-			margin: 1rem;
+	.centerText {
+		text-align: center;
+	}
 
-			li {
-				list-style-type: circle;
-			}
-		}
-
-		span {
-			font-weight: bold;
-		}
-
-		.centerText {
-			text-align: center;
-		}
-
-		.marginTop {
-			margin-top: 1rem;
-		}
+	.marginTop {
+		margin-top: 1rem;
 	}
 }
