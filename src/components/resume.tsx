@@ -1,7 +1,5 @@
 import React from 'react'
-import { URLS, githubRepo } from '../../util'
-// Styles
-import './resume.scss'
+import { URLS, githubRepo } from '../util'
 
 export default function Resume() {
 	// const downloadResume = () => {

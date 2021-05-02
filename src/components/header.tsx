@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 // Material UI
 // Utilities
-import { Routes } from '../../util'
-// Styles
-import './header.scss'
+import { Routes } from '../util'
 
 export default function Header({ siteTitle }: any) {
 	return (

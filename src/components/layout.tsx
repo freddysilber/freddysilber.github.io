@@ -9,9 +9,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 // Components
-import { Header, Navigation } from '..'
-// Styles
-import './layout.scss'
+import { Header, Navigation } from '.'
 
 const Layout = ({ children }: any) => {
 	const data = useStaticQuery(graphql`
@@ -24,13 +22,10 @@ const Layout = ({ children }: any) => {
 		}
   `)
 	return (
-		<div className="body">
+		<div className="layoutContainer">
 			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<Navigation />
 			<main>{children}</main>
-			{/* <footer className="has-text-centered">
-					<p>Made with ❤️ by yours truly. -Freddy</p>
-				</footer> */}
 		</div>
 	)
 }

@@ -1,5 +1,6 @@
 @charset 'utf-8';
 @import './variables.scss';
+@import './mixins.scss';
 
 // If need, change your variables before importing Bulma
 // $title-color: #ff0000;
@@ -15,17 +16,156 @@
 		   url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
-* {
-	font-family: 'Drama Sans';
+@font-face {
+	font-family: 'Empire';
+	src: local('Empire'), url(../../assets/fonts/Empire.otf) format('truetype')
 }
+
+@font-face {
+	font-family: 'Grizzly';
+	src: local('Grizzly'), url(../../assets/fonts/Grizzly.ttf) format('truetype')
+}
+
+@font-face {
+	font-family: 'Fira Code';
+	src: local('FiraCode-Regular'), url(../../assets/fonts/FiraCode-Regular.otf);
+}
+
 
 html, body {
 	background-color: $dark;
 	height: 100%;
-	overscroll-behavior: none;
 	color: $light;
+	overscroll-behavior: none;
+
+	* {
+		font-family: 'Drama Sans';
+	}
 
 	i {
 		color: $warning;
+	}
+
+	div.layoutContainer {
+		padding: 0 .5rem 0 .5rem;
+
+		header {
+			h1.titleText {
+				font-size: 2em;
+				letter-spacing: 3px;
+				
+				a.header {
+					color: $purple;
+					text-decoration: none;
+					font-family: 'Grizzly';
+					font-weight: lighter;
+					transition: all .5s ease;
+		
+					&:hover {
+						color: $warning;
+					}
+				}
+			}
+		}
+		
+		img {
+			margin: 0;
+		}
+		
+		nav {
+			margin-bottom: .5rem;
+			
+			a {
+				font-family: 'Empire';
+				letter-spacing: 3px;
+				font-size: 1.5em;
+				border-radius: 10px;
+				border: 1px solid transparent;
+				transition: all .2s ease;
+			}
+		
+			.active {
+				border: 1px solid $purple;
+			}
+		}
+
+		main {
+			height: 90vh;
+			overflow: auto;
+
+			div.socialMediaContainer {
+				display: flex;
+				justify-content: space-evenly;
+				margin-top: 1rem;
+
+				a {
+					transition: all .5s ease;
+					
+					i {
+						color: $info;
+						font-size: 2rem;
+						transition: all .5s ease;
+
+						&:hover {
+							color: $purple;
+						}
+					}
+
+					&:hover {
+						transform: scale(1.5);
+					}
+				}
+			}
+
+			div.resumeContainer {
+				display: flex;
+				flex-direction: column;
+				padding: 1rem 3rem;
+				color: $white-ter;
+				background-color: $dark;
+			
+				* {
+					font-family: 'Fira Code';
+				}
+			
+				h1 {
+					font-weight: bold;
+					text-transform: uppercase;
+					text-align: center;
+					margin-top: 1rem;
+			
+					&:first-child {
+						text-align: left;
+					}
+				}
+			
+				hr {
+					margin: 0;
+					height: 1px;
+				}
+			
+				ol {
+					margin: 1rem;
+			
+					li {
+						list-style-type: circle;
+					}
+				}
+			
+				span {
+					font-weight: bold;
+				}
+			}
+
+			div.skillsContainer {
+				@include flex-container-vertical();
+				justify-content: space-between;
+				margin: 0 1rem 0 1rem;
+			
+				i {
+					font-size: 1.5em;
+				}
+			}
+		}
 	}
 }

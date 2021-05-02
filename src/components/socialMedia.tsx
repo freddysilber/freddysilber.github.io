@@ -1,15 +1,13 @@
 import React from 'react'
 // Utilities
-import { URLS } from '../../util'
-// Styles
-import './socialMedia.scss'
+import { URLS } from '../util'
 
 export default function SocialMedia(): JSX.Element {
 	return (
 		<div className="socialMediaContainer">
 			<span>Lets get in touch!</span>
 			<a href={URLS.github.url} target='_blank' rel='noopener noreferrer'>
-				<i className={`devicon-github-original `}></i>
+				<i className={`devicon-github-original`}></i>
 			</a>
 			<a href={URLS.instagram.url} target='_blank' rel='noopener noreferrer'>
 				<i className={`fab fa-instagram`}></i>
