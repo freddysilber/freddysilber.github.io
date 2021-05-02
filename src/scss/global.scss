@@ -72,11 +72,11 @@ html, body {
 				letter-spacing: 3px;
 				
 				a.header {
+					@include transition-all();
 					color: $purple;
 					text-decoration: none;
 					font-family: 'Grizzly';
 					font-weight: lighter;
-					transition: all .5s ease;
 		
 					&:hover {
 						color: $warning;
@@ -93,16 +93,16 @@ html, body {
 			margin-bottom: .5rem;
 			
 			a {
+				@include transition-all();
 				font-family: 'Empire';
 				letter-spacing: 3px;
 				font-size: 1.5em;
 				border-radius: 10px;
-				border: 1px solid transparent;
-				transition: all .2s ease;
-			}
-		
-			.active {
-				border: 1px solid $purple;
+				border: 2px solid transparent;
+
+				&.active {
+					border: 2px solid $purple;
+				}
 			}
 		}
 
@@ -116,12 +116,12 @@ html, body {
 				margin-top: 1rem;
 
 				a {
-					transition: all .5s ease;
+					@include transition-all();
 					
 					i {
+						@include transition-all();
 						color: $info;
 						font-size: 2rem;
-						transition: all .5s ease;
 
 						&:hover {
 							color: $purple;
@@ -135,8 +135,6 @@ html, body {
 			}
 
 			div.resumeContainer {
-				display: flex;
-				flex-direction: column;
 				padding: 1rem 3rem;
 				color: $white-ter;
 				background-color: $dark;
