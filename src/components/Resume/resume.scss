@@ -5,18 +5,24 @@
 	src: local('FiraCode-Regular'), url(../../assets/fonts/FiraCode-Regular.otf);
 }
 
-* {
-	font-family: 'Fira Code';
-}
-
 div.resumeContainer {
-	margin: 1%;
+	padding: 1rem 3rem;
 	color: $white-ter;
 	background-color: $dark;
 
-	h1.bold {
+	* {
+		font-family: 'Fira Code';
+	}
+
+	h1 {
 		font-weight: bold;
 		text-transform: uppercase;
+		text-align: center;
+		margin-top: 1rem;
+
+		&:first-child {
+			text-align: left;
+		}
 	}
 
 	hr {
@@ -34,13 +40,5 @@ div.resumeContainer {
 
 	span {
 		font-weight: bold;
-	}
-
-	.centerText {
-		text-align: center;
-	}
-
-	.marginTop {
-		margin-top: 1rem;
 	}
 }
