@@ -4,6 +4,8 @@ import { Layout, SEO } from '../components'
 // Hooks
 // import { useSiteMetadata } from '../hooks'
 import { StaticImage } from "gatsby-plugin-image"
+// Styles
+import './scss/blog.scss'
 
 export default function SecondPage() {
 	// const { title } = useSiteMetadata()
@@ -21,6 +23,6 @@ export default function SecondPage() {
 
 function Image() {
 	return (
-		<StaticImage style={{ width: '20%' }} src="../assets/images/horseRide.png" alt="Horse Ride" />
+		<StaticImage className="horseRide" src="../assets/images/horseRide.png" alt="Horse Ride" />
 	)
 }
