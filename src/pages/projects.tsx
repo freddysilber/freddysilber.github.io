@@ -3,6 +3,7 @@ import {
 	Layout,
 	SEO,
 } from '../components'
+import './scss/projects.scss'
 
 export default function ProjectsPage() {
 	return (
