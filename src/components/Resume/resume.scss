@@ -6,6 +6,8 @@
 }
 
 div.resumeContainer {
+	display: flex;
+	flex-direction: column;
 	padding: 1rem 3rem;
 	color: $white-ter;
 	background-color: $dark;
