@@ -46,6 +46,14 @@ html, body {
 		color: $warning;
 	}
 
+	a {
+		color: $purple;
+
+		&:hover {
+			color: $red;
+		}
+	}
+
 	div.layoutContainer {
 		padding: 0 .5rem 0 .5rem;
 
