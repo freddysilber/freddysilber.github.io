@@ -23,6 +23,6 @@ export default function SecondPage() {
 
 function Image() {
 	return (
-		<StaticImage className="horseRide" src="../assets/images/horseRide.png" alt="Horse Ride" />
+		<StaticImage style={{ width: '20%' }} src="../assets/images/horseRide.png" alt="Horse Ride" />
 	)
 }

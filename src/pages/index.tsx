@@ -9,7 +9,7 @@ import {
 	SocialMedia
 } from '../components'
 // Styles
-import './scss/index.scss'
+// import './scss/index.scss'
 
 const IndexPage = () => (
 	<Layout>

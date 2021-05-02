@@ -1,7 +1,7 @@
 import React from 'react'
 import { Layout, SEO, } from '../components'
 import { URLS, githubRepo } from '../util'
-import './scss/resume.scss'
+// import './scss/resume.scss'
 
 export default function ResumePage() {
 	return (

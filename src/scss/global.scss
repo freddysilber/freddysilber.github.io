@@ -18,17 +18,17 @@
 
 @font-face {
 	font-family: 'Empire';
-	src: local('Empire'), url(../../assets/fonts/Empire.otf) format('truetype')
+	src: local('Empire'), url(../assets/fonts/Empire.otf) format('truetype');
 }
 
 @font-face {
 	font-family: 'Grizzly';
-	src: local('Grizzly'), url(../../assets/fonts/Grizzly.ttf) format('truetype')
+	src: local('Grizzly'), url(../assets/fonts/Grizzly.ttf) format('truetype');
 }
 
 @font-face {
 	font-family: 'Fira Code';
-	src: local('FiraCode-Regular'), url(../../assets/fonts/FiraCode-Regular.otf);
+	src: local('FiraCode-Regular'), url(../assets/fonts/FiraCode-Regular.otf);
 }
 
 
@@ -56,6 +56,15 @@ html, body {
 
 	div.layoutContainer {
 		padding: 0 .5rem 0 .5rem;
+
+		section.firstSection {
+			@include flex-container-horizontal();
+		
+			.avatar {
+				border-radius: 10px;
+				width: 80rem;
+			}
+		}
 
 		header {
 			h1.titleText {
