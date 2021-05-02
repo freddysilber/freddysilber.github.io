@@ -93,15 +93,6 @@ html, body {
 			height: 90vh;
 			overflow: auto;
 
-			section.firstSection {
-				@include flex-container-horizontal();
-			
-				.avatar {
-					border-radius: 10px;
-					width: 80rem;
-				}
-			}
-
 			div.socialMediaContainer {
 				display: flex;
 				justify-content: space-evenly;

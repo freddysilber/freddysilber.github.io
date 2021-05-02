@@ -8,6 +8,8 @@ import {
 	Skills,
 	SocialMedia
 } from '../components'
+// Styles
+import './scss/index.scss'
 
 const IndexPage = () => (
 	<Layout>
