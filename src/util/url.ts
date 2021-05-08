@@ -54,6 +54,6 @@ export const URLS: Urls = {
 	}
 };
 
-export function githubRepo(repoName: string) {
+export function getGithubRepo(repoName: string) {
 	return `${URLS.github.url}/${repoName}`
 }

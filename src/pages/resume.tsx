@@ -1,14 +1,16 @@
-import React from 'react'
-import { Layout, SEO, } from '../components'
-import { URLS, githubRepo } from '../util'
+import React from 'react';
+import { Layout, SEO, } from '../components';
+import { URLS, getGithubRepo } from '../util';
 
 export default function ResumePage() {
+	const emailHandlerLink = `mailto: freddy.silber@gmail.com?subject=Hey Freddy...&body=Ask me anything, I'd love to hear from you!`;
+
 	return (
 		<Layout>
 			<SEO title="Resume" />
 			<div className="resumeContainer">
 				<h1>Freddy Silber</h1>
-				<p><a href="tel:+1-970-532-0297">970-531-0297</a> | <a href="mailto: freddy.silber@gmail.com" target="_blank">freddy.silber@gmail.com</a></p>
+				<p><a href="tel:+1-970-532-0297">970-531-0297</a> | <a href={emailHandlerLink} target="_blank">freddy.silber@gmail.com</a></p>
 				<p><a href={URLS.linkedIn.url} target="_blank">LinkedIn</a> | <a href={URLS.github.url} target="_blank">Github</a> | <a href={URLS.blog.url} target="_blank">Blog</a> | <a href={URLS.portfolio.url} target="_blank">Portfolio</a> | <a href={URLS.youtube.url} target="_blank">YouTube</a></p>
 				<h1>Software Engineer</h1>
 				<hr />
@@ -29,7 +31,7 @@ export default function ResumePage() {
 				<h1>Technical Projects</h1>
 				<hr />
 				<p>
-					<span>React Redux Portfolio Project / Portfolio Site - <a href={githubRepo('portfolio-site')} target="_blank">Github</a> | <a href="https://www.youtube.com/watch?v=Wg42yMQ6dxI&t=1s" target="_blank">Demo</a></span>
+					<span>React Redux Portfolio Project / Portfolio Site - <a href={getGithubRepo('portfolio-site')} target="_blank">Github</a> | <a href="https://www.youtube.com/watch?v=Wg42yMQ6dxI&t=1s" target="_blank">Demo</a></span>
 					<br />
 					Portfolio website/ web application to learn about my background and projects
 				</p>
@@ -39,7 +41,7 @@ export default function ResumePage() {
 					<li>Amplified the UI with React-bootstrap to brand with consistent styling and create a friendly user experience</li>
 				</ol>
 				<p>
-					<span>Agile Project - <a href={githubRepo('agile-project')} target="_blank">Github</a> | <a href="https://www.youtube.com/watch?v=yQMf8GfuxRA&t=1s" target="_blank">Demo</a></span>
+					<span>Agile Project - <a href={getGithubRepo('agile-project')} target="_blank">Github</a> | <a href="https://www.youtube.com/watch?v=yQMf8GfuxRA&t=1s" target="_blank">Demo</a></span>
 					<br />
 					Web application for agile style project management using kanban boards with projects and tasks
 				</p>
@@ -50,7 +52,7 @@ export default function ResumePage() {
 					<li>Enforced CRUD application requirements for a fully functional single page application using fetch calls to my API</li>
 				</ol>
 				<p>
-					<span>Rails Address Book - <a href={githubRepo('rails-address-book')} target="_blank">Github</a> | <a href="https://www.youtube.com/watch?v=mPOfY_4FgvI&t=3s" target="_blank">Demo</a></span>
+					<span>Rails Address Book - <a href={getGithubRepo('rails-address-book')} target="_blank">Github</a> | <a href="https://www.youtube.com/watch?v=mPOfY_4FgvI&t=3s" target="_blank">Demo</a></span>
 					<br />
 					Web application for account and project management using an address book with personal contacts for clients
 				</p>
