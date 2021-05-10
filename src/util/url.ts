@@ -57,3 +57,15 @@ export const URLS: Urls = {
 export function getGithubRepo(repoName: string) {
 	return `${URLS.github.url}/${repoName}`
 }
+/**
+ * This class handles email config external routing to outside of my site
+ */
+export class Email {
+	private static _email = `freddy.silber@gmail.com`;
+	private static _subject = `Hey Freddy...`;
+	private static _body = `Ask me anything, I'd love to hear from you!`;
+
+	public static getEmailHandler(): string {
+		return `mailto: ${this._email}?subject=${this._subject}&body=${this._body}`;
+	}
+}

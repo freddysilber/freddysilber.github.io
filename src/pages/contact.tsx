@@ -3,6 +3,7 @@ import {
 	Layout,
 	SEO,
 } from '../components'
+import { Email } from '../util'
 
 export default function ContactPage() {
 	return (
@@ -10,7 +11,7 @@ export default function ContactPage() {
 			<SEO title="Contact" />
 			<section>
 				<h1>Phone: <a href="tel:+1-970-532-0297">970-531-0297</a></h1>
-				<h1>Email: <a href="mailto: freddy.silber@gmail.com" target="_blank">freddy.silber@gmail.com</a></h1>
+				<h1>Email: <a href={Email.getEmailHandler()} target="_blank">freddy.silber@gmail.com</a></h1>
 			</section>
 		</Layout>
 	)
