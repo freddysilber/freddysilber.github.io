@@ -47,7 +47,7 @@ export const URLS: Urls = {
 		url: 'https://freddysilber.github.io/blog/'
 	},
 	portfolio: {
-		url: 'freddysilber.github.io'
+		url: '/'
 	},
 	youtube: {
 		url: 'https://www.youtube.com/channel/UCzzigkFUQprDQ3DBFiSg75w'
