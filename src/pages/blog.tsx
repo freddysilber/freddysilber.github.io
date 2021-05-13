@@ -14,15 +14,8 @@ export default function SecondPage() {
 			<SEO title="Blog" />
 			{/* <h1>welcome to {title}</h1> */}
 			<h1>Coming soon... so heres another picture</h1>
-			<Link to="/blog/my-first-post/">Go to my first Markdown blog post</Link>
-			<Image />
+			<Link to="/blog/my-first-post/">First Post</Link>
+			<StaticImage style={{ width: '20%' }} src="../assets/images/horseRide.png" alt="Horse Ride" />
 		</Layout >
-	)
-}
-
-
-function Image() {
-	return (
-		<StaticImage style={{ width: '20%' }} src="../assets/images/horseRide.png" alt="Horse Ride" />
 	)
 }
