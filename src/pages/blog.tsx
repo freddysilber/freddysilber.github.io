@@ -2,19 +2,30 @@ import React from 'react'
 // Components
 import { Layout, SEO } from '../components'
 // Hooks
-// import { useSiteMetadata } from '../hooks'
-// import { StaticImage } from "gatsby-plugin-image"
 import { Link } from 'gatsby'
 
 export default function SecondPage() {
-	// const { title } = useSiteMetadata()
+	const blogRoutes = [
+		{
+			title: 'First Post',
+			route: '/blog/my-first-post/'
+		},
+		{
+			title: 'Second Post',
+			route: '/blog/my-second-post/'
+		}
+	]
 
 	return (
 		<Layout>
 			<SEO title="Blog" />
-			{/* <h1>welcome to {title}</h1> */}
-			<Link to="/blog/my-first-post/">First Post</Link>
-			{/* <StaticImage style={{ width: '20%' }} src="../assets/images/horseRide.png" alt="Horse Ride" /> */}
+			<ul>
+				{blogRoutes.map((post, index) => (
+					<li>
+						<Link to={post.route}>{index + 1}. {post.title}</Link>
+					</li>
+				))}
+			</ul>
 		</Layout >
 	)
 }
