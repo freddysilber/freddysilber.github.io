@@ -1,7 +1,7 @@
 # Personal Portfolio Webite
 
 ### Helpful links
-* ```http://localhost:8000/__graphql```
+* [GraphiQL in Dev](http://localhost:8000/__graphql)
 
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
