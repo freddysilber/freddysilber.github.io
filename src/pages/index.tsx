@@ -9,6 +9,7 @@ import {
 	Skills,
 	SocialMedia
 } from '../components'
+import { Email } from '../util'
 
 const IndexContainer = styled.section`
 	display: flex;
