@@ -11,11 +11,21 @@ interface MarkdownData {
 				date: string;
 				slug: string;
 				title: string;
-				coverImage: any;
+				coverImage: {
+					childImageSharp: {
+						fixed: {
+							base64: string;
+							height: number;
+							src: string;
+							srcSet: string;
+							width: number;
+						}
+					}
+				}
 			},
 			html: string;
-		};
-	};
+		}
+	}
 }
 
 export default function Template({
@@ -23,16 +33,15 @@ export default function Template({
 }: MarkdownData) {
 	const { markdownRemark } = data // data.markdownRemark holds your post data
 	const { frontmatter, html } = markdownRemark
-	console.log(data);
 	return (
 		<Layout>
 			<Link to={Routes.blog}>
-				<button className="button is-black">Back</button>
+				<button className="button is-warning mb-2">Back</button>
 			</Link>
 			<div>
 				<Img fixed={{ ...frontmatter.coverImage.childImageSharp.fixed }} />
-				<h1>{frontmatter.title}</h1>
-				<h2>{frontmatter.date}</h2>
+				<h1 className="title is-3 has-text-light">{frontmatter.title}</h1>
+				<h2 className="title is-5 has-text-light">{frontmatter.date}</h2>
 				<div dangerouslySetInnerHTML={{ __html: html }} />
 			</div>
 		</Layout>

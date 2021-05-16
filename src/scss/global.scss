@@ -83,7 +83,6 @@ html, body {
 
 		header {
 			h1.titleText {
-				font-size: 2em;
 				letter-spacing: 3px;
 				
 				a.header {
@@ -126,40 +125,16 @@ html, body {
 			}
 
 			div.resumeContainer {
-				padding: 1rem 3rem;
-				color: $white-ter;
-				background-color: $dark;
-			
 				* {
 					font-family: 'Fira Code';
 				}
-			
-				h1 {
-					font-weight: bold;
-					text-transform: uppercase;
-					text-align: center;
-					margin-top: 1rem;
-			
-					&:first-child {
-						text-align: left;
-					}
-				}
-			
-				hr {
-					margin: 0;
-					height: 1px;
-				}
-			
+
 				ol {
 					margin: 1rem;
 			
 					li {
 						list-style-type: circle;
 					}
-				}
-			
-				span {
-					font-weight: bold;
 				}
 			}
 
