@@ -38,7 +38,7 @@ export default function Bio(): JSX.Element {
 			</p>
 			<br />
 			<p>
-				Asside from programming all the time, I enjoy playing electric guitar, cook, play with my cat, skateboard, snowboard, bmx bike, mountain bike, fish, hike, camp and much much more... oh, and keep learning!
+				Asside from programming, I enjoy playing electric guitar, cooking, hanging out with my cat, skateboarding, snowboarding, bmx bike, mountain bike, fishing, hiking, camping and much much more... oh, and keep learning!
 			</p>
 		</div >
 	)
