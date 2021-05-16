@@ -4,8 +4,13 @@ import { Layout, SEO } from '../components'
 // Hooks
 import { Link } from 'gatsby'
 
+interface BlogRoute {
+	title: string;
+	route: string;
+}
+
 export default function SecondPage() {
-	const blogRoutes = [
+	const blogRoutes: BlogRoute[] = [
 		{
 			title: 'First Post',
 			route: '/blog/my-first-post/'
