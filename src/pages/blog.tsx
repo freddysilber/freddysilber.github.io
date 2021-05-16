@@ -1,28 +1,43 @@
 import React from 'react'
 // Components
-import { Layout, SEO } from '../components'
+import { BlogSidebar, Layout, SEO } from '../components'
 // Hooks
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
+interface BlogPost {
+	node: {
+		excerpt: string;
+		frontmatter: {
+			coverImage: Record<any, any>;
+			date: string;
+			slug: string;
+			title: string;
+		};
+	};
+}
+
 interface BlogData {
 	data: {
 		blog: {
-			edges: any;
+			edges: BlogPost[];
 		};
 	};
 }
 
 const PostList = styled.ol`
 	list-style: none;
-	align-items: center;
-	padding: 0 15%;
+	width: 70%;
 `
 
 const PostListItem = styled.li`
 	width: 100%;
 	padding: 0.5rem;
+
+	&:not(:last-child) {
+		margin-bottom: 0.5rem !important;
+	}
 `
 
 const PostLink = styled(Link)`
@@ -49,18 +64,17 @@ const PostImageWrapper = styled.div`
 `
 
 export default function SecondPage({ data }: BlogData) {
-	console.log(data);
 	const posts = data.blog.edges
-	console.log(posts)
 
 	return (
 		<Layout>
 			<SEO title="Blog" />
+			<div style={{ display: 'flex' }}>
 			<PostList>
-				{posts.map((post: any) => {
-					console.log(post);
+					{posts.map((post: BlogPost) => {
 					const { frontmatter, excerpt } = post.node
 					const { slug, title, coverImage, date } = frontmatter
+
 					return (
 						<PostListItem className="has-background-black box">
 							<PostLink to={slug}>
@@ -68,7 +82,7 @@ export default function SecondPage({ data }: BlogData) {
 									<Img fluid={{ ...coverImage.childImageSharp.fluid }} />
 								</PostImageWrapper>
 								<PostListItemContent>
-									<h1 className="has-text-warning">{title}</h1>
+									<h1 className="has-text-warning has-text-weight-semibold is-size-5">{title}</h1>
 									<p className="has-text-grey-light mb-2">Published on {date}</p>
 									<p className="has-text-light">{excerpt}</p>
 								</PostListItemContent>
@@ -76,7 +90,9 @@ export default function SecondPage({ data }: BlogData) {
 						</PostListItem>
 					)
 				})}
-			</PostList>
+				</PostList>
+				<BlogSidebar />
+			</div>
 		</Layout >
 	)
 }
