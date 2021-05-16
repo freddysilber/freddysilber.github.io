@@ -1,8 +1,8 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { Layout } from '../components'
-import { Routes } from '../util'
+import { graphql } from 'gatsby'
+import { BlogSidebar, Layout } from '../components'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 
 interface MarkdownData {
 	data: {
@@ -24,25 +24,40 @@ interface MarkdownData {
 				}
 			},
 			html: string;
-		}
+		},
+		otherPosts: any;
 	}
 }
 
-export default function Template({
-	data, // this prop will be injected by the GraphQL query below.
-}: MarkdownData) {
-	const { markdownRemark } = data // data.markdownRemark holds your post data
+const PostContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	padding: 0 5rem;
+`
+
+const CoverImage = styled.div`
+	align-self: center;
+
+	.gatsby-image-wrapper {
+		border-radius: 10px;
+	}
+`
+
+export default function Template({ data }: MarkdownData) {
+	const { markdownRemark, otherPosts } = data
 	const { frontmatter, html } = markdownRemark
 	return (
 		<Layout>
-			<Link to={Routes.blog}>
-				<button className="button is-warning mb-2">Back</button>
-			</Link>
-			<div>
-				<Img fixed={{ ...frontmatter.coverImage.childImageSharp.fixed }} />
+			<div style={{ display: 'flex' }}>
+				<PostContainer>
 				<h1 className="title is-3 has-text-light">{frontmatter.title}</h1>
 				<h2 className="title is-5 has-text-light">{frontmatter.date}</h2>
+					<CoverImage>
+						<Img fixed={{ ...frontmatter.coverImage.childImageSharp.fixed }} />
+					</CoverImage>
 				<div dangerouslySetInnerHTML={{ __html: html }} />
+				</PostContainer>
+				<BlogSidebar data={data} otherPosts={otherPosts.edges} />
 			</div>
 		</Layout>
 	)
@@ -58,12 +73,27 @@ export const pageQuery = graphql`
 				title
 				coverImage {
 					childImageSharp {
-						fixed(width: 1200, height: 250, fit: COVER, cropFocus: CENTER) {
+						fixed(width: 1000, height: 250, fit: COVER, cropFocus: CENTER) {
 							...GatsbyImageSharpFixed
 						}
 					}
 				}
 			}
+		}
+		otherPosts: allMarkdownRemark(
+      		sort: { order: DESC, fields: [frontmatter___date] }
+      		limit: 10
+    	) {
+      		edges {
+		        node {
+        		  excerpt
+          			frontmatter {
+            			title
+            			date
+            			slug
+          			}
+        		}
+      		}
 		}
 	}
 `
