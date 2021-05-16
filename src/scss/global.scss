@@ -72,15 +72,6 @@ html, body {
 	div.layoutContainer {
 		padding: 0 .5rem 0 .5rem;
 
-		section.firstSection {
-			@include flex-container-horizontal();
-		
-			.avatar {
-				border-radius: 10px;
-				width: 80rem;
-			}
-		}
-
 		header {
 			h1.titleText {
 				letter-spacing: 3px;
