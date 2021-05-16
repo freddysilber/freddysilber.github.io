@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import breakpoints from '../config/breakpoints'
 // Components
 import {
 	Layout,
@@ -13,10 +14,16 @@ import {
 
 const IndexContainer = styled.section`
 	display: flex;
+	flex-direction: row;
+
+  	@media (max-width: ${breakpoints.breakpointMd}) {
+    	flex-direction: column;
+  	}
 `;
 
 const AvatarWrapper = styled.div`
 	width: 100%;
+	min-width: 20rem;
 	height: auto;
 	margin: auto;
 

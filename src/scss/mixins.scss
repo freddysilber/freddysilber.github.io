@@ -1,8 +1,3 @@
-@mixin flex-container-vertical() {
-	display: flex;
-	flex-direction: column;
-  }
-
   @mixin transition-all($duration: .5s) {
 	  transition: all $duration ease;
   }
