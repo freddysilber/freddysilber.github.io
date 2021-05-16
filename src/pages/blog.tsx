@@ -16,10 +16,13 @@ interface BlogData {
 
 const PostList = styled.ol`
 	list-style: none;
+	align-items: center;
+	padding: 0 15%;
 `
 
 const PostListItem = styled.li`
-
+	width: 100%;
+	padding: 0.5rem;
 `
 
 const PostLink = styled(Link)`
@@ -27,22 +30,20 @@ const PostLink = styled(Link)`
 `
 
 const PostListItemContent = styled.div`
-	padding: 1rem;
+	padding: .25rem;
 `
 
 const PostImageWrapper = styled.div`
 	width: 200px;
-	border: 1px solid #e5e5e5;
-	border-radius: 4px;
-	padding: 8px;
+	border-radius: 5px;
 	background: rgba(0, 0, 0, 0.1);
 	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 
 	.gatsby-image-wrapper {
 		width: 184px;
-		border-radius: 4px;
+		border-radius: 5px;
 		img {
-			border-radius: 4px;
+			border-radius: 5px;
 		}
 	}
 `
@@ -61,15 +62,15 @@ export default function SecondPage({ data }: BlogData) {
 					const { frontmatter, excerpt } = post.node
 					const { slug, title, coverImage, date } = frontmatter
 					return (
-						<PostListItem>
+						<PostListItem className="has-background-black box">
 							<PostLink to={slug}>
 								<PostImageWrapper>
 									<Img fluid={{ ...coverImage.childImageSharp.fluid }} />
 								</PostImageWrapper>
 								<PostListItemContent>
-									<h1>{title}</h1>
-									<p>{date}</p>
-									<p>{excerpt}</p>
+									<h1 className="has-text-warning">{title}</h1>
+									<p className="has-text-grey-light mb-2">Published on {date}</p>
+									<p className="has-text-light">{excerpt}</p>
 								</PostListItemContent>
 							</PostLink>
 						</PostListItem>
