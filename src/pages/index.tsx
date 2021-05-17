@@ -31,6 +31,10 @@ const AvatarWrapper = styled.div`
 		border-radius: 100%;
 		box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 	}
+
+	@media (max-width: ${breakpoints.breakpointMd}) {
+    	width: 50%;
+  	}
 `
 
 export default function IndexPage() {
