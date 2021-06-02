@@ -50,12 +50,12 @@ export default function Template({ data }: MarkdownData) {
 		<Layout>
 			<div style={{ display: 'flex' }}>
 				<PostContainer>
-				<h1 className="title is-3 has-text-light">{frontmatter.title}</h1>
-				<h2 className="title is-5 has-text-light">{frontmatter.date}</h2>
+					<h1 className="title is-3 has-text-light">{frontmatter.title}</h1>
+					<h2 className="title is-5 has-text-light">{frontmatter.date}</h2>
 					<CoverImage>
 						<Img fixed={{ ...frontmatter.coverImage.childImageSharp.fixed }} />
 					</CoverImage>
-				<div dangerouslySetInnerHTML={{ __html: html }} />
+					<div dangerouslySetInnerHTML={{ __html: html }} />
 				</PostContainer>
 				<BlogSidebar data={data} otherPosts={otherPosts.edges} />
 			</div>

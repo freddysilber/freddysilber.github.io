@@ -32,7 +32,7 @@ const PostLink = styled(Link)`
 `
 
 const PostListItemContent = styled.div`
-	padding: .25rem;
+	padding: .5rem;
 `
 
 const PostImageWrapper = styled.div`
