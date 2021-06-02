@@ -55,7 +55,7 @@ export default function BlogPage({ data }: BlogData) {
 	return (
 		<Layout>
 			<SEO title="Blog" />
-			<div style={{ display: 'flex', padding: '0 3rem' }}>
+			<div style={{ display: 'flex' }}>
 				<PostList>
 					{recentPosts.map((post: BlogPost, index: number) => {
 						const { frontmatter, excerpt } = post.node
