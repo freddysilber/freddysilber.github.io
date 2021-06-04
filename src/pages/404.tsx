@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 // @ts-ignore
 import { Eclipse } from 'react-loading-io';
@@ -8,7 +8,7 @@ import { Layout, SEO } from '../components';
  * Component that shows the 404 page when the user fucks up.
  */
 const NotFoundPage = () => {
-	const [state, setState]: any = React.useState([]);
+	const [state, setState]: any = useState([]);
 	// Fetch quote of the day when user hits a 404 and fucks up
 	useEffect(() => {
 		axios.get('https://quotes.rest/qod').then(({ data }) => {
