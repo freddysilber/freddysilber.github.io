@@ -46,6 +46,34 @@ html, body {
 		font-family: 'Kaushan Script' !important;
 	}
 
+	.navbar-item {
+		display: flex;
+		color: $light !important;
+	}
+	  
+	.navbar,
+	.navbar-menu,
+	.navbar-start,
+	.navbar-end {
+		background: $dark !important;
+		align-items: stretch;
+		display: flex;
+		padding: 0;
+	}
+	  
+	.navbar-menu{
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+	.navbar-start{
+		justify-content: flex-start;
+		margin-right: auto;
+	}
+	.navbar-end{
+		justify-content: flex-end;
+		margin-left: auto;
+	}
+
 	* {
 		font-family: 'Drama Sans';
 	}
