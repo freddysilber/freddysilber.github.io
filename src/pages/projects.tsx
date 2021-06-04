@@ -25,7 +25,7 @@ export default function ProjectsPage() {
 	const renderProjects = () => {
 		if (state.length) {
 			return (
-				<ol>
+				<ol style={{ padding: '0 2rem' }}>
 					{state.map((repo: any) => {
 						return (
 							<li key={repo.id}>
