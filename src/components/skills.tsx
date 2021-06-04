@@ -16,7 +16,7 @@ const ICONS: string[] = [
 	'devicon-sass-original',
 	'devicon-visualstudio-plain',
 	'devicon-webpack-plain',
-]
+];
 
 const SkillsWrapper = styled.div`
 	display: flex;
@@ -28,11 +28,11 @@ const SkillsWrapper = styled.div`
     	flex-direction: row;
 		margin: 1rem 0 1rem 0;
   	}
-`
+`;
 
 const Icon = styled.i`
 	  font-size: 1.5em;
-`
+`;
 
 export default function Skills() {
 	return (
