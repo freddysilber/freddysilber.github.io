@@ -45,7 +45,7 @@ html, body {
 	.has-script-text {
 		font-family: 'Kaushan Script' !important;
 	}
-
+	// Css for mobile fix
 	.navbar-item {
 		display: flex;
 		color: $light !important;
@@ -73,6 +73,7 @@ html, body {
 		justify-content: flex-end;
 		margin-left: auto;
 	}
+	// END - Css for mobile fix
 
 	* {
 		font-family: 'Drama Sans';
