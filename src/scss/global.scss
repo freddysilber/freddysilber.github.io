@@ -31,11 +31,20 @@
 	src: local('FiraCode-Regular'), url(../assets/fonts/FiraCode-Regular.otf);
 }
 
+@font-face {
+	font-family: 'Kaushan Script';
+	src: local('KaushanScript-Regular'), url(../assets/fonts/KaushanScript-Regular.ttf);
+}
+
 html, body {
 	background-color: $dark;
 	height: 100%;
 	color: $light;
 	overscroll-behavior: none;
+
+	.has-script-text {
+		font-family: 'Kaushan Script' !important;
+	}
 
 	* {
 		font-family: 'Drama Sans';
