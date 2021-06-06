@@ -7,6 +7,7 @@
 
 @import '~bulma/bulma.sass';
 
+// Register fonts
 @font-face {
 	font-family: 'Drama Sans';
 	src: url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.eot'); /* IE9 Compat Modes */
@@ -36,16 +37,17 @@
 	src: local('KaushanScript-Regular'), url(../assets/fonts/KaushanScript-Regular.ttf);
 }
 
+// Scoping to outer html/body elements
 html, body {
 	background-color: $dark;
 	height: 100%;
 	color: $light;
 	overscroll-behavior: none;
-
+	// Selector for using 'script' style font
 	.has-script-text {
 		font-family: 'Kaushan Script' !important;
 	}
-	// Css for mobile fix
+	// START - Css for mobile fix
 	.navbar-item {
 		display: flex;
 		color: $light !important;
@@ -75,6 +77,7 @@ html, body {
 	}
 	// END - Css for mobile fix
 
+	// Default all text to use 'Drama Sans'
 	* {
 		font-family: 'Drama Sans';
 	}
