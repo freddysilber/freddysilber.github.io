@@ -16,7 +16,7 @@ const IndexContainer = styled.section`
 	display: flex;
 	flex-direction: row;
 
-  	@media (max-width: ${breakpoints.breakpointMd}) {
+  	@media(max-width: ${breakpoints.breakpointMd}) {
     	flex-direction: column;
   	}
 `;

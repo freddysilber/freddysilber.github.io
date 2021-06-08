@@ -1,13 +1,19 @@
 import React from 'react';
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 import { BlogPost } from '../models';
+import breakpoints from '../config/breakpoints';
 
 const PostList = styled.ul`
 	width: 30%;
 	list-style: upper-roman;
 	padding: 0 2rem;
+
+	@media(max-width: ${breakpoints.breakpointMd}) {
+    	width: 100%;
+		margin-top: 1rem;
+  	}
 `
 
 const PostListItem = styled.li``

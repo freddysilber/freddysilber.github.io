@@ -5,11 +5,25 @@ import { BlogSidebar, Layout, SEO } from '../components'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+// Models
 import { BlogData, BlogPost } from '../models'
+import breakpoints from '../config/breakpoints';
+
+const PostListContainer = styled.div`
+	display: flex;
+
+	@media(max-width: ${breakpoints.breakpointMd}) {
+    	flex-direction: column;
+  	}
+`;
 
 const PostList = styled.ol`
 	list-style: none;
 	width: 70%;
+
+	@media(max-width: ${breakpoints.breakpointMd}) {
+    	width: 100%;
+  	}
 `
 
 const PostListItem = styled.li`
@@ -29,6 +43,10 @@ const PostListItem = styled.li`
 
 const PostLink = styled(Link)`
 	display: flex;
+
+	@media(max-width: ${breakpoints.breakpointMd}) {
+    	flex-direction: column;
+  	}
 `
 
 const PostListItemContent = styled.div`
@@ -55,7 +73,7 @@ export default function BlogPage({ data }: BlogData) {
 	return (
 		<Layout>
 			<SEO title="Blog" />
-			<div style={{ display: 'flex' }}>
+			<PostListContainer>
 				<PostList>
 					{recentPosts.map((post: BlogPost, index: number) => {
 						const { frontmatter, excerpt } = post.node
@@ -78,7 +96,7 @@ export default function BlogPage({ data }: BlogData) {
 					})}
 				</PostList>
 				<BlogSidebar data={data} otherPosts={otherPosts} />
-			</div>
+			</PostListContainer>
 		</Layout >
 	)
 }
