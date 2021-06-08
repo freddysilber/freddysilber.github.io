@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { BlogSidebar, Layout } from '../components'
+import { BlogSidebar, Layout, SEO } from '../components'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
@@ -46,8 +46,10 @@ const CoverImage = styled.div`
 export default function Template({ data }: MarkdownData) {
 	const { markdownRemark, otherPosts } = data
 	const { frontmatter, html } = markdownRemark
+
 	return (
 		<Layout>
+			<SEO title={frontmatter.title} />
 			<div style={{ display: 'flex' }}>
 				<PostContainer>
 					<h1 className="title is-3 has-text-light">{frontmatter.title}</h1>
