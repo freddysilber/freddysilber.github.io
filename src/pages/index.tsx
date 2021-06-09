@@ -53,7 +53,7 @@ export default function IndexPage() {
 
 	return (
 		<Layout>
-			<ReactTooltip />
+			<ReactTooltip type="dark" />
 			<SEO title="Home" />
 			{/* <p data-tip="hello world">Tooltip</p> */}
 			<IndexContainer>
