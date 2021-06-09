@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import ReactTooltip from 'react-tooltip';
 import breakpoints from '../config/breakpoints'
 // Components
 import {
@@ -52,10 +53,14 @@ export default function IndexPage() {
 
 	return (
 		<Layout>
+			<ReactTooltip />
 			<SEO title="Home" />
+			{/* <p data-tip="hello world">Tooltip</p> */}
 			<IndexContainer>
 				<AvatarWrapper>
-					<Img fluid={data.placeholderImage.childImageSharp.fluid} />
+					<div data-tip="That's me!">
+						<Img fluid={data.placeholderImage.childImageSharp.fluid} />
+					</div>
 				</AvatarWrapper>
 				<Skills />
 				<Bio />
