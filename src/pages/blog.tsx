@@ -93,6 +93,7 @@ export default function BlogPage({ data }: BlogData) {
 								</PostLink>
 							</PostListItem>
 						)
+
 					})}
 				</PostList>
 				<BlogSidebar data={data} otherPosts={otherPosts} />
