@@ -18,7 +18,7 @@ export default function ResumePage() {
 			<ResumeContainer className="resumeContainer px-1 pb-6">
 				<h1 className="has-text-left has-text-weight-bold is-uppercase mt-1">Freddy Silber</h1>
 				<p><a href="tel:+1-970-532-0297">970-531-0297</a> | <a href={Email.getEmailHandler()} target="_blank">freddy.silber@gmail.com</a></p>
-				<p><a href={URLS.linkedIn.url} target="_blank">LinkedIn</a> | <a href={URLS.github.url} target="_blank">{URLS.github.name}</a> | <a href={URLS.blog.url} target="_blank">Blog</a> | <Link to={URLS.portfolio.url}>Portfolio</Link> | <a href={URLS.youtube.url} target="_blank">YouTube</a></p>
+				<p><a href={URLS.linkedIn.url} target="_blank">LinkedIn</a> | <a href={URLS.github.url} target="_blank">{URLS.github.name}</a> | <Link to={URLS.blog.url}>Blog</Link> | <Link to={URLS.portfolio.url}>Portfolio</Link> | <a href={URLS.youtube.url} target="_blank">YouTube</a></p>
 				<h1 className="has-text-weight-bold has-text-centered is-uppercase">Software Engineer</h1>
 				<Line />
 				<p>

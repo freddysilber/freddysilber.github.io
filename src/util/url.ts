@@ -44,7 +44,7 @@ export const URLS: Urls = {
 		url: 'https://twitter.com/freddysilber'
 	},
 	blog: {
-		url: 'https://freddysilber.github.io/blog/'
+		url: '/blog/'
 	},
 	portfolio: {
 		url: '/'
