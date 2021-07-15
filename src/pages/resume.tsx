@@ -1,8 +1,8 @@
-import React from 'react';
 import { Link } from 'gatsby';
-import { Layout, SEO, } from '../components';
-import { URLS, getGithubRepo, Email, Routes } from '../util';
+import React from 'react';
 import styled from 'styled-components';
+import { Layout, SEO } from '../components';
+import { Email, getGithubRepo, Routes, URLS } from '../util';
 
 const ResumeContainer = styled.div``;
 
@@ -15,6 +15,7 @@ export default function ResumePage() {
 	return (
 		<Layout>
 			<SEO title="Resume" />
+			<a className="button" style={{ float: 'right' }} href='../../Resume.pdf' download="Freddy Silber - Resume">Download my Resume! (PDF)</a>
 			<ResumeContainer className="resumeContainer px-1 pb-6">
 				<h1 className="has-text-left has-text-weight-bold is-uppercase mt-1">Freddy Silber</h1>
 				<p>
