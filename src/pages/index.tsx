@@ -48,6 +48,20 @@ export default function IndexPage() {
 					}
 				}
 			}
+			flatironSchoolCertification: file(relativePath: { eq: "flatiron-school-certificate.jpg" }) {
+				childImageSharp {
+					fluid {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+			salesforceAppBuilderCertification: file(relativePath: { eq: "salesforce-app-builder-certificate.jpg" }) {
+				childImageSharp {
+					fluid {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
 		}
 	`)
 
@@ -64,6 +78,10 @@ export default function IndexPage() {
 				<Bio />
 			</IndexContainer>
 			<SocialMedia />
+			<div style={{ display: 'flex', padding: '1rem 0 0.5rem 0' }}>
+				<Img fluid={data.flatironSchoolCertification.childImageSharp.fluid} style={{ width: '50%', margin: '5px', borderRadius: '5px' }} />
+				<Img fluid={data.salesforceAppBuilderCertification.childImageSharp.fluid} style={{ width: '50%', margin: '5px', borderRadius: '5px' }} />
+			</div>
 		</Layout>
 	)
 }
