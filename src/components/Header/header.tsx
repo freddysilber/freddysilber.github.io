@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 // Utilities
-import { Routes } from '../util'
+import { Routes } from '../../util'
+// Styles
+import '../Header/header.scss';
 
 const HeaderUnderline = styled.div`
 	height: 4px;

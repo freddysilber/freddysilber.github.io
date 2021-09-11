@@ -6,5 +6,6 @@ export enum Routes {
 	about = '/about/',
 	page2 = '/page-2/',
 	usingTypescript = '/using-typescript/',
-	errorPage = '/404/'
+	errorPage = '/404/',
+	credentials = '/credentials/',
 }

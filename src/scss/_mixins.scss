@@ -1,0 +1,9 @@
+  @mixin transition-all($duration: .5s) {
+	  transition: all $duration ease;
+  }
+
+  @mixin sticky($pos: 'top', $dist: 0, $zIndex: 10) {
+    position: sticky;
+    #{$pos}: $dist;
+    z-index: $zIndex;
+  }
