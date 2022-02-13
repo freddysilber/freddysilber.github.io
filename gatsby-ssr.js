@@ -25,7 +25,7 @@ exports.onRenderBody = ({
 	setHtmlAttributes(HtmlAttributes)
 	setHeadComponents([
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css" />,
-		<script src="https://kit.fontawesome.com/c0f875bda2.js" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/c0f875bda2.js" crossOrigin="anonymous"></script>
 	])
 	setBodyAttributes(BodyAttributes)
 }

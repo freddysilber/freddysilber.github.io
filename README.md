@@ -5,3 +5,6 @@
 
 ## Todo
 * Deploy site to Vercel?
+
+## Scripts
+* ```npm start``` - start dev server
