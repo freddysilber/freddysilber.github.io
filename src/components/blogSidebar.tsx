@@ -28,8 +28,8 @@ export default function BlogSidebar({ otherPosts }: any) {
 			<h1 className="has-text-weight-bold has-text-centered has-text-warning is-size-5 mb-4">Other Blog Posts</h1>
 			<hr />
 			{
-				!!otherPosts.length ?
-					otherPosts.map((post: BlogPost, index: number) => {
+				!!otherPosts.length
+					? otherPosts.map((post: BlogPost, index: number) => {
 						const { slug, title } = post.node.frontmatter
 						return (
 							<PostListItem key={index}>
@@ -38,8 +38,8 @@ export default function BlogSidebar({ otherPosts }: any) {
 								</PostLink>
 							</PostListItem>
 						)
-					}) :
-					<p className="has-text-centered has-text-grey-light mt-6">More posts coming soon...</p>
+					})
+					: <p className="has-text-centered has-text-grey-light mt-6">More posts coming soon...</p>
 			}
 		</PostList>
 	)
