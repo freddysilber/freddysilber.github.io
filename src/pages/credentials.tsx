@@ -46,7 +46,9 @@ export default function Credentials() {
 		<Layout>
 			<SEO title="Credentials" />
 			<CredentialsContainer>
+				<div style={{ padding: '1rem' }}>
 				<Img fluid={data.flatironSchoolCertification.childImageSharp.fluid} style={credentialsStyles} />
+				</div>
 				<Img fluid={data.salesforceAppBuilderCertification.childImageSharp.fluid} style={credentialsStyles} />
 			</CredentialsContainer>
 		</Layout>
