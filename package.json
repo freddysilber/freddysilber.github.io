@@ -23,7 +23,7 @@
   "dependencies": {
     "axios": "^0.25.0",
     "bulma": "^0.9.3",
-    "devicon": "^2.13.0",
+    "devicon": "^2.15.1",
     "gatsby": "^3.12.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^1.12.0",
