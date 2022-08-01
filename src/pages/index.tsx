@@ -12,6 +12,7 @@ import {
 	Skills,
 	SocialMedia
 } from '../components'
+import { Email, mailTo } from '../util/email';
 import axios from 'axios';
 
 const IndexContainer = styled.section`
@@ -86,7 +87,7 @@ export default function IndexPage() {
 					<div style={{
 						padding: '1rem'
 					}}>
-						<p>💌 freddy.silber@gmail.com</p>
+						<span>💌 {mailTo()}</span>
 						<p>📞 970-531-0297</p>
 					</div>
 				</div>
