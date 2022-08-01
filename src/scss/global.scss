@@ -136,32 +136,8 @@ body {
 		font-size: 5em;
 		line-height: 1;
 
-		@media (max-width: 2000px) {
-			font-size: 4em;
-		}
-
 		@media (max-width: 1200px) {
 			font-size: 3em;
-		}
-
-		div.layoutContainer {
-			padding: 0 .5rem 0 .5rem;
-
-			main {
-				div.resumeContainer {
-					* {
-						font-family: 'Fira Code';
-					}
-
-					ol {
-						margin: 1rem;
-
-						li {
-							list-style-type: circle;
-						}
-					}
-				}
-			}
 		}
 	}
 }

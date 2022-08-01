@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
@@ -12,6 +12,7 @@ import {
 	Skills,
 	SocialMedia
 } from '../components'
+import axios from 'axios';
 
 const IndexContainer = styled.section`
 	display: flex;
@@ -38,7 +39,14 @@ const AvatarWrapper = styled.div`
   	}
 `
 
+const SubTitle = styled.h3`
+	color: #666;
+	font-size: 1.3em;
+	padding-bottom: 2rem;
+`;
+
 export default function IndexPage() {
+	const [state, setState] = useState<{ spotlight?: any }>({});
 	const data = useStaticQuery(graphql`
 		query {
 			placeholderImage: file(relativePath: { eq: "avatar.jpg" }) {
@@ -50,6 +58,19 @@ export default function IndexPage() {
 			}
 		}
 	`)
+
+	// useEffect(() => {
+	// 	axios.get('https://api.github.com/repos/freddysilber/ghost-rider').then((response) => {
+	// 		setState({
+	// 			...state,
+	// 			spotlight: response.data
+	// 		});
+	// 		console.log(state)
+	// 	}).catch(error => {
+	// 		setState({});
+	// 		throw new Error(error);
+	// 	})
+	// }, {} as any);
 
 	return (
 		<Layout>
@@ -71,7 +92,23 @@ export default function IndexPage() {
 				</div>
 				<Skills />
 				<div>
-					<h1 className="titleText">Hello,<br /> I'm Freddy Silber,<br /> Sofware Developer</h1>
+					<div>
+						<h1 className="titleText">Hello,<br /> I'm Freddy Silber,<br /> Sofware Developer</h1>
+						<SubTitle>Full stack developer | Salesforce connoisseur</SubTitle>
+					</div>
+					{
+						state.spotlight
+							? <div style={{
+								padding: '1rem',
+								border: '1px solid #666',
+								borderRadius: '5px',
+								width: 'fit-content'
+							}}>
+								<h1 style={{ display: 'flex', alignItems: 'center' }}>Splotlight Project:<span style={{ fontSize: '1.5em', marginLeft: '.25rem' }}>Ghost Rider</span></h1>
+								<p>{state.spotlight.description}</p>
+							</div>
+							: null
+					}
 					<Bio />
 				</div>
 			</IndexContainer>

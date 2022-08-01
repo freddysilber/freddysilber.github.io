@@ -1,4 +1,4 @@
-export { default as Layout } from './layout';
+export { default as Layout } from './Layout/layout';
 export { default as Bio } from './bio';
 export { default as Skills } from './skills';
 export { default as Image } from './image';

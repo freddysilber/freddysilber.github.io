@@ -11,6 +11,7 @@ export default function ProjectsPage() {
 	const [state, setState] = useState([]);
 
 	useEffect(() => {
+		// axios.get('https://api.github.com/repos/freddysilber/ghost-rider').then((repos) => {
 		axios.get('https://api.github.com/users/freddysilber/repos').then((repos) => {
 			setState(repos.data);
 		}).catch(error => {
@@ -30,6 +31,7 @@ export default function ProjectsPage() {
 						return (
 							<li key={repo.id}>
 								<a href={repo.html_url as string} target="_blank">{repo.name}</a>
+								<p style={{ color: '#666' }}>- {repo.description || 'N/A'}</p>
 							</li>
 						)
 					})}
