@@ -148,30 +148,6 @@ body {
 			padding: 0 .5rem 0 .5rem;
 
 			main {
-				div.socialMediaContainer {
-					display: flex;
-					justify-content: space-evenly;
-					margin-top: 1rem;
-
-					a {
-						@include transition-all();
-
-						i {
-							@include transition-all();
-							color: $info;
-							font-size: 2rem;
-
-							&:hover {
-								color: $purple;
-							}
-						}
-
-						&:hover {
-							transform: scale(1.2);
-						}
-					}
-				}
-
 				div.resumeContainer {
 					* {
 						font-family: 'Fira Code';
