@@ -30,7 +30,7 @@ const AvatarWrapper = styled.div`
 
 	.gatsby-image-wrapper {
 		border-radius: 100%;
-		box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+		box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.5);
 	}
 
 	@media (max-width: ${breakpoints.breakpointMd}) {
@@ -62,6 +62,12 @@ export default function IndexPage() {
 						<Img fluid={data.placeholderImage.childImageSharp.fluid} />
 					</AvatarWrapper>
 					<SocialMedia />
+					<div style={{
+						padding: '1rem'
+					}}>
+						<p>💌 freddy.silber@gmail.com</p>
+						<p>📞 970-531-0297</p>
+					</div>
 				</div>
 				<Skills />
 				<div>
