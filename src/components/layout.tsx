@@ -9,7 +9,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 // Components
-import { Header, Navigation } from '../components'
+import { Navigation } from '../components'
 
 export default function Layout({ children }: any) {
 	const data = useStaticQuery(graphql`
