@@ -24,7 +24,6 @@ export default function Layout({ children }: any) {
 
 	return (
 		<div className="layoutContainer">
-			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<Navigation />
 			<main>{children}</main>
 		</div>

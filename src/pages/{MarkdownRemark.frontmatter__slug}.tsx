@@ -59,7 +59,8 @@ export default function Template({ data }: MarkdownData) {
 						border: '1px',
 						borderStyle: 'solid',
 						borderRadius: '5px',
-						margin: '1.5rem 0rem'
+						margin: '1.5rem 0rem',
+						width: 'fit-content'
 					}} to={Routes.blog} activeClassName="active">Back To Blog List</Link>
 					<h1 className="title is-3 has-text-light">{frontmatter.title}</h1>
 					<h2 className="title is-5 has-text-light">{frontmatter.date}</h2>

@@ -57,13 +57,18 @@ export default function IndexPage() {
 			<SEO title="Home" />
 			{/* <p data-tip="hello world">Tooltip</p> */}
 			<IndexContainer>
-				<AvatarWrapper data-tip="That's me!">
-					<Img fluid={data.placeholderImage.childImageSharp.fluid} />
-				</AvatarWrapper>
+				<div>
+					<AvatarWrapper data-tip="That's me!">
+						<Img fluid={data.placeholderImage.childImageSharp.fluid} />
+					</AvatarWrapper>
+					<SocialMedia />
+				</div>
 				<Skills />
-				<Bio />
+				<div>
+					<h1 className="titleText">Hello,<br /> I'm Freddy Silber,<br /> Sofware Developer</h1>
+					<Bio />
+				</div>
 			</IndexContainer>
-			<SocialMedia />
 			<div style={{ display: 'flex', padding: '1rem 0 0.5rem 0' }}></div>
 		</Layout>
 	)

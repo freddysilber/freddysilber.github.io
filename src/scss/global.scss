@@ -10,21 +10,21 @@
 // Register fonts
 @font-face {
 	font-family: 'Drama Sans';
-	src: url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.eot'); /* IE9 Compat Modes */
-	src: url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		   url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.woff2') format('woff2'), /* Super Modern Browsers */
-		   url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.woff') format('woff'), /* Pretty Modern Browsers */
-		   url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.ttf')  format('truetype'); /* Safari, Android, iOS */
+	src: url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.eot');
+	/* IE9 Compat Modes */
+	src: url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */
+		url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.woff') format('woff'),
+		/* Pretty Modern Browsers */
+		url('https://rawgit.com/drama-sans/drama-sans/master/dist/DramaSans.ttf') format('truetype');
+	/* Safari, Android, iOS */
 }
 
 @font-face {
 	font-family: 'Empire';
 	src: local('Empire'), url(../assets/fonts/Empire.otf) format('truetype');
-}
-
-@font-face {
-	font-family: 'Grizzly';
-	src: local('Grizzly'), url(../assets/fonts/Grizzly.ttf) format('truetype');
 }
 
 @font-face {
@@ -37,44 +37,55 @@
 	src: local('KaushanScript-Regular'), url(../assets/fonts/KaushanScript-Regular.ttf);
 }
 
+@font-face {
+	font-family: 'FredokaOne';
+	src: local('FredokaOne'), url(../assets/fonts/FredokaOne-Regular.ttf);
+}
+
 // Scoping to outer html/body elements
-html, body {
+html,
+body {
 	background-color: $dark;
 	height: 100%;
 	color: $light;
 	overscroll-behavior: none;
+
 	// Selector for using 'script' style font
 	.has-script-text {
 		font-family: 'Kaushan Script' !important;
 	}
+
 	// START - Css for mobile fix
 	.navbar-item {
 		display: flex;
-		color: $light !important;
+		color: $light  !important;
 	}
-	  
+
 	.navbar,
 	.navbar-menu,
 	.navbar-start,
 	.navbar-end {
-		background: $dark !important;
+		background: $dark  !important;
 		align-items: stretch;
 		display: flex;
 		padding: 0;
 	}
-	  
-	.navbar-menu{
+
+	.navbar-menu {
 		flex-grow: 1;
 		flex-shrink: 0;
 	}
-	.navbar-start{
+
+	.navbar-start {
 		justify-content: flex-start;
 		margin-right: auto;
 	}
-	.navbar-end{
+
+	.navbar-end {
 		justify-content: flex-end;
 		margin-left: auto;
 	}
+
 	// END - Css for mobile fix
 
 	// Default all text to use 'Drama Sans'
@@ -97,10 +108,8 @@ html, body {
 	code {
 		background: inherit;
 	}
-	
+
 	nav {
-		margin-bottom: .5rem;
-		
 		a {
 			font-family: 'Empire';
 			letter-spacing: 3px;
@@ -110,32 +119,21 @@ html, body {
 
 			&.active {
 				border: 2px solid $purple;
-				background-color: $dark !important;
+				background-color: $dark  !important;
 			}
 		}
+	}
+
+	.titleText {
+		@include transition-all();
+		color: $purple;
+		text-decoration: none;
+		font-family: 'FredokaOne';
 	}
 
 	div.layoutContainer {
 		padding: 0 .5rem 0 .5rem;
 
-		header {
-			h1.titleText {
-				letter-spacing: 3px;
-				
-				a.header {
-					@include transition-all();
-					color: $purple;
-					text-decoration: none;
-					font-family: 'Grizzly';
-					font-weight: lighter;
-		
-					&:hover {
-						color: $warning;
-					}
-				}
-			}
-		}
-		
 		main {
 			div.socialMediaContainer {
 				display: flex;
@@ -144,7 +142,7 @@ html, body {
 
 				a {
 					@include transition-all();
-					
+
 					i {
 						@include transition-all();
 						color: $info;
@@ -156,7 +154,7 @@ html, body {
 					}
 
 					&:hover {
-						transform: scale(1.5);
+						transform: scale(1.2);
 					}
 				}
 			}
@@ -168,7 +166,7 @@ html, body {
 
 				ol {
 					margin: 1rem;
-			
+
 					li {
 						list-style-type: circle;
 					}
