@@ -140,53 +140,45 @@ body {
 			font-size: 3em;
 		}
 
-		@media (max-width: 800px) {
-			font-size: 3em;
-		}
+		div.layoutContainer {
+			padding: 0 .5rem 0 .5rem;
 
-		@media (max-width: 400px) {
-			font-size: 4em;
-		}
-	}
+			main {
+				div.socialMediaContainer {
+					display: flex;
+					justify-content: space-evenly;
+					margin-top: 1rem;
 
-	div.layoutContainer {
-		padding: 0 .5rem 0 .5rem;
-
-		main {
-			div.socialMediaContainer {
-				display: flex;
-				justify-content: space-evenly;
-				margin-top: 1rem;
-
-				a {
-					@include transition-all();
-
-					i {
+					a {
 						@include transition-all();
-						color: $info;
-						font-size: 2rem;
+
+						i {
+							@include transition-all();
+							color: $info;
+							font-size: 2rem;
+
+							&:hover {
+								color: $purple;
+							}
+						}
 
 						&:hover {
-							color: $purple;
+							transform: scale(1.2);
 						}
 					}
+				}
 
-					&:hover {
-						transform: scale(1.2);
+				div.resumeContainer {
+					* {
+						font-family: 'Fira Code';
 					}
-				}
-			}
 
-			div.resumeContainer {
-				* {
-					font-family: 'Fira Code';
-				}
+					ol {
+						margin: 1rem;
 
-				ol {
-					margin: 1rem;
-
-					li {
-						list-style-type: circle;
+						li {
+							list-style-type: circle;
+						}
 					}
 				}
 			}
