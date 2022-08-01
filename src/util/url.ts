@@ -35,7 +35,7 @@ export const URLS: Urls = {
 		url: 'https://github.com/freddysilber'
 	},
 	instagram: {
-		url: 'https://www.instagram.com/burnttoast_jpeg/'
+		url: 'https://www.instagram.com/freddy.silber/'
 	},
 	linkedIn: {
 		url: 'https://www.linkedin.com/in/freddysilber/'
