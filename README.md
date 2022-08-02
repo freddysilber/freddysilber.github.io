@@ -7,5 +7,5 @@
 * Deploy site to Vercel?
 
 ## Scripts
-* Make sure to be using node 12 / npm 6
+> Check ```.nvmrc```
 * ```npm start``` - start dev server
