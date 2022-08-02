@@ -9,7 +9,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 // Components
-import { Header, Navigation } from '../components'
+import { Navigation } from '..'
+// Styles
+import './layout.scss';
 
 export default function Layout({ children }: any) {
 	const data = useStaticQuery(graphql`
@@ -24,7 +26,6 @@ export default function Layout({ children }: any) {
 
 	return (
 		<div className="layoutContainer">
-			<Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 			<Navigation />
 			<main>{children}</main>
 		</div>

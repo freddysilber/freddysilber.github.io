@@ -1,8 +1,9 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { BlogSidebar, Layout, SEO } from '../components'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { Routes } from '../util'
 
 interface MarkdownData {
 	data: {
@@ -52,6 +53,15 @@ export default function Template({ data }: MarkdownData) {
 			<SEO title={frontmatter.title} />
 			<div style={{ display: 'flex' }}>
 				<PostContainer>
+					<Link style={{
+						fontSize: '1.5rem',
+						padding: '.5rem',
+						border: '1px',
+						borderStyle: 'solid',
+						borderRadius: '5px',
+						margin: '1.5rem 0rem',
+						width: 'fit-content'
+					}} to={Routes.blog} activeClassName="active">Back To Blog List</Link>
 					<h1 className="title is-3 has-text-light">{frontmatter.title}</h1>
 					<h2 className="title is-5 has-text-light">{frontmatter.date}</h2>
 					<CoverImage>

@@ -2,7 +2,8 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { Layout, SEO } from '../components';
-import { Email, getGithubRepo, Routes, URLS } from '../util';
+import { getGithubRepo, Routes, URLS } from '../util';
+import { Email, mailTo } from '../util/email';
 
 const ResumeContainer = styled.div``;
 
@@ -21,7 +22,7 @@ export default function ResumePage() {
 				<p>
 					<a href="tel:+1-970-532-0297">970-531-0297</a>
 					<span> | </span>
-					<a href={Email.getEmailHandler()} target="_blank">freddy.silber@gmail.com</a>
+					{mailTo()}
 				</p>
 				<p>
 					<a href={URLS.linkedIn.url} target="_blank">LinkedIn</a>

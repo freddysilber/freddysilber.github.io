@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface Url {
 	name?: string;
 	url: string;
@@ -35,7 +37,7 @@ export const URLS: Urls = {
 		url: 'https://github.com/freddysilber'
 	},
 	instagram: {
-		url: 'https://www.instagram.com/burnttoast_jpeg/'
+		url: 'https://www.instagram.com/freddy.silber/'
 	},
 	linkedIn: {
 		url: 'https://www.linkedin.com/in/freddysilber/'
@@ -53,16 +55,4 @@ export const URLS: Urls = {
 
 export function getGithubRepo(repoName: string) {
 	return `${URLS.github.url}/${repoName}`
-}
-/**
- * This class handles email config external routing to outside of my site
- */
-export class Email {
-	private static _email: string = `freddy.silber@gmail.com`;
-	private static _subject: string = `Hey Freddy...`;
-	private static _body: string = `Ask me anything, I'd love to hear from you!`;
-
-	public static getEmailHandler(): string {
-		return `mailto: ${this._email}?subject=${this._subject}&body=${this._body}`;
-	}
 }

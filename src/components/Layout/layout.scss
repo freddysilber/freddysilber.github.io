@@ -1,0 +1,19 @@
+div.layoutContainer {
+	padding: 0 .5rem 0 .5rem;
+
+	main {
+		div.resumeContainer {
+			* {
+				font-family: 'Fira Code';
+			}
+
+			ol {
+				margin: 1rem;
+
+				li {
+					list-style-type: circle;
+				}
+			}
+		}
+	}
+}
