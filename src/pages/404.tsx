@@ -3,6 +3,7 @@ import axios from 'axios';
 // @ts-ignore
 import { Eclipse } from 'react-loading-io';
 import { Layout, SEO } from '../components';
+import { endpoints } from '../util/endpoints';
 
 /**
  * Component that shows the 404 page when the user fucks up.
@@ -11,7 +12,7 @@ const NotFoundPage = () => {
 	const [state, setState]: any = useState([]);
 	// Fetch quote of the day when user hits a 404 and fucks up
 	useEffect(() => {
-		axios.get('https://quotes.rest/qod').then(({ data }) => {
+		axios.get(endpoints.quotes).then(({ data }) => {
 			setState(data.contents.quotes);
 		}).catch(error => {
 			setState([{ quote: 'Something is seriously wrong here...' }]);

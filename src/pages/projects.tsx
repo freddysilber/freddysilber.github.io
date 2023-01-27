@@ -6,14 +6,20 @@ import {
 import axios from 'axios';
 // @ts-ignore
 import { Eclipse } from 'react-loading-io';
+import { GithubRepo } from '../models/github-repo.model';
+import { endpoints } from '../util/endpoints';
 
 export default function ProjectsPage() {
-	const [state, setState] = useState([]);
+	const [state, setState] = useState<GithubRepo[]>([]);
 
 	useEffect(() => {
 		// axios.get('https://api.github.com/repos/freddysilber/ghost-rider').then((repos) => {
-		axios.get('https://api.github.com/users/freddysilber/repos').then((repos) => {
-			setState(repos.data);
+		axios.get<GithubRepo[]>(endpoints.github.repos).then((repos) => {
+			console.log(repos)
+			const filteredRepos = repos.data.filter((repo) => {
+				return !!!repo.fork;
+			});
+			setState(filteredRepos);
 		}).catch(error => {
 			setState([]);
 			throw new Error(error);
@@ -27,7 +33,7 @@ export default function ProjectsPage() {
 		if (state.length) {
 			return (
 				<ol style={{ padding: '0 2rem' }}>
-					{state.map((repo: any) => {
+					{state.map((repo: GithubRepo) => {
 						return (
 							<li key={repo.id}>
 								<a href={repo.html_url as string} target="_blank">{repo.name}</a>

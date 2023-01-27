@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Layout, SEO } from '../components';
 import { getGithubRepo, Routes, URLS } from '../util';
-import { Email, mailTo } from '../util/email';
+import { mailTo } from '../util/email';
 
 const ResumeContainer = styled.div``;
 
