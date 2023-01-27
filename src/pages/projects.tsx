@@ -15,7 +15,6 @@ export default function ProjectsPage() {
 	useEffect(() => {
 		// axios.get('https://api.github.com/repos/freddysilber/ghost-rider').then((repos) => {
 		axios.get<GithubRepo[]>(endpoints.github.repos).then((repos) => {
-			console.log(repos)
 			const filteredRepos = repos.data.filter((repo) => {
 				return !!!repo.fork;
 			});
