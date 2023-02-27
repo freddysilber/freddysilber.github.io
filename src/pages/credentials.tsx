@@ -3,11 +3,21 @@ import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components'
 import { Layout, SEO } from '../components';
+import breakpoints from '../config/breakpoints';
 
 const CredentialsContainer = styled.div`
 	display: flex;
-	flex-direction: column;
+	@media(max-width: ${breakpoints.breakpointMd}) {
+		flex-wrap: wrap;
+	}
 `;
+
+const credentialsStyles = {
+	width: '100%',
+	padding: '2rem',
+	borderRadius: '5px',
+	margin: '.25rem',
+};
 
 export default function Credentials() {
 	const data = useStaticQuery(graphql`
@@ -36,19 +46,11 @@ export default function Credentials() {
 	}
 `)
 
-	const credentialsStyles = {
-		width: '100%',
-		padding: '2rem',
-		borderRadius: '1rem',
-	};
-
 	return (
 		<Layout>
 			<SEO title="Credentials" />
 			<CredentialsContainer>
-				<div style={{ padding: '1rem' }}>
 				<Img fluid={data.flatironSchoolCertification.childImageSharp.fluid} style={credentialsStyles} />
-				</div>
 				<Img fluid={data.salesforceAppBuilderCertification.childImageSharp.fluid} style={credentialsStyles} />
 			</CredentialsContainer>
 		</Layout>

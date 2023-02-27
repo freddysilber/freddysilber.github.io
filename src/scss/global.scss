@@ -115,14 +115,15 @@ body {
 
 	nav {
 		a {
-			font-family: 'Empire';
-			letter-spacing: 3px;
-			font-size: 1.5em;
-			border-radius: 10px;
-			border: 2px solid transparent;
+			// font-family: 'Empire';
+			// font-family: 'Kaushan Script';
+			// letter-spacing: 3px;
+			// font-size: 1.5em;
+			// border-radius: 10px;
+			border-bottom: 2px solid transparent;
 
 			&.active {
-				border: 2px solid $purple;
+				border-bottom: 2px solid $purple;
 				background-color: $dark  !important;
 			}
 		}

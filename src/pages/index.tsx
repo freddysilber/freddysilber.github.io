@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
@@ -12,8 +12,7 @@ import {
 	Skills,
 	SocialMedia
 } from '../components'
-import { Email, mailTo } from '../util/email';
-import axios from 'axios';
+import { mailTo } from '../util/email';
 
 const IndexContainer = styled.section`
 	display: flex;
@@ -88,7 +87,6 @@ export default function IndexPage() {
 						padding: '1rem'
 					}}>
 						<span>💌 {mailTo()}</span>
-						<p>📞 970-531-0297</p>
 					</div>
 				</div>
 				<Skills />
