@@ -24,14 +24,14 @@ const SkillsWrapper = styled.div`
 	margin: 0 1rem 0 1rem;
 	justify-content: space-between;
 
-  	@media (max-width: ${breakpoints.breakpointMd}) {
-    	flex-direction: row;
+	@media (max-width: ${breakpoints.breakpointMd}) {
+		flex-direction: row;
 		margin: 1rem 0 1rem 0;
-  	}
+	}
 `;
 
 const Icon = styled.i`
-	  font-size: 1.5em;
+	font-size: 1.5em;
 `;
 
 export default function Skills() {

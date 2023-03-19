@@ -7,6 +7,14 @@
 
 @import '~bulma/bulma.sass';
 
+// Rubik font: 
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+}
+
 // Register fonts
 @font-face {
 	font-family: 'Drama Sans';
@@ -42,6 +50,11 @@
 	src: local('FredokaOne'), url(../assets/fonts/FredokaOne-Regular.ttf);
 }
 
+// Mixins
+@mixin flex() {
+	display: flex;
+}
+
 // Scoping to outer html/body elements
 html,
 body {
@@ -57,7 +70,7 @@ body {
 
 	// START - Css for mobile fix
 	.navbar-item {
-		display: flex;
+		@include flex();
 		color: $light  !important;
 	}
 
@@ -71,7 +84,7 @@ body {
 	.navbar-end {
 		background: $dark  !important;
 		align-items: stretch;
-		display: flex;
+		@include flex();
 		padding: 0;
 	}
 
@@ -90,11 +103,16 @@ body {
 		margin-left: auto;
 	}
 
+	.grid {
+		@include flex();
+	}
+
 	// END - Css for mobile fix
 
 	// Default all text to use 'Drama Sans'
 	* {
-		font-family: 'Drama Sans';
+		// font-family: 'Drama Sans';
+		font-family: 'Rubik';
 	}
 
 	i {

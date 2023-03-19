@@ -8,10 +8,11 @@ import breakpoints from '../config/breakpoints'
 import {
 	Layout,
 	SEO,
-	Bio,
-	Skills,
+	// Bio,
+	// Skills,
 	SocialMedia
 } from '../components'
+import { Icon } from '@iconify/react';
 import { mailTo } from '../util/email';
 
 const IndexContainer = styled.section`
@@ -35,8 +36,8 @@ const AvatarWrapper = styled.div`
 	}
 
 	@media (max-width: ${breakpoints.breakpointMd}) {
-    	width: 50%;
-  	}
+		width: 50%;
+	}
 `
 
 const SubTitle = styled.h3`
@@ -44,6 +45,14 @@ const SubTitle = styled.h3`
 	font-size: 1.3em;
 	padding-bottom: 2rem;
 `;
+
+const styles: Record<string, Record<string, string | number>> = {
+	emailContainer: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
+};
 
 export default function IndexPage() {
 	const [state, setState] = useState<{ spotlight?: any }>({});
@@ -86,16 +95,23 @@ export default function IndexPage() {
 					<div style={{
 						padding: '1rem'
 					}}>
-						<span>💌 {mailTo()}</span>
+						<div style={{ ...styles.emailContainer }}>
+							<Icon icon="ic:outline-email" style={{ marginRight: '.25rem' }} />
+							<span>{mailTo('Send me an Email!')}</span>
+						</div>
 					</div>
 				</div>
-				<Skills />
-				<div>
+				{/* <Skills /> */}
+				<div style={{ marginLeft: '1.5rem' }}>
 					<div>
 						<h1 className="titleText">Hello,<br /> I'm Freddy Silber,<br /> Sofware Developer</h1>
-						<SubTitle>Full stack developer | Salesforce connoisseur</SubTitle>
+						<SubTitle style={{ fontWeight: 'bold' }}>Full stack developer | Salesforce connoisseur</SubTitle>
+						<div className="grid">
+							<img src="https://raw.githubusercontent.com/ng-ghost-rider/ghost-rider/main/assets/images/step.png" style={{ width: "700px" }}></img>
+							<p style={{ alignSelf: 'center' }}>An Angular library for creating guided tours</p>
+						</div>
 					</div>
-					{
+					{/* {
 						state.spotlight
 							? <div style={{
 								padding: '1rem',
@@ -107,11 +123,11 @@ export default function IndexPage() {
 								<p>{state.spotlight.description}</p>
 							</div>
 							: null
-					}
-					<Bio />
+					} */}
+					{/* <Bio /> */}
 				</div>
 			</IndexContainer>
-			<div style={{ display: 'flex', padding: '1rem 0 0.5rem 0' }}></div>
+			{/* <div style={{ display: 'flex', padding: '1rem 0 0.5rem 0' }}></div> */}
 		</Layout>
 	)
 }

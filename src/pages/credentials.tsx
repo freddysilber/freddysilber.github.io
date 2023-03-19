@@ -50,8 +50,16 @@ export default function Credentials() {
 		<Layout>
 			<SEO title="Credentials" />
 			<CredentialsContainer>
-				<Img fluid={data.flatironSchoolCertification.childImageSharp.fluid} style={credentialsStyles} />
-				<Img fluid={data.salesforceAppBuilderCertification.childImageSharp.fluid} style={credentialsStyles} />
+				<Img
+					fluid={data.flatironSchoolCertification.childImageSharp.fluid}
+					style={credentialsStyles}
+					alt="Flatiron School certification"
+				/>
+				<Img
+					fluid={data.salesforceAppBuilderCertification.childImageSharp.fluid}
+					style={credentialsStyles}
+					alt="Salesforce App Builder certification"
+				/>
 			</CredentialsContainer>
 		</Layout>
 	)
