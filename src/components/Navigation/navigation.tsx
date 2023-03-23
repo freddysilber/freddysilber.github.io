@@ -9,7 +9,7 @@ export default function Navigation(): JSX.Element {
 	// const showBack: boolean = /([^\/]+$)/.test(window.location.pathname);
 
 	return (
-		<nav className="navbar is-dark p-2" role="navigation" aria-label="main navigation">
+		<nav className="navbar is-dark p-2 pr-6" role="navigation" aria-label="main navigation">
 			<div className="navbar-menu">
 				{/* {showBack
 					? <div className="navbar-start">

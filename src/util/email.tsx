@@ -6,7 +6,7 @@ import React from 'react';
 export class Email {
 	private static _email: string = `freddy.silber@gmail.com`;
 	private static _subject: string = `Hey Freddy...`;
-	private static _body: string = `Ask me anything, I'd love to hear from you!`;
+	private static _body: string = `Hello, I'm...`;
 
 	public static getEmailHandler(): string {
 		return `mailto: ${this._email}?subject=${this._subject}&body=${this._body}`;

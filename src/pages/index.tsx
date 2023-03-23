@@ -104,10 +104,10 @@ export default function IndexPage() {
 				{/* <Skills /> */}
 				<div style={{ marginLeft: '1.5rem' }}>
 					<div>
-						<h1 className="titleText">Hello,<br /> I'm Freddy Silber,<br /> Sofware Developer</h1>
+						<h1 className="titleText">Hi,<br /> I'm Freddy Silber,<br /> Sofware Developer</h1>
 						<SubTitle style={{ fontWeight: 'bold' }}>Full stack developer | Salesforce connoisseur</SubTitle>
 						<div className="grid">
-							<img src="https://raw.githubusercontent.com/ng-ghost-rider/ghost-rider/main/assets/images/step.png" style={{ width: "700px" }}></img>
+							<img src="https://raw.githubusercontent.com/ng-ghost-rider/ghost-rider/main/assets/images/step.png" style={{ width: "400px" }}></img>
 							<p style={{ alignSelf: 'center' }}>An Angular library for creating guided tours</p>
 						</div>
 					</div>
