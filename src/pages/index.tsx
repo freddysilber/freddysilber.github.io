@@ -63,7 +63,7 @@ export default function IndexPage() {
 					}
 				}
 			}
-			prioritizationMatrix: file(relativePath: { eq: "Screenshot 2023-04-01 at 6.39.56 PM.png" }) {
+			prioritizationMatrix: file(relativePath: { eq: "prioritization-matrix-demo.png" }) {
 				childImageSharp {
 					fluid(maxWidth: 1000) {
 						...GatsbyImageSharpFluid
@@ -72,8 +72,6 @@ export default function IndexPage() {
 			}
 		}
 	`)
-
-	console.log(data);
 
 	return (
 		<Layout>
@@ -108,8 +106,9 @@ export default function IndexPage() {
 							<Img fluid={data.prioritizationMatrix.childImageSharp.fluid} style={{ width: '40rem', borderRadius: '5px' }} />
 							<div style={{ marginLeft: '1rem' }}>
 								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>Prioritization Matrix</h1>
-								<p>A simple project on Salesforce to rate and prioritize bug records</p>
-								<p>Any user can vote on the same collection of bugs to create a company wide vote</p>
+								<p>- A simple project on Salesforce to rate and prioritize bug records</p>
+								<p>- Any user can vote on the same collection of bugs to create a company wide vote</p>
+								<p><em>- React, Apex, and Node.js</em></p>
 							</div>
 						</div>
 					</div>
