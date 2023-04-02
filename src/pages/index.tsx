@@ -106,8 +106,7 @@ export default function IndexPage() {
 							<Img fluid={data.prioritizationMatrix.childImageSharp.fluid} style={{ width: '40rem', borderRadius: '5px' }} />
 							<div style={{ marginLeft: '1rem' }}>
 								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>Prioritization Matrix</h1>
-								<p>- A simple project on Salesforce to rate and prioritize bug records</p>
-								<p>- Any user can vote on the same collection of bugs to create a company wide vote</p>
+								<p>A simple Salesforce app where a user can vote on their favorite bug to be prioritized</p>
 								<p><em>- React, Apex, and Node.js</em></p>
 							</div>
 						</div>
