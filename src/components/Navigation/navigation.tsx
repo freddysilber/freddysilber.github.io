@@ -22,7 +22,7 @@ export default function Navigation(): JSX.Element {
 					<Link className="navbar-item" to={Routes.credentials} activeClassName="active">Credentials</Link>
 					<Link className="navbar-item" to={Routes.about} activeClassName="active">About</Link>
 					<Link className="navbar-item" to={Routes.blog} partiallyActive={true} activeClassName="active">Blog</Link>
-					<Link className="navbar-item" to={Routes.projects} activeClassName="active">Projects</Link>
+					{/* <Link className="navbar-item" to={Routes.projects} activeClassName="active">Projects</Link> */}
 				</div>
 			</div>
 		</nav>

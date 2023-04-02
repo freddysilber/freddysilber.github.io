@@ -1,18 +1,16 @@
-import React, { useState } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import breakpoints from '../config/breakpoints'
-// Components
+import styled from 'styled-components';
+import breakpoints from '../config/breakpoints';
+import { Icon } from '@iconify/react';
 import {
 	Layout,
 	SEO,
-	// Bio,
-	// Skills,
+	Skills,
 	SocialMedia
-} from '../components'
-import { Icon } from '@iconify/react';
+} from '../components';
 import { mailTo } from '../util/email';
 
 const IndexContainer = styled.section`
@@ -44,6 +42,7 @@ const SubTitle = styled.h3`
 	color: #666;
 	font-size: 1.3em;
 	padding-bottom: 2rem;
+	font-weight: bold;
 `;
 
 const styles: Record<string, Record<string, string | number>> = {
@@ -55,12 +54,18 @@ const styles: Record<string, Record<string, string | number>> = {
 };
 
 export default function IndexPage() {
-	const [state, setState] = useState<{ spotlight?: any }>({});
 	const data = useStaticQuery(graphql`
 		query {
-			placeholderImage: file(relativePath: { eq: "avatar.jpg" }) {
+			avatar: file(relativePath: { eq: "avatar.jpg" }) {
 				childImageSharp {
 					fluid(maxWidth: 300) {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
+			prioritizationMatrix: file(relativePath: { eq: "Screenshot 2023-04-01 at 6.39.56 PM.png" }) {
+				childImageSharp {
+					fluid(maxWidth: 1000) {
 						...GatsbyImageSharpFluid
 					}
 				}
@@ -68,30 +73,21 @@ export default function IndexPage() {
 		}
 	`)
 
-	// useEffect(() => {
-	// 	axios.get('https://api.github.com/repos/freddysilber/ghost-rider').then((response) => {
-	// 		setState({
-	// 			...state,
-	// 			spotlight: response.data
-	// 		});
-	// 		console.log(state)
-	// 	}).catch(error => {
-	// 		setState({});
-	// 		throw new Error(error);
-	// 	})
-	// }, {} as any);
+	console.log(data);
 
 	return (
 		<Layout>
 			<ReactTooltip type="dark" />
 			<SEO title="Home" />
-			{/* <p data-tip="hello world">Tooltip</p> */}
+
 			<IndexContainer>
 				<div>
 					<AvatarWrapper data-tip="That's me!">
-						<Img fluid={data.placeholderImage.childImageSharp.fluid} />
+						<Img fluid={data.avatar.childImageSharp.fluid} />
 					</AvatarWrapper>
+
 					<SocialMedia />
+
 					<div style={{
 						padding: '1rem'
 					}}>
@@ -101,33 +97,24 @@ export default function IndexPage() {
 						</div>
 					</div>
 				</div>
-				{/* <Skills /> */}
-				<div style={{ marginLeft: '1.5rem' }}>
-					<div>
-						<h1 className="titleText">Hi,<br /> I'm Freddy Silber,<br /> Sofware Developer</h1>
-						<SubTitle style={{ fontWeight: 'bold' }}>Full stack developer | Salesforce connoisseur</SubTitle>
-						<div className="grid">
-							<img src="https://raw.githubusercontent.com/ng-ghost-rider/ghost-rider/main/assets/images/step.png" style={{ width: "400px" }}></img>
-							<p style={{ alignSelf: 'center' }}>An Angular library for creating guided tours</p>
+
+				<Skills />
+
+				<div>
+					<h1 className="titleText">Hi,<br /> I'm Freddy Silber,<br /> Sofware Developer</h1>
+					<SubTitle>Full stack developer | Salesforce connoisseur</SubTitle>
+					<div style={{ width: '100%' }}>
+						<div style={{ display: 'flex', alignItems: 'center' }}>
+							<Img fluid={data.prioritizationMatrix.childImageSharp.fluid} style={{ width: '40rem', borderRadius: '5px' }} />
+							<div style={{ marginLeft: '1rem' }}>
+								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>Prioritization Matrix</h1>
+								<p>A simple project on Salesforce to rate and prioritize bug records</p>
+								<p>Any user can vote on the same collection of bugs to create a company wide vote</p>
+							</div>
 						</div>
 					</div>
-					{/* {
-						state.spotlight
-							? <div style={{
-								padding: '1rem',
-								border: '1px solid #666',
-								borderRadius: '5px',
-								width: 'fit-content'
-							}}>
-								<h1 style={{ display: 'flex', alignItems: 'center' }}>Splotlight Project:<span style={{ fontSize: '1.5em', marginLeft: '.25rem' }}>Ghost Rider</span></h1>
-								<p>{state.spotlight.description}</p>
-							</div>
-							: null
-					} */}
-					{/* <Bio /> */}
 				</div>
 			</IndexContainer>
-			{/* <div style={{ display: 'flex', padding: '1rem 0 0.5rem 0' }}></div> */}
 		</Layout>
 	)
 }
