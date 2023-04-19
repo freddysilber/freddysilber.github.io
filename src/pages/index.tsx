@@ -129,6 +129,8 @@ export default function IndexPage() {
 							<Img fluid={data.nflLoserPoolGame.childImageSharp.fluid} style={{ width: '50%', borderRadius: '5px' }} />
 						</div>
 					</div>
+
+					<h1 className="titleText" style={{ textAlign: 'center', marginTop: '2rem', fontSize: '2em' }}>More coming soon...</h1>
 				</div>
 			</IndexContainer>
 		</Layout>
