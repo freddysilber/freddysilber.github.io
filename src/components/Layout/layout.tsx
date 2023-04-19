@@ -7,22 +7,22 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
+// import { useStaticQuery, graphql } from 'gatsby'
 // Components
 import { Navigation } from '..'
 // Styles
 import './layout.scss';
 
 export default function Layout({ children }: any) {
-	const data = useStaticQuery(graphql`
-		query SiteTitleQuery {
-			site {
-				siteMetadata {
-					title
-				}
-			}
-		}
-  `)
+	// const data = useStaticQuery(graphql`
+	// 	query SiteTitleQuery {
+	// 		site {
+	// 			siteMetadata {
+	// 				title
+	// 			}
+	// 		}
+	// 	}
+  // `)
 
 	return (
 		<div className="layoutContainer">

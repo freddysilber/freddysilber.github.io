@@ -70,6 +70,13 @@ export default function IndexPage() {
 					}
 				}
 			}
+			nflLoserPoolGame: file(relativePath: { eq: "nfl-loser-pool-game.png" }) {
+				childImageSharp {
+					fluid(maxWidth: 1000) {
+						...GatsbyImageSharpFluid
+					}
+				}
+			}
 		}
 	`)
 
@@ -98,17 +105,28 @@ export default function IndexPage() {
 
 				<Skills />
 
-				<div>
+				<div style={{ width: '100%' }}>
 					<h1 className="titleText">Hi,<br /> I'm Freddy Silber,<br /> Sofware Developer</h1>
+
 					<SubTitle>Full stack developer | Salesforce connoisseur</SubTitle>
-					<div style={{ width: '100%' }}>
-						<div style={{ display: 'flex', alignItems: 'center' }}>
-							<Img fluid={data.prioritizationMatrix.childImageSharp.fluid} style={{ width: '40rem', borderRadius: '5px' }} />
-							<div style={{ marginLeft: '1rem' }}>
+
+					<div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+							<Img fluid={data.prioritizationMatrix.childImageSharp.fluid} style={{ width: '50%', borderRadius: '5px' }} />
+							<div>
 								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>Prioritization Matrix</h1>
 								<p>A simple Salesforce app where a user can vote on their favorite bug to be prioritized</p>
 								<p><em>- React, Apex, and Node.js</em></p>
 							</div>
+						</div>
+
+						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+							<div>
+								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>NFL Loser Pool</h1>
+								<p>A game to play with others and vote against the worst teams of the season</p>
+								<p><em>- Svelte, Golang, and Postgres</em></p>
+							</div>
+							<Img fluid={data.nflLoserPoolGame.childImageSharp.fluid} style={{ width: '50%', borderRadius: '5px' }} />
 						</div>
 					</div>
 				</div>
