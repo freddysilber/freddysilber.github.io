@@ -56,7 +56,7 @@ const styles: Record<string, Record<string, string | number>> = {
 export default function IndexPage() {
 	const data = useStaticQuery(graphql`
 		query {
-			avatar: file(relativePath: { eq: "avatar.jpg" }) {
+			avatar: file(relativePath: { eq: "avatar.png" }) {
 				childImageSharp {
 					fluid(maxWidth: 300) {
 						...GatsbyImageSharpFluid
