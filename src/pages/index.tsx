@@ -113,7 +113,7 @@ export default function IndexPage() {
 					<div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
 						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
 							<Img fluid={data.prioritizationMatrix.childImageSharp.fluid} style={{ width: '50%', borderRadius: '5px' }} />
-							<div>
+							<div style={{ padding: '0 .5rem' }}>
 								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>Prioritization Matrix</h1>
 								<p>A simple Salesforce app where a user can vote on their favorite bug to be prioritized</p>
 								<p><em>- React, Apex, and Node.js</em></p>
@@ -121,7 +121,7 @@ export default function IndexPage() {
 						</div>
 
 						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
-							<div>
+							<div style={{ padding: '0 .5rem' }}>
 								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>NFL Loser Pool</h1>
 								<p>A game to play with others and vote against the worst teams of the season</p>
 								<p><em>- Svelte, Golang, and Postgres</em></p>
