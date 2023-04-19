@@ -23,7 +23,6 @@ const SkillsWrapper = styled.div`
 	flex-direction: column;
 	margin: 0 1rem 0 1rem;
 	justify-content: space-between;
-	min-height: 85vh;
 	max-height: 65vh;
 
 	@media (max-width: ${breakpoints.breakpointMd}) {
