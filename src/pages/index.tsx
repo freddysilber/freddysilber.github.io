@@ -111,7 +111,7 @@ export default function IndexPage() {
 					<SubTitle>Full stack developer | Salesforce connoisseur</SubTitle>
 
 					<div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 							<Img fluid={data.prioritizationMatrix.childImageSharp.fluid} style={{ width: '50%', borderRadius: '5px' }} />
 							<div style={{ padding: '0 .5rem' }}>
 								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>Prioritization Matrix</h1>
@@ -120,7 +120,7 @@ export default function IndexPage() {
 							</div>
 						</div>
 
-						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+						<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 							<div style={{ padding: '0 .5rem' }}>
 								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>NFL Loser Pool</h1>
 								<p>A game to play with others and vote against the worst teams of the season</p>
