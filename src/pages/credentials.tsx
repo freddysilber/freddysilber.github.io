@@ -4,20 +4,15 @@ import React from 'react';
 import styled from 'styled-components'
 import { Layout, SEO } from '../components';
 import breakpoints from '../config/breakpoints';
+import PictureFrame from '../components/PictureFrame/pictureFrame';
 
 const CredentialsContainer = styled.div`
 	display: flex;
+	gap: 1rem;
 	@media(max-width: ${breakpoints.breakpointMd}) {
 		flex-wrap: wrap;
 	}
 `;
-
-const credentialsStyles = {
-	width: '100%',
-	padding: '2rem',
-	borderRadius: '5px',
-	margin: '.25rem',
-};
 
 export default function Credentials() {
 	const data = useStaticQuery(graphql`
@@ -50,16 +45,18 @@ export default function Credentials() {
 		<Layout>
 			<SEO title="Credentials" />
 			<CredentialsContainer>
-				<Img
-					fluid={data.flatironSchoolCertification.childImageSharp.fluid}
-					style={credentialsStyles}
-					alt="Flatiron School certification"
-				/>
-				<Img
-					fluid={data.salesforceAppBuilderCertification.childImageSharp.fluid}
-					style={credentialsStyles}
-					alt="Salesforce App Builder certification"
-				/>
+				<PictureFrame>
+					<Img
+						fluid={data.flatironSchoolCertification.childImageSharp.fluid}
+						alt="Flatiron School certification"
+					/>
+				</PictureFrame>
+				<PictureFrame>
+					<Img
+						fluid={data.salesforceAppBuilderCertification.childImageSharp.fluid}
+						alt="Salesforce App Builder certification"
+					/>
+				</PictureFrame>
 			</CredentialsContainer>
 		</Layout>
 	)
