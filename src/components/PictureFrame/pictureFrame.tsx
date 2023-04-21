@@ -3,11 +3,9 @@ import './pictureFrame.scss';
 
 export default function PictureFrame(props: PropsWithChildren<ReactNode>) {
 	return (
-		<div style={{ width: '100%' }}>
+		<div className="frame-container">
 			<div className="frames"	>
-				<div className="frame">
-					<div>{props.children}</div>
-				</div>
+				<div className="frame">{props.children}</div>
 			</div>
 		</div>
 	);
