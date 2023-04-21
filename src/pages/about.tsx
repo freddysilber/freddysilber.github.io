@@ -3,7 +3,7 @@ import { Bio, Layout, SEO } from '../components';
 
 const styles: Record<string, Record<string, string | number>> = {
 	bioContainer: {
-		padding: '0 10rem',
+		padding: '0 5%',
 		fontSize: '1.3em'
 	}
 };
