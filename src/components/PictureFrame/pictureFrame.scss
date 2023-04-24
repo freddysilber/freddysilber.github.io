@@ -21,17 +21,9 @@ $glare-size: 75%;
 	-o-transform: rotateZ($deg);
 }
 
-.frame-container {
-	width: 50%;
-
-	@media(max-width: 800px) {
-		width: 100%;
-	}
-
-	.frames,
-	.frame {
-		width: 100%;
-	}
+.frames,
+.frame {
+	width: 100%;
 }
 
 .frame {
