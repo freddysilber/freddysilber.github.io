@@ -21,10 +21,13 @@ $glare-size: 75%;
 	-o-transform: rotateZ($deg);
 }
 
-.frame-container,
-.frames,
-.frame {
-	width: 100%;
+.frame-container {
+	width: 50%;
+
+	.frames,
+	.frame {
+		width: 100%;
+	}
 }
 
 .frame {
