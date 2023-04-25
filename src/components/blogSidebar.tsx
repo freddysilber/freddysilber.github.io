@@ -11,9 +11,9 @@ const PostList = styled.ul`
 	padding: 0 2rem;
 
 	@media(max-width: ${breakpoints.breakpointMd}) {
-    	width: 100%;
+		width: 100%;
 		margin-top: 1rem;
-  	}
+	}
 `
 
 const PostListItem = styled.li``
