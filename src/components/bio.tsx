@@ -18,7 +18,7 @@ export default function Bio(): JSX.Element {
 				<a href={URLS.winterParkResort.url} target='_blank' rel='noopener noreferrer'> {URLS.winterParkResort.name}</a>.
 				I graduated <a href={URLS.middleParkHighSchool.url} target='_blank' rel='noopener noreferrer'>{URLS.middleParkHighSchool.name} </a>
 				in Granby Colorado and during school, I would often find myself nerding out in our computer lab with some of my friends.
-				We would do all kinds of things like creating claymation films, 3D printing, programming 3D printers, video games, and our attemps to hack other computer programs.
+				We would do all kinds of things like creating claymation films, 3D printing, programming 3D printers, video games, and our attempts to hack other computer programs.
 			</p>
 			<br />
 			<p>
@@ -38,7 +38,7 @@ export default function Bio(): JSX.Element {
 			</p>
 			<br />
 			<p>
-				Asside from programming, I enjoy playing electric guitar, cooking, hanging out with my cat, skateboarding, snowboarding, bmx bike, mountain bike, fishing, hiking, camping and much much more... oh, and keep learning!
+				Aside from programming, I enjoy playing electric guitar, cooking, hanging out with my cat, skateboarding, snowboarding, bmx bike, mountain bike, fishing, hiking, camping and much much more... oh, and keep learning!
 			</p>
 		</div >
 	)

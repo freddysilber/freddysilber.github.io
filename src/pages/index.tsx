@@ -106,7 +106,7 @@ export default function IndexPage() {
 				<Skills />
 
 				<div style={{ width: '100%' }}>
-					<h1 className="titleText">Hi,<br /> I'm Freddy Silber,<br /> Sofware Developer</h1>
+					<h1 className="titleText">Hi,<br /> I'm Freddy Silber,<br /> Software Developer</h1>
 
 					<SubTitle>Full stack developer | Salesforce connoisseur</SubTitle>
 
