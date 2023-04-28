@@ -17,7 +17,7 @@ export default function Bio(): JSX.Element {
 				I started snowboarding when I was 4 years old and would average almost 100 days a season snowboarding at my local ski area,
 				<a href={URLS.winterParkResort.url} target='_blank' rel='noopener noreferrer'> {URLS.winterParkResort.name}</a>.
 				I graduated <a href={URLS.middleParkHighSchool.url} target='_blank' rel='noopener noreferrer'>{URLS.middleParkHighSchool.name} </a>
-				in Granby Colorado and during school, I would often find myself nerding out in our computer lab with some of my friends.
+				in Granby, Colorado and during school, I would often find myself nerding out in our computer lab with some of my friends.
 				We would do all kinds of things like creating claymation films, 3D printing, programming 3D printers, video games, and our attempts to hack other computer programs.
 			</p>
 			<br />
