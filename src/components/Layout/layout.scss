@@ -1,7 +1,14 @@
 div.layoutContainer {
 	padding: 0 .5rem 0 .5rem;
+	height: 100vh;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
 
 	main {
+		height: 0;
+		flex: 1 1 0;
+
 		div.resumeContainer {
 			* {
 				font-family: 'Fira Code';

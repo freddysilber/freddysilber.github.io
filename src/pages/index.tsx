@@ -16,10 +16,20 @@ import { mailTo } from '../util/email';
 const IndexContainer = styled.section`
 	display: flex;
 	flex-direction: row;
+	height: 100%;
 
   	@media(max-width: ${breakpoints.breakpointMd}) {
     	flex-direction: column;
   	}
+`;
+
+const ContentBody = styled.div`
+		width: 100%;
+		overflow: auto;
+
+		@media (max-width: ${breakpoints.breakpointMd}) {
+			overflow: revert;
+		}
 `;
 
 const AvatarWrapper = styled.div`
@@ -105,7 +115,7 @@ export default function IndexPage() {
 
 				<Skills />
 
-				<div style={{ width: '100%' }}>
+				<ContentBody>
 					<h1 className="titleText">Hi,<br /> I'm Freddy Silber,<br /> Software Developer</h1>
 
 					<SubTitle>Full stack developer | Salesforce connoisseur</SubTitle>
@@ -131,7 +141,7 @@ export default function IndexPage() {
 					</div>
 
 					<h1 className="titleText" style={{ textAlign: 'center', marginTop: '2rem', fontSize: '2em' }}>More coming soon...</h1>
-				</div>
+				</ContentBody>
 			</IndexContainer>
 		</Layout>
 	)
