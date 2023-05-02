@@ -8,6 +8,7 @@ div.layoutContainer {
 	main {
 		height: 0;
 		flex: 1 1 0;
+		overflow: auto;
 
 		div.resumeContainer {
 			* {
