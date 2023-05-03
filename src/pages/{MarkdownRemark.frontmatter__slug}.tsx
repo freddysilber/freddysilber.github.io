@@ -86,7 +86,7 @@ export default function Template({ data }: MarkdownData) {
 
 export const pageQuery = graphql`
 	query($id: String!) {
-		markdownRemark(id: { eq: $id }) {
+		markdownRemark(id: {eq: $id}) {
 			html
 			frontmatter {
 				date(formatString: "MMMM DD, YYYY")
@@ -101,20 +101,17 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		otherPosts: allMarkdownRemark(
-      		sort: { order: DESC, fields: [frontmatter___date] }
-      		limit: 10
-    	) {
-      		edges {
-		        node {
-        		  excerpt
-          			frontmatter {
-            			title
-            			date
-            			slug
-          			}
-        		}
-      		}
+		otherPosts: allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 10) {
+			edges {
+				node {
+					excerpt
+					frontmatter {
+						title
+						date
+						slug
+					}
+				}
+			}
 		}
 	}
 `

@@ -104,30 +104,21 @@ export default function BlogPage({ data }: BlogData) {
 
 export const query = graphql`
 	query {
-		blog: allMarkdownRemark(
-			sort: {
-				order: DESC, fields: [frontmatter___date]
-			}
+	  blog: allMarkdownRemark(
+			sort: {frontmatter: {date: DESC}}
 			limit: 15
-			filter: {
-				fileAbsolutePath: { regex: "/blog/"
-			}
-		}) {
-	  		edges {
+			filter: {fileAbsolutePath: {regex: "/blog/"}}
+		) {
+			edges {
 				node {
 					excerpt
-		  			frontmatter {
+					frontmatter {
 						title
 						date
 						slug
 						coverImage {
 							childImageSharp {
-								fluid(
-									maxWidth: 400
-									maxHeight: 400
-									fit: COVER
-									cropFocus: CENTER
-								) {
+								fluid(maxWidth: 400, maxHeight: 400, fit: COVER, cropFocus: CENTER) {
 									...GatsbyImageSharpFluid
 								}
 							}
