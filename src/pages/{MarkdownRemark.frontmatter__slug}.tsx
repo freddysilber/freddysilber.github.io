@@ -1,8 +1,10 @@
-import React from 'react'
+import roundArrowBack from '@iconify/icons-ic/round-arrow-back'
+import { Icon } from '@iconify/react'
 import { graphql, Link } from 'gatsby'
-import { BlogSidebar, Layout, SEO } from '../components'
 import Img from 'gatsby-image'
+import React from 'react'
 import styled from 'styled-components'
+import { BlogSidebar, Layout, SEO } from '../components'
 import { Routes } from '../util'
 
 interface MarkdownData {
@@ -31,16 +33,12 @@ interface MarkdownData {
 }
 
 const PostContainer = styled.div`
-	display: flex;
-	flex-direction: column;
 	padding: 0 5rem;
 `
 
 const CoverImage = styled.div`
-	align-self: center;
-
 	.gatsby-image-wrapper {
-		border-radius: 10px;
+		border-radius: 5px;
 	}
 `
 
@@ -51,17 +49,28 @@ export default function Template({ data }: MarkdownData) {
 	return (
 		<Layout>
 			<SEO title={frontmatter.title} />
-			<div style={{ display: 'flex' }}>
-				<PostContainer>
-					<Link style={{
-						fontSize: '1.5rem',
-						padding: '.5rem',
-						border: '1px',
-						borderStyle: 'solid',
-						borderRadius: '5px',
-						margin: '1.5rem 0rem',
-						width: 'fit-content'
-					}} to={Routes.blog} activeClassName="active">Back To Blog List</Link>
+			<div className="is-flex is-justify-content-space-between">
+				<PostContainer className="is-flex is-flex-direction-column">
+					<Link
+						style={{
+							fontSize: '1.5rem',
+							padding: '.25rem',
+							border: '1px',
+							borderStyle: 'solid',
+							borderRadius: '5px',
+							margin: '1.5rem 0rem',
+							width: 'fit-content',
+						}}
+						to={Routes.blog}
+						activeClassName="active"
+					>
+						<Icon
+							icon={roundArrowBack}
+							style={{ verticalAlign: 'middle' }}
+							className="mr-1 mb-1"
+						/>
+						<span className="mr-1">Back To Blog List</span>
+					</Link>
 					<h1 className="title is-3 has-text-light">{frontmatter.title}</h1>
 					<h2 className="title is-5 has-text-light">{frontmatter.date}</h2>
 					<CoverImage>

@@ -105,32 +105,36 @@ export default function BlogPage({ data }: BlogData) {
 export const query = graphql`
 	query {
 		blog: allMarkdownRemark(
-	  		sort: { order: DESC, fields: [frontmatter___date] }
-	  		limit: 15
-	  		filter: { fileAbsolutePath: { regex: "/blog/" } }
-		) {
+			sort: {
+				order: DESC, fields: [frontmatter___date]
+			}
+			limit: 15
+			filter: {
+				fileAbsolutePath: { regex: "/blog/"
+			}
+		}) {
 	  		edges {
 				node {
-		  			excerpt
+					excerpt
 		  			frontmatter {
 						title
 						date
 						slug
 						coverImage {
-			  				childImageSharp {
+							childImageSharp {
 								fluid(
-				  					maxWidth: 400
-				  					maxHeight: 400
-				  					fit: COVER
-				  					cropFocus: CENTER
+									maxWidth: 400
+									maxHeight: 400
+									fit: COVER
+									cropFocus: CENTER
 								) {
-				  					...GatsbyImageSharpFluid
+									...GatsbyImageSharpFluid
 								}
-			  				}
+							}
 						}
-		  			}
+					}
 				}
-	  		}
+			}
 		}
-  	}
+	}
 `

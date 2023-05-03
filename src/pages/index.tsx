@@ -1,16 +1,17 @@
+import outlineEmail from '@iconify/icons-ic/outline-email';
+import { Icon } from '@iconify/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import styled from 'styled-components';
-import breakpoints from '../config/breakpoints';
-import { Icon } from '@iconify/react';
 import {
 	Layout,
 	SEO,
 	Skills,
 	SocialMedia
 } from '../components';
+import breakpoints from '../config/breakpoints';
 import { mailTo } from '../util/email';
 
 const IndexContainer = styled.section`
@@ -108,7 +109,7 @@ export default function IndexPage() {
 						padding: '1rem'
 					}}>
 						<div style={{ ...styles.emailContainer }}>
-							<Icon icon="ic:outline-email" style={{ marginRight: '.25rem' }} />
+							<Icon icon={outlineEmail} className="mr-1" />
 							<span>{mailTo('Send me an Email!')}</span>
 						</div>
 					</div>
