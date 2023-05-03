@@ -57,7 +57,7 @@ export default function Bio(): JSX.Element {
 			<p>
 				I have recently graduated from
 				<a href={URLS.flatironSchool.url} target="_blank" rel="noopener noreferrer"> {URLS.flatironSchool.name} </a>
-				studying thier Full Stack Software Engineering curriculum. During school, I have practiced skills
+				studying their Full Stack Software Engineering curriculum. During school, I have practiced skills
 				within the entire stack of a web application. I learned many languages, some of which are Ruby, Ruby on Rails, Javascript, React, Redux, Angular, Node and many more as well as
 				building multiple projects to add to my portfolio!
 			</p>
