@@ -123,14 +123,14 @@ export default function IndexPage() {
 					<SubTitle>Full stack developer | Salesforce connoisseur</SubTitle>
 
 					<div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-						<div style={{ display: 'flex', alignItems: 'center' }}>
+						{/* <div style={{ display: 'flex', alignItems: 'center' }}>
 							<Img fluid={data.prioritizationMatrix.childImageSharp.fluid} style={{ width: '50%', borderRadius: '5px', boxShadow: '8px 8px 15px 1px #000' }} />
 							<div style={{ textAlign: 'center', width: '50%' }}>
 								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>Prioritization Matrix</h1>
 								<p>"A simple Salesforce app where a user can vote on their favorite bug to be prioritized"</p>
 								<p><em>- React, Apex, and Node.js</em></p>
 							</div>
-						</div>
+						</div> */}
 
 						<div style={{ display: 'flex', alignItems: 'center' }}>
 							<div style={{ textAlign: 'center', width: '50%' }}>
