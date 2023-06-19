@@ -18,6 +18,7 @@ const ICONS: string[] = [
 	'devicon-webpack-plain',
 ];
 
+
 const SkillsWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
