@@ -13,7 +13,6 @@
     "url": "https://github.com/freddysilber/freddysilber.github.io/issues"
   },
   "scripts": {
-    "deploy": "gatsby build && gh-pages -d public -b gh-pages",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
@@ -56,7 +55,6 @@
     "@types/react-helmet": "^6.1.5",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.25",
-    "gh-pages": "^4.0.0",
     "source-map-loader": "^4.0.0",
     "ts-loader": "^9.3.1",
     "tslint": "^6.1.3",
