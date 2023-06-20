@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 /**
  * This class handles email config external routing to outside of my site
@@ -17,9 +17,9 @@ export class Email {
 	}
 }
 
-/**
- * Renders an anchor tag with a 'mailto' link to set up an email
- */
-export function mailTo(label?: string): JSX.Element {
-	return <a href={Email.getEmailHandler()} target="_blank">{label || 'freddy.silber@gmail.com'}</a>;
-}
+// /**
+//  * Renders an anchor tag with a 'mailto' link to set up an email
+//  */
+// export function mailTo(label?: string): JSX.Element {
+// 	return <a href={Email.getEmailHandler()} target="_blank">{label || 'freddy.silber@gmail.com'}</a>;
+// }

@@ -9,7 +9,8 @@ div.socialMediaContainer {
 	a {
 		@include transition-all();
 
-		i {
+		i,
+		.gmail-icon {
 			@include transition-all();
 			color: $info;
 			font-size: 2rem;

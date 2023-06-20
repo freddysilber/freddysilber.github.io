@@ -147,13 +147,13 @@ body {
 		}
 	}
 
-	.titleText {
+	.title-text {
 		@include transition-all();
 		color: $purple;
 		text-decoration: none;
 		font-family: 'FredokaOne';
 		font-size: 5em;
-		line-height: 1;
+		line-height: 1.5;
 
 		@media (max-width: 1200px) {
 			font-size: 3em;
