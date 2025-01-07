@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import breakpoints from '../../config/breakpoints';
 
 const FrameContainer = styled.div`
-	width: 50%;
-
 	@media(max-width: ${breakpoints.breakpointMd}) {
 		width: 100%;
 	}

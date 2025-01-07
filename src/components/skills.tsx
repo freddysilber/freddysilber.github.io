@@ -5,8 +5,10 @@ import breakpoints from '../config/breakpoints'
 const ICONS: string[] = [
 	'devicon-react-original',
 	'devicon-angularjs-plain',
+	'devicon-salesforce-plain',
 	'devicon-html5-plain',
 	'devicon-css3-plain',
+	'devicon-go-original-wordmark',
 	'devicon-typescript-plain',
 	'devicon-git-plain',
 	'devicon-java-plain',

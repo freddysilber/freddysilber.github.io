@@ -7,10 +7,12 @@ import breakpoints from '../config/breakpoints';
 import PictureFrame from '../components/PictureFrame/pictureFrame';
 
 const CredentialsContainer = styled.div`
-	display: flex;
-	gap: 1rem;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 1rem;
+
 	@media(max-width: ${breakpoints.breakpointMd}) {
-		flex-wrap: wrap;
+		grid-template-columns: auto;
 	}
 `;
 
@@ -38,6 +40,13 @@ export default function Credentials() {
 				}
 			}
 		}
+		salesforcePlatformDeveloperCertification: file(relativePath: { eq: "platform-developer.jpg" }) {
+			childImageSharp {
+				fluid {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
 	}
 `)
 
@@ -54,6 +63,12 @@ export default function Credentials() {
 				<PictureFrame>
 					<Img
 						fluid={data.salesforceAppBuilderCertification.childImageSharp.fluid}
+						alt="Salesforce App Builder certification"
+					/>
+				</PictureFrame>
+				<PictureFrame>
+					<Img
+						fluid={data.salesforcePlatformDeveloperCertification.childImageSharp.fluid}
 						alt="Salesforce App Builder certification"
 					/>
 				</PictureFrame>
