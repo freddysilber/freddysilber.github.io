@@ -69,7 +69,7 @@ export default function Credentials() {
 				<PictureFrame>
 					<Img
 						fluid={data.salesforcePlatformDeveloperCertification.childImageSharp.fluid}
-						alt="Salesforce App Builder certification"
+						alt="Salesforce Platform Developer certification"
 					/>
 				</PictureFrame>
 			</CredentialsContainer>

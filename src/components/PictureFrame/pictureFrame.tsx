@@ -1,7 +1,7 @@
-import React, { PropsWithChildren, ReactNode } from 'react';
-import './pictureFrame.scss';
+import React, { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 import breakpoints from '../../config/breakpoints';
+import './pictureFrame.scss';
 
 const FrameContainer = styled.div`
 	@media(max-width: ${breakpoints.breakpointMd}) {
@@ -9,7 +9,7 @@ const FrameContainer = styled.div`
 	}
 `;
 
-export default function PictureFrame(props: PropsWithChildren<ReactNode>) {
+export default function PictureFrame(props: PropsWithChildren) {
 	return (
 		<FrameContainer>
 			<div className="frames"	>
