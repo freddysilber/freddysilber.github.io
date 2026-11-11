@@ -15,10 +15,11 @@ const Container = styled.div`
 export default function NotFoundPage() {
 	return (
 		<Layout>
-			<SEO title="404: Not found" />
 			<Container className="has-text-centered">
 				<h1 style={{ fontSize: '3em' }}>Woops! Something went wrong...</h1>
 			</Container>
 		</Layout>
 	)
 }
+
+export const Head = () => <SEO title="404: Not found" />

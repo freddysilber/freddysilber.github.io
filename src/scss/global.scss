@@ -1,11 +1,14 @@
 @charset 'utf-8';
-@import './variables.scss';
-@import '../scss/mixins';
+@use 'variables' as v;
+@use 'mixins' as *;
 
-// If need, change your variables before importing Bulma
-// $title-color: #ff0000;
-
-@import '~bulma/bulma.sass';
+// Bulma's own defaults are overridden with the values from variables.scss
+@use 'bulma/bulma' with (
+	$purple: v.$purple,
+	$orange: v.$orange,
+	$warning: v.$warning,
+	$info: v.$info
+);
 
 // Rubik font: 
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
@@ -58,9 +61,9 @@
 // Scoping to outer html/body elements
 html,
 body {
-	background-color: $dark;
+	background-color: bulma.$dark;
 	height: 100%;
-	color: $light;
+	color: bulma.$light;
 	// overscroll-behavior: none;
 
 	// Selector for using 'script' style font
@@ -71,7 +74,7 @@ body {
 	// START - Css for mobile fix
 	.navbar-item {
 		@include flex();
-		color: $light  !important;
+		color: bulma.$light  !important;
 	}
 
 	.navbar {
@@ -82,7 +85,7 @@ body {
 	.navbar-menu,
 	.navbar-start,
 	.navbar-end {
-		background: $dark  !important;
+		background: bulma.$dark  !important;
 		align-items: stretch;
 		@include flex();
 		padding: 0;
@@ -116,14 +119,14 @@ body {
 	}
 
 	i {
-		color: $warning;
+		color: v.$warning;
 	}
 
 	a {
-		color: $purple;
+		color: v.$purple;
 
 		&:hover {
-			color: $red;
+			color: bulma.$red;
 		}
 	}
 
@@ -141,15 +144,15 @@ body {
 			border-bottom: 2px solid transparent;
 
 			&.active {
-				border-bottom: 2px solid $purple;
-				background-color: $dark  !important;
+				border-bottom: 2px solid v.$purple;
+				background-color: bulma.$dark  !important;
 			}
 		}
 	}
 
 	.title-text {
 		@include transition-all();
-		color: $purple;
+		color: v.$purple;
 		text-decoration: none;
 		font-family: 'FredokaOne';
 		font-size: 5em;

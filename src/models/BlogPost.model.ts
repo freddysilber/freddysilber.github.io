@@ -1,8 +1,9 @@
+import type { ImageDataLike } from 'gatsby-plugin-image'
 export interface BlogPost {
 	node: {
 		excerpt: string;
 		frontmatter: {
-			coverImage: Record<any, any>;
+			coverImage: ImageDataLike;
 			date: string;
 			slug: string;
 			title: string;

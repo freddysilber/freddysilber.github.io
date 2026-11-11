@@ -1,2 +1,2 @@
-export { BlogPost } from './BlogPost.model'
-export { BlogData } from './BlogData.model'
+export type { BlogPost } from './BlogPost.model'
+export type { BlogData } from './BlogData.model'

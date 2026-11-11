@@ -7,7 +7,7 @@ import { Icon } from '@iconify/react';
 import gmailIcon from '@iconify/icons-simple-icons/gmail';
 import { Email } from '../../util/email';
 
-export default function SocialMedia(): JSX.Element {
+export default function SocialMedia(): React.JSX.Element {
 	return (
 		<div className="socialMediaContainer">
 			<a href={URLS.github.url} target="_blank" rel="noopener noreferrer">

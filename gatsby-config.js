@@ -5,8 +5,17 @@ module.exports = {
     author: `@freddysilber`
   },
   plugins: [
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        sassOptions: {
+          // gatsby-plugin-sass uses sass-loader v10, which only supports the legacy API
+          silenceDeprecations: [`legacy-js-api`],
+          // Hide deprecation warnings coming from dependencies (Bulma 0.9)
+          quietDeps: true,
+        },
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

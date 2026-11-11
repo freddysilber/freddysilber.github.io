@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import styled from 'styled-components'
 import { Layout, SEO } from '../components';
@@ -19,32 +19,19 @@ const CredentialsContainer = styled.div`
 export default function Credentials() {
 	const data = useStaticQuery(graphql`
 	query {
-		placeholderImage: file(relativePath: { eq: "avatar.jpg" }) {
-			childImageSharp {
-				fluid(maxWidth: 300) {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
 		flatironSchoolCertification: file(relativePath: { eq: "flatiron-school-certificate.jpg" }) {
 			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
+				gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
 			}
 		}
 		salesforceAppBuilderCertification: file(relativePath: { eq: "salesforce-app-builder-certificate.jpg" }) {
 			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
+				gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
 			}
 		}
 		salesforcePlatformDeveloperCertification: file(relativePath: { eq: "platform-developer.jpg" }) {
 			childImageSharp {
-				fluid {
-					...GatsbyImageSharpFluid
-				}
+				gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
 			}
 		}
 	}
@@ -52,23 +39,22 @@ export default function Credentials() {
 
 	return (
 		<Layout>
-			<SEO title="Credentials" />
 			<CredentialsContainer>
 				<PictureFrame>
-					<Img
-						fluid={data.flatironSchoolCertification.childImageSharp.fluid}
+					<GatsbyImage
+						image={getImage(data.flatironSchoolCertification)!}
 						alt="Flatiron School certification"
 					/>
 				</PictureFrame>
 				<PictureFrame>
-					<Img
-						fluid={data.salesforceAppBuilderCertification.childImageSharp.fluid}
+					<GatsbyImage
+						image={getImage(data.salesforceAppBuilderCertification)!}
 						alt="Salesforce App Builder certification"
 					/>
 				</PictureFrame>
 				<PictureFrame>
-					<Img
-						fluid={data.salesforcePlatformDeveloperCertification.childImageSharp.fluid}
+					<GatsbyImage
+						image={getImage(data.salesforcePlatformDeveloperCertification)!}
 						alt="Salesforce Platform Developer certification"
 					/>
 				</PictureFrame>
@@ -76,3 +62,5 @@ export default function Credentials() {
 		</Layout>
 	)
 }
+
+export const Head = () => <SEO title="Credentials" />

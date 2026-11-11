@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from 'react';
 import styled from 'styled-components';
 import {
@@ -67,16 +67,12 @@ export default function IndexPage() {
 	/**
 	 		prioritizationMatrix: file(relativePath: { eq: "prioritization-matrix-demo.png" }) {
 				childImageSharp {
-					fluid(maxWidth: 1000) {
-						...GatsbyImageSharpFluid
-					}
+					gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
 				}
 			}
 			nflLoserPoolGame: file(relativePath: { eq: "nfl-loser-pool-game.png" }) {
 				childImageSharp {
-					fluid(maxWidth: 1000) {
-						...GatsbyImageSharpFluid
-					}
+					gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
 				}
 			}
 	 */
@@ -84,9 +80,7 @@ export default function IndexPage() {
 		query {
 			avatar: file(relativePath: { eq: "avatar.png" }) {
 				childImageSharp {
-					fluid(maxWidth: 300) {
-						...GatsbyImageSharpFluid
-					}
+					gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
 				}
 			}
 		}
@@ -94,12 +88,11 @@ export default function IndexPage() {
 
 	return (
 		<Layout>
-			<SEO title="Home" />
 
 			<IndexContainer>
 				<div>
 					<AvatarWrapper>
-						<Img fluid={data.avatar.childImageSharp.fluid} />
+						<GatsbyImage image={getImage(data.avatar)!} alt="Freddy Silber" />
 					</AvatarWrapper>
 
 					<SocialMedia />
@@ -121,7 +114,7 @@ export default function IndexPage() {
 
 					{/* <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
 						<div style={{ display: 'flex', alignItems: 'center' }}>
-							<Img fluid={data.prioritizationMatrix.childImageSharp.fluid} style={{ width: '50%', borderRadius: '5px', boxShadow: '8px 8px 15px 1px #000' }} />
+							<GatsbyImage image={getImage(data.prioritizationMatrix)!} alt="" style={{ width: '50%', borderRadius: '5px', boxShadow: '8px 8px 15px 1px #000' }} />
 							<div style={{ textAlign: 'center', width: '50%' }}>
 								<h1 style={{ fontSize: '1.4em', fontWeight: 'bold' }}>Prioritization Matrix</h1>
 								<p>"A simple Salesforce app where a user can vote on their favorite bug to be prioritized"</p>
@@ -135,7 +128,7 @@ export default function IndexPage() {
 								<p>"A game to play with others and vote against the worst teams of the season"</p>
 								<p><em>- Svelte, Golang, and Postgres</em></p>
 							</div>
-							<Img fluid={data.nflLoserPoolGame.childImageSharp.fluid} style={{ width: '50%', borderRadius: '5px', boxShadow: '8px 8px 15px 1px #000' }} />
+							<GatsbyImage image={getImage(data.nflLoserPoolGame)!} alt="" style={{ width: '50%', borderRadius: '5px', boxShadow: '8px 8px 15px 1px #000' }} />
 						</div>
 					</div>
 
@@ -145,3 +138,5 @@ export default function IndexPage() {
 		</Layout>
 	)
 }
+
+export const Head = () => <SEO title="Home" />

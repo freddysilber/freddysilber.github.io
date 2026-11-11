@@ -3,7 +3,7 @@ import React from 'react'
 import { BlogSidebar, Layout, SEO } from '../components'
 // Hooks
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components'
 // Models
 import { BlogData, BlogPost } from '../models'
@@ -72,7 +72,6 @@ export default function BlogPage({ data }: BlogData) {
 
 	return (
 		<Layout>
-			<SEO title="Blog" />
 			<PostListContainer>
 				<PostList>
 					{recentPosts.map((post: BlogPost, index: number) => {
@@ -83,7 +82,7 @@ export default function BlogPage({ data }: BlogData) {
 							<PostListItem key={index} className="has-background-grey-dark box">
 								<PostLink to={slug}>
 									<PostImageWrapper>
-										<Img fluid={{ ...coverImage.childImageSharp.fluid }} />
+										<GatsbyImage image={getImage(coverImage)!} alt={title} />
 									</PostImageWrapper>
 									<PostListItemContent>
 										<h1 className="has-text-warning has-text-weight-semibold is-size-5">{title}</h1>
@@ -96,7 +95,7 @@ export default function BlogPage({ data }: BlogData) {
 
 					})}
 				</PostList>
-				<BlogSidebar data={data} otherPosts={otherPosts} />
+				<BlogSidebar otherPosts={otherPosts} />
 			</PostListContainer>
 		</Layout >
 	)
@@ -118,9 +117,12 @@ export const query = graphql`
 						slug
 						coverImage {
 							childImageSharp {
-								fluid(maxWidth: 400, maxHeight: 400, fit: COVER, cropFocus: CENTER) {
-									...GatsbyImageSharpFluid
-								}
+								gatsbyImageData(
+									layout: FULL_WIDTH
+									aspectRatio: 1
+									placeholder: BLURRED
+									transformOptions: { fit: COVER, cropFocus: CENTER }
+								)
 							}
 						}
 					}
@@ -129,3 +131,4 @@ export const query = graphql`
 		}
 	}
 `
+export const Head = () => <SEO title="Blog" />
