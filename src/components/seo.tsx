@@ -1,71 +1,34 @@
 /**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
+ * SEO component for Gatsby's Head API.
  *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
+ * Render it from a page's exported `Head` function:
+ *   export const Head = () => <SEO title="Home" />
+ *
+ * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useSiteMetadata } from '../hooks'
 
-export default function SEO({ description, lang, meta, title }: any) {
-	const { site } = useStaticQuery(
-		graphql`
-			query {
-				site {
-					siteMetadata {
-						title
-						description
-						author
-					}
-				}
-			}
-		`
-	)
+interface SEOProps {
+	title: string;
+	description?: string;
+	children?: React.ReactNode;
+}
 
-	const metaDescription = description || site.siteMetadata.description
-	const defaultTitle = site.siteMetadata?.title
+export default function SEO({ title, description, children }: SEOProps) {
+	const siteMetadata = useSiteMetadata()
+	const metaDescription = description || siteMetadata.description
+	const defaultTitle = siteMetadata.title
+	const fullTitle = defaultTitle ? `${title} | ${defaultTitle}` : title
 
 	return (
-		<Helmet
-			htmlAttributes={{
-				lang,
-			}}
-			title={title}
-			titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : ''}
-			meta={[
-				{
-					name: `description`,
-					content: metaDescription,
-				},
-				{
-					property: `og:title`,
-					content: title,
-				},
-				{
-					property: `og:description`,
-					content: metaDescription,
-				},
-				{
-					property: `og:type`,
-					content: `website`,
-				},
-			].concat(meta)}
-		/>
+		<>
+			<title>{fullTitle}</title>
+			<meta name="description" content={metaDescription} />
+			<meta property="og:title" content={title} />
+			<meta property="og:description" content={metaDescription} />
+			<meta property="og:type" content="website" />
+			{children}
+		</>
 	)
-}
-
-SEO.defaultProps = {
-	lang: `en`,
-	meta: [],
-	description: ``,
-}
-
-SEO.propTypes = {
-	description: PropTypes.string,
-	lang: PropTypes.string,
-	meta: PropTypes.arrayOf(PropTypes.object),
-	title: PropTypes.string.isRequired,
 }

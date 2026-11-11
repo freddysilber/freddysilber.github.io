@@ -1,7 +1,7 @@
 import roundArrowBack from '@iconify/icons-ic/round-arrow-back'
 import { Icon } from '@iconify/react'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import React from 'react'
 import styled from 'styled-components'
 import { BlogSidebar, Layout, SEO } from '../components'
@@ -14,17 +14,7 @@ interface MarkdownData {
 				date: string;
 				slug: string;
 				title: string;
-				coverImage: {
-					childImageSharp: {
-						fixed: {
-							base64: string;
-							height: number;
-							src: string;
-							srcSet: string;
-							width: number;
-						}
-					}
-				}
+				coverImage: ImageDataLike
 			},
 			html: string;
 		},
@@ -48,7 +38,6 @@ export default function Template({ data }: MarkdownData) {
 
 	return (
 		<Layout>
-			<SEO title={frontmatter.title} />
 			<div className="is-flex is-justify-content-space-between">
 				<PostContainer className="is-flex is-flex-direction-column">
 					<Link
@@ -74,11 +63,11 @@ export default function Template({ data }: MarkdownData) {
 					<h1 className="title is-3 has-text-light">{frontmatter.title}</h1>
 					<h2 className="title is-5 has-text-light">{frontmatter.date}</h2>
 					<CoverImage>
-						<Img fixed={{ ...frontmatter.coverImage.childImageSharp.fixed }} />
+						<GatsbyImage image={getImage(frontmatter.coverImage)!} alt={frontmatter.title} />
 					</CoverImage>
 					<div dangerouslySetInnerHTML={{ __html: html }} />
 				</PostContainer>
-				<BlogSidebar data={data} otherPosts={otherPosts.edges} />
+				<BlogSidebar otherPosts={otherPosts.edges} />
 			</div>
 		</Layout>
 	)
@@ -94,9 +83,12 @@ export const pageQuery = graphql`
 				title
 				coverImage {
 					childImageSharp {
-						fixed(width: 1000, height: 250, fit: COVER, cropFocus: CENTER) {
-							...GatsbyImageSharpFixed
-						}
+						gatsbyImageData(
+							layout: FULL_WIDTH
+							aspectRatio: 4
+							placeholder: BLURRED
+							transformOptions: { fit: COVER, cropFocus: CENTER }
+						)
 					}
 				}
 			}
@@ -115,3 +107,4 @@ export const pageQuery = graphql`
 		}
 	}
 `
+export const Head = ({ data }: MarkdownData) => <SEO title={data.markdownRemark.frontmatter.title} />

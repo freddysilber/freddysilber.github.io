@@ -11,7 +11,6 @@ const styles: Record<string, Record<string, string | number>> = {
 export default function About() {
 	return (
 		<Layout>
-			<SEO title="About" />
 
 			<div style={{ ...styles.bioContainer }}>
 				<Bio />
@@ -19,3 +18,4 @@ export default function About() {
 		</Layout>
 	);
 }
+export const Head = () => <SEO title="About" />

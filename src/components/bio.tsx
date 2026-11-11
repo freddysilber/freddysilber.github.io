@@ -2,30 +2,19 @@ import React from 'react'
 // Utilities
 import { URLS } from '../util'
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-export default function Bio(): JSX.Element {
+export default function Bio(): React.JSX.Element {
 	const data = useStaticQuery(graphql`
 	query {
 		rockJump: file(relativePath: { eq: "rock-jump.jpeg" }) {
 			childImageSharp {
-				fluid(maxWidth: 1000) {
-					...GatsbyImageSharpFluid
-				}
+				gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
 			}
 		}
 
-		downFlatDown: file(relativePath: { eq: "down-flat-down.jpeg" }) {
-			childImageSharp {
-				fluid(maxWidth: 1000) {
-					...GatsbyImageSharpFluid
-				}
-			}
-		}
 	}
 `);
-	console.log(data);
-
 	return (
 		<div>
 			<p>
@@ -36,7 +25,7 @@ export default function Bio(): JSX.Element {
 				I'm a snowboarder but that doesn't pay the bills so now I'm a developer.
 			</p>
 
-			<Img fluid={data.rockJump.childImageSharp.fluid} style={{ borderRadius: '5px', maxWidth: '400px', margin: 'auto' }} />
+			<GatsbyImage image={getImage(data.rockJump)!} alt="Freddy snowboarding off a rock" style={{ borderRadius: '5px', maxWidth: '400px', margin: 'auto' }} />
 
 			<p>
 				I started snowboarding when I was 4 years old and would average almost 100 days a season snowboarding at my local ski area,

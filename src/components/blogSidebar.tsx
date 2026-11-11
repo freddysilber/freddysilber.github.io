@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { BlogPost } from '../models';
@@ -50,9 +49,4 @@ export default function BlogSidebar({ otherPosts }: { otherPosts: BlogPost[] }) 
 			<PostList>{renderPostListItems(otherPosts)}</PostList>
 		</BlogSideBarContainer>
 	)
-}
-
-BlogSidebar.propTypes = {
-	otherPosts: PropTypes.array.isRequired,
-	data: PropTypes.object.isRequired,
 }

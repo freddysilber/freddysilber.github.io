@@ -1,5 +1,5 @@
-@import '../../scss/mixins';
-@import '../../scss/variables.scss';
+@use '../../scss/mixins' as *;
+@use '../../scss/variables' as *;
 
 div.socialMediaContainer {
 	display: flex;

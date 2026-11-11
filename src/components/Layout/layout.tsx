@@ -6,11 +6,12 @@
  */
 
 import React from 'react'
-import PropTypes from 'prop-types'
 // import { useStaticQuery, graphql } from 'gatsby'
 // Components
 import { Navigation } from '..'
 // Styles
+// Global styles are imported here (before the layout styles) so the CSS order is the same on every page
+import '../../scss/global.scss';
 import './layout.scss';
 
 export default function Layout({ children }: any) {
@@ -30,8 +31,4 @@ export default function Layout({ children }: any) {
 			<main>{children}</main>
 		</div>
 	)
-}
-
-Layout.propTypes = {
-	children: PropTypes.node.isRequired,
 }

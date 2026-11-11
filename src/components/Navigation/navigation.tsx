@@ -5,7 +5,7 @@ import { Routes } from '../../util'
 // Styles
 import '../Navigation/navigation.scss';
 
-export default function Navigation(): JSX.Element {
+export default function Navigation(): React.JSX.Element {
 	// const showBack: boolean = /([^\/]+$)/.test(window.location.pathname);
 
 	return (
